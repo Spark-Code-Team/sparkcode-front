@@ -27,7 +27,8 @@ const Navbar = ()=>{
 
         <>
 
-            <div className="lg:w-[1150px] lg:h-[83px] lg:mx-auto bg-indigo-400 lg:flex lg:justify-between lg:items-center lg:pl-7 lg:pr-7 hidden">
+
+            <div className="lg:absolute lg:top-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:z-50 lg:w-[1150px] z-100 lg:h-[83px] lg:mx-auto bg-indigo-400 lg:mt-7 lg:rounded-xl lg:flex lg:justify-between lg:items-center lg:pl-7 lg:pr-7 hidden">
 
                 <div className="flex">
 
