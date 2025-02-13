@@ -7,3 +7,15 @@
   margin: 0;
   direction: rtl;
 }
+
+
+.custom-border::before{
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 50%; /* شروع از وسط */
+  width: 75%; /* نصف عرض باکس */
+  height: 3px; /* ضخامت border */
+  background: linear-gradient(90deg, transparent 0%, #5E94FF 100%);
+  transform: translateX(-50%); /* برای تراز از وسط */
+}

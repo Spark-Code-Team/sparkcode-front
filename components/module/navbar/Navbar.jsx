@@ -28,7 +28,7 @@ const Navbar = ()=>{
         <>
 
 
-            <div className="lg:absolute lg:top-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:z-50 lg:w-[1150px] z-100 lg:h-[83px] lg:mx-auto bg-indigo-400 lg:mt-7 lg:rounded-xl lg:flex lg:justify-between lg:items-center lg:pl-7 lg:pr-7 hidden">
+            <div className="bg-gradient-to-b from-[#091119] via-[#172744] to-[#091119] shadow-xl text-white lg:absolute lg:top-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:z-50 lg:w-[1150px] z-100 lg:h-[83px] lg:mx-auto lg:mt-7 lg:rounded-xl lg:flex lg:justify-between lg:items-center lg:pl-7 lg:pr-7 hidden">
 
                 <div className="flex">
 
@@ -64,7 +64,7 @@ const Navbar = ()=>{
 
 
                 <div>
-                    <Link href="#" className="bg-pink-400 text-white lg:w-[170px] lg:h-[48px] flex justify-center items-center gap-x-2 rounded-md">
+                    <Link href="#" className="bg-[#2e567d] text-white lg:w-[170px] lg:h-[48px] flex justify-center items-center gap-x-2 rounded-md">
                         ورود/ثبت نام
                         <IconLogin/>
                     </Link>

@@ -6,14 +6,14 @@ const SparkCode = ()=>{
 
         <>
 
-            <div className="w-full bg-violet-700 lg:mt-0 mt-10">
+            <div className="w-full lg:mt-0 mt-10">
 
-                <div className="w-full bg-yellow-300 text-center lg:text-3xl text-xl opacity-90">? Why Spark Code</div>
-                <div className="w-full bg-yellow-600 text-center lg:text-2xl text-xl lg:mt-1">چرا اسپارک کد ؟</div>
+                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text">? Why Spark Code</div>
+                <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">چرا اسپارک کد ؟</div>
 
-                <div className="lg:w-[85%] w-full bg-violet-400 m-auto lg:mt-20 flex lg:flex-nowrap flex-wrap lg:gap-x-5">
+                <div className="lg:w-[85%] w-full m-auto lg:mt-20 flex lg:flex-nowrap flex-wrap lg:gap-x-5">
 
-                    <div className="lg:w-1/3 lg:h-[480px] w-[94%] min-h-[200px] lg:m-0 lg:mt-0 mt-10 m-auto bg-red-600 flex flex-wrap items-center lg:pb-4 lg:pt-0 pt-5 pb-5 relative rounded-2xl">
+                    <div className="border-2 border-[#182128] custom-border lg:w-1/3 lg:h-[480px] w-[94%] min-h-[200px] lg:m-0 lg:mt-0 mt-10 m-auto flex flex-wrap items-center lg:pb-4 lg:pt-0 pt-5 pb-5 relative rounded-2xl">
 
                         <p className="absolute -top-14 left-10 text-[64px] text-yellow-300">10</p>
 
@@ -21,8 +21,8 @@ const SparkCode = ()=>{
                             <Image src="/image/profile.png" alt="" width={165} height={160} className="object-contain"/>
                         </div>
 
-                        <div className="w-full bg-lime-400 lg:mt-1 mt-5 text-center text-md font-bold lg:z-auto z-10">درک عمیق از نیازهای مشتری</div>
-                        <div className="w-full lg:mt-1 mt-5 lg:pr-4 lg:pl-4 pr-3 pl-3 lg:text-sm text-[13px] lg:leading-7 leading-7 lg:z-auto z-10">ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما در ارتباط است. این همکاری نزدیک به ما کمک می‌کند تا بهترین خروجی ممکن را ارائه دهیم و پروژه‌ها را به موقع و با هزینه‌های معقول به سرانجام برسانیم.</div>
+                        <div className="w-full lg:mt-1 mt-5 text-center text-md font-bold lg:z-auto z-10 text-white">درک عمیق از نیازهای مشتری</div>
+                        <div className="w-full lg:mt-1 mt-5 lg:pr-4 lg:pl-4 pr-3 pl-3 lg:text-sm text-[13px] lg:leading-7 leading-7 lg:z-auto z-10 text-[#d4e1f2]">ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما در ارتباط است. این همکاری نزدیک به ما کمک می‌کند تا بهترین خروجی ممکن را ارائه دهیم و پروژه‌ها را به موقع و با هزینه‌های معقول به سرانجام برسانیم.</div>
 
                         <div className="absolute -bottom-20 -right-14 lg:block hidden">
                             <Image src="/image/arrow1.png" alt="" width={88} height={97}/>
@@ -31,7 +31,7 @@ const SparkCode = ()=>{
                     </div>
 
 
-                    <div className="lg:w-1/3 lg:h-[480px] w-[94%] min-h-[200px] lg:m-0 lg:mt-0 mt-10 m-auto bg-red-600 flex flex-wrap items-center lg:pb-4 lg:pt-0 pt-5 pb-5 relative rounded-2xl">
+                    <div className="border-2 border-[#182128] custom-border lg:w-1/3 lg:h-[480px] w-[94%] min-h-[200px] lg:m-0 lg:mt-0 mt-10 m-auto flex flex-wrap items-center lg:pb-4 lg:pt-0 pt-5 pb-5 relative rounded-2xl">
 
                         <p className="absolute -top-14 left-10 text-[64px] text-yellow-300">01</p>
 
@@ -39,13 +39,13 @@ const SparkCode = ()=>{
                             <Image src="/image/shield.png" alt="" width={165} height={160} className="object-contain"/>
                         </div>
 
-                        <div className="w-full bg-lime-400 lg:mt-1 mt-5 text-center text-md font-bold lg:z-auto z-10">درک عمیق از نیازهای مشتری</div>
-                        <div className="w-full lg:mt-1 mt-5 lg:pr-4 lg:pl-4 pr-3 pl-3 lg:text-sm text-[13px] lg:leading-7 leading-7 lg:z-auto z-10">ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما در ارتباط است. این همکاری نزدیک به ما کمک می‌کند تا بهترین خروجی ممکن را ارائه دهیم و پروژه‌ها را به موقع و با هزینه‌های معقول به سرانجام برسانیم.</div>
+                        <div className="w-full lg:mt-1 mt-5 text-center text-md font-bold lg:z-auto z-10 text-white">تمرکز بر کیفیت و امنیت</div>
+                        <div className="w-full lg:mt-1 mt-5 lg:pr-4 lg:pl-4 pr-3 pl-3 lg:text-sm text-[13px] lg:leading-7 leading-7 lg:z-auto z-10 text-[#d4e1f2]">ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما در ارتباط است. این همکاری نزدیک به ما کمک می‌کند تا بهترین خروجی ممکن را ارائه دهیم و پروژه‌ها را به موقع و با هزینه‌های معقول به سرانجام برسانیم.</div>
 
                     </div>
 
 
-                    <div className="lg:w-1/3 lg:h-[480px] w-[94%] min-h-[200px] lg:m-0 lg:mt-0 mt-10 m-auto bg-red-600 flex flex-wrap items-center lg:pb-4 lg:pt-0 pt-5 pb-5 relative rounded-2xl">
+                    <div className="border-2 border-[#182128] custom-border lg:w-1/3 lg:h-[480px] w-[94%] min-h-[200px] lg:m-0 lg:mt-0 mt-10 m-auto flex flex-wrap items-center lg:pb-4 lg:pt-0 pt-5 pb-5 relative rounded-2xl">
 
                         <p className="absolute -top-14 left-10 text-[64px] text-yellow-300">00</p>
 
@@ -53,8 +53,8 @@ const SparkCode = ()=>{
                             <Image src="/image/star.png" alt="" width={165} height={160} className="object-contain"/>
                         </div>
 
-                        <div className="w-full bg-lime-400 lg:mt-1 mt-5 text-center text-md font-bold lg:z-auto z-10">درک عمیق از نیازهای مشتری</div>
-                        <div className="w-full lg:mt-1 mt-5 lg:pr-4 lg:pl-4 pr-3 pl-3 lg:text-sm text-[13px] lg:leading-7 leading-7 lg:z-auto z-10">ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما در ارتباط است. این همکاری نزدیک به ما کمک می‌کند تا بهترین خروجی ممکن را ارائه دهیم و پروژه‌ها را به موقع و با هزینه‌های معقول به سرانجام برسانیم.</div>
+                        <div className="w-full lg:mt-1 mt-5 text-center text-md font-bold lg:z-auto z-10 text-white">تجربه و تخصص حرفه‌ای</div>
+                        <div className="w-full lg:mt-1 mt-5 lg:pr-4 lg:pl-4 pr-3 pl-3 lg:text-sm text-[13px] lg:leading-7 leading-7 lg:z-auto z-10 text-[#d4e1f2]">ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما در ارتباط است. این همکاری نزدیک به ما کمک می‌کند تا بهترین خروجی ممکن را ارائه دهیم و پروژه‌ها را به موقع و با هزینه‌های معقول به سرانجام برسانیم.</div>
 
                         <div className="absolute -top-20 -left-14 lg:block hidden">
                             <Image src="/image/arrow2.png" alt="" width={88} height={97}/>
