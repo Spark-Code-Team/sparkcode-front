@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import ArrowRight from "../../../public/icons/ArrowRight";
 
 const AboutSparkCode = ()=>{
 
@@ -11,23 +13,21 @@ const AboutSparkCode = ()=>{
                 <div className="w-full bg-yellow-300 text-center lg:text-3xl text-xl opacity-90">About Spark Code</div>
                 <div className="w-full bg-yellow-600 text-center lg:text-2xl text-xl lg:mt-1">درباره اسپارک کد</div>
 
-                <div className="lg:w-[85%] w-full bg-yellow-300 m-auto mt-9">
+                <div className="lg:w-[85%] w-full bg-yellow-300 flex m-auto mt-10">
 
-                    <div className="w-full bg-pink-400 lg:leading-8 leading-8 lg:text-base text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیردلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آ</div>
+                    <div className="lg:w-1/2 bg-violet-800 flex flex-wrap items-center text-base lg:pr-7 lg:pl-14">
 
-                    <div className="w-full bg-pink-700 flex mt-14 gap-x-5">
+                        <p className="w-full bg-yellow-200 leading-8">ما یک تیم متخصص در حوزه برنامه‌نویسی و فناوری اطلاعات هستیم که با خلاقیت و نوآوری توانسته‌ایم راه‌حل‌های منحصربه‌فردی برای کسب‌وکارهای کوچک و بزرگ ارائه دهیم. با قابلیت‌هایی در زمینه کدنویسی، طراحی وب و اپلیکیشن، و مدیریت سرورها و هاستینگ، ما به شما کمک می‌کنیم تا حضور آنلاین خود را تقویت کنید و نیازهای خاص بیزینس خود را برآورده سازید. هدف ما ایجاد تجربه‌ای کاربرپسند و مؤثر برای مشتریانمان است.</p>
 
-                        <div className="lg:w-[392px] lg:h-[253px] bg-orange-400 flex justify-center items-center rounded-2xl">
-                            <Image src="/image/gallery.png" alt="" width={75} height={75}/>
-                        </div>
+                        <Link href="#" className="bg-red-800 lg:w-[135px] lg:h-[51px] gap-x-1 flex justify-center items-center lg:mt-6 text-white rounded-lg">
+                            درباره ما <ArrowRight/>
+                        </Link>
 
-                        <div className="lg:w-[392px] lg:h-[253px] bg-orange-400 flex justify-center items-center rounded-2xl">
-                            <Image src="/image/gallery.png" alt="" width={75} height={75}/>
-                        </div>
+                    </div>
 
-                        <div className="lg:w-[392px] lg:h-[253px] bg-orange-400 flex justify-center items-center rounded-2xl">
-                            <Image src="/image/gallery.png" alt="" width={75} height={75}/>
-                        </div>
+                    <div className="lg:w-1/2 bg-orange-500 flex justify-center lg:pr-10 lg:pl-10">
+
+                        <Image src="/image/about-spark.png" alt="" width={496} height={338}/>
 
                     </div>
 

@@ -1,43 +1,29 @@
 'use client';
 import {useState} from "react";
+import Image from "next/image";
+import SlideRight from "../../../public/icons/SlideRight";
+import SlideLeft from "../../../public/icons/SlideLeft";
 
 const CustomerReviews = ()=>{
 
-    const testimonials = [
-        {
-            id: 1,
-            name: 'sara joan',
-            role: 'Community Member',
-            review: 'تجربه کار کردن با تیم اسپارکد یکی از بهترین تجربه‌های کاری من در این چند ساله بوده...',
-        },
-        {
-            id: 2,
-            name: 'Ali Reza',
-            role: 'Verified User',
-            review: 'تیم بسیار حرفه‌ای و خلاق. تجربه‌ای فوق‌العاده داشتم!',
-        },
-        {
-            id: 3,
-            name: 'Niloofar Amini',
-            role: 'Freelancer',
-            review: 'من کاملاً از همکاری با این تیم راضی هستم. طراحی زیبا و تعامل عالی!',
-        },
-        {
-            id: 4,
-            name: 'Mohammad T.',
-            role: 'Developer',
-            review: 'تجربه‌ی بی‌نظیری داشتم، همه چیز عالی بود!',
-        },
-    ];
+    const [index , setIndex] = useState(0);
+    const slides = [
+        {id:1 , name:"امید عطایی"} ,
+        {id:"2" , name:"محسن پورپاک"},
+        {id:"2" , name:"رضا عبادی"},
+        {id:"2" , name:"علیرضا سلمان"},
+        {id:"2" , name:"فاطمه صباغ"},
+        {id:"2" , name:"مهربد"},
+        {id:"2" , name:"رزا"},
+        {id:"2" , name:"مریم محمدی"},
+    ]
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+    const updateSlider = (mozoe) => {
+        if (mozoe === "azafe") {
+            setIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1)); // از اول شروع کن
+        } else {
+            setIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1)); // برعکس
+        }
     };
 
 
@@ -45,50 +31,105 @@ const CustomerReviews = ()=>{
 
         <>
 
-            <div className="w-full bg-violet-400 lg:mt-24 mt-10">
+            <div className="w-full bg-violet-500 lg:min-h-auto h-full lg:mt-24 mt-10">
 
                 <div className="w-full bg-yellow-300 text-center lg:text-3xl text-xl opacity-90">Customer Reviews</div>
                 <div className="w-full bg-yellow-600 text-center lg:text-2xl text-xl lg:mt-1">نظرات مشتریان</div>
 
-                <div className="w-[85%] h-[500px] flex items-center bg-blue-700 m-auto mt-10 flex gap-x-4 relative">
+                <div className="lg:w-[85%] w-full bg-blue-700 m-auto mt-10 lg:flex lg:flex-wrap gap-x-4 relative hidden">
 
-                    {/*<div className="w-full flex flex-col items-center py-10 relative overflow-hidden">*/}
-                    {/*    <div className="relative w-full max-w-3xl flex justify-center items-center">*/}
-                    {/*        {testimonials.map((testimonial, index) => {*/}
-                    {/*            const isActive = index === currentIndex;*/}
-                    {/*            const isPrev = index === (currentIndex - 1 + testimonials.length) % testimonials.length;*/}
-                    {/*            const isNext = index === (currentIndex + 1) % testimonials.length;*/}
-                    {/*            return (*/}
-                    {/*                <div key={testimonial.id} className={`absolute w-[493px] h-[240px] p-6 bg-gray-900 text-white rounded-2xl shadow-lg transition-all duration-500 */}
-                    {/*                    ${isActive ? 'scale-100 opacity-100 z-10' : 'scale-75 opacity-50 blur-md'}*/}
-                    {/*                    ${isPrev ? '-translate-x-32 md:-translate-x-52' : ''}*/}
-                    {/*                    ${isNext ? 'translate-x-32 md:translate-x-52' : ''}`}*/}
-                    {/*                >*/}
-                    {/*                    <p className="text-lg text-center">{testimonial.review}</p>*/}
-                    {/*                    <h3 className="mt-4 font-bold text-center">{testimonial.name}</h3>*/}
-                    {/*                    <p className="text-sm text-gray-400 text-center">{testimonial.role}</p>*/}
-                    {/*                </div>*/}
-                    {/*            );*/}
-                    {/*        })}*/}
-                    {/*    </div>*/}
-                    {/*    /!* دکمه‌های ناوبری *!/*/}
-                    {/*    <button*/}
-                    {/*        onClick={prevSlide}*/}
-                    {/*        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full z-20"*/}
-                    {/*    >*/}
-                    {/*        ❮*/}
-                    {/*    </button>*/}
-                    {/*    <button*/}
-                    {/*        onClick={nextSlide}*/}
-                    {/*        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full z-20"*/}
-                    {/*    >*/}
-                    {/*        ❯*/}
-                    {/*    </button>*/}
-                    {/*</div>*/}
+                    <div className="w-full bg-orange-400 flex justify-end gap-x-2">
+
+                        <div className=" flex justify-between gap-x-2">
+
+                            <button className="w-9 h-9 bg-red-500 flex justify-center items-center" onClick={() => updateSlider("azafee")}>
+                                <SlideLeft/>
+                            </button>
+
+                            <button className="w-9 h-9 bg-red-500 flex justify-center items-center" onClick={() => updateSlider("azafe")}>
+                                <SlideRight/>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div className="relative lg:w-[1200px] w-3/5 min-h-[200px] mx-auto mt-10 overflow-hidden bg-red-300">
+                        <div className="flex transition-transform duration-500" style={{ transform: `translateX(${index * 33.33 - 33.33}%)` }}>
+                            {slides.map((slide, i) => (
+                                <div
+                                    key={i}
+                                    className={`flex-none lg:w-1/3 w-1/3 flex justify-center items-center p-4 transition-transform duration-300 cursor-pointer ${i === index ? "scale-125 z-10 opacity-100" : "opacity-50"}`}
+                                    onClick={() => updateSlider(i)}
+                                >
+                                    {/*<Image width={300} height={300} src={src} alt={`Slide ${i + 1}`} className="w-full rounded-lg" />*/}
+                                    <div className="lg:w-[900px] pb-9 bg-yellow-300 pt-5">
+                                        <p className="w-full text-[12px] mt-5 pr-5 pl-7 leading-6">تجربه کار کردن با تیم اسپارکد یکی از بهترین تجربه های کاری من  در این چند ساله بوده  لذت داشتن یک تیم حرفه ای و باحال یکی از دلایل خفن بود این تیم بود ! </p>
+
+                                        <div className="flex justify-between items-center pr-5 pl-5 mt-16">
+
+                                            <div>
+                                                <Image src="/image/arrow-comment.png" alt="" width={37} height={37}/>
+                                            </div>
+
+                                            <div className="flex items-center">
+                                                <p className="pl-2">{slide.name}</p>
+                                                <Image src="/image/social.png" alt="" width={32} height={32}/>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
 
                 </div>
 
+
+
+                {/*    Responsive slider   */}
+
+                <div className="relative w-[85%] min-h-[250px] mx-auto mt-10 pb-3 lg:hidden block">
+                    {/* اسلایدها */}
+                    <div className="relative w-full h-auto">
+                        {slides.map((slide, key) => (
+                            <div
+                                key={key}
+                                className={`w-full min-h-[200px] absolute top-0 left-0 flex flex-col justify-center items-center rounded-xl bg-pink-500 pt-4 pb-4 transition-opacity duration-500 ${index === key ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
+
+                                <p className="w-full text-[13px] mt-2 pr-7 pl-9 leading-6">
+                                    تجربه کار کردن با تیم اسپارکد یکی از بهترین تجربه های کاری من  در این چند ساله بوده  لذت داشتن یک تیم حرفه ای و باحال یکی از دلایل خفن بود این تیم بود !
+                                </p>
+
+                                <div className="w-full bg-blue-600 flex justify-between items-center pr-5 pl-5 mt-16">
+                                    <div>
+                                        <Image src="/image/arrow-comment.png" alt="" width={37} height={37}/>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <p className="pl-2">امید عطایی</p>
+                                        <Image src="/image/social.png" alt="" width={32} height={32}/>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* دکمه‌های ناوبری */}
+                    <button className="absolute top-24 -left-8 w-9 h-9 flex justify-center items-center z-50 -translate-y-1/2" onClick={() => updateSlider("prev")}>
+                        <SlideLeft />
+                    </button>
+                    <button className="absolute top-24 -right-8 w-9 h-9 flex justify-center items-center z-50 -translate-y-1/2" onClick={() => updateSlider("azafe")}>
+                        <SlideRight />
+                    </button>
+                </div>
+
+
             </div>
+
 
         </>
 

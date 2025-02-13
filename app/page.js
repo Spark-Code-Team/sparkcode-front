@@ -12,8 +12,8 @@ const HomePage = ()=>{
 
           <Introduction/>
           <SparkCode/>
-          <AboutSparkCode/>
           <CustomerReviews/>
+          <AboutSparkCode/>
           <Articles/>
 
       </>
