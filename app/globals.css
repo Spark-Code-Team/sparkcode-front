@@ -19,3 +19,14 @@
   background: linear-gradient(90deg, transparent 0%, #5E94FF 100%);
   transform: translateX(-50%); /* برای تراز از وسط */
 }
+
+
+.custom-border-contact::before{
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 0;
+  height: 90%;
+  width: 2px; /* ضخامت خط */
+  background-color: #182128; /* رنگ خط */
+}

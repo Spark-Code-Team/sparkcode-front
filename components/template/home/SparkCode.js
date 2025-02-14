@@ -18,7 +18,7 @@ const SparkCode = ()=>{
                         <p className="absolute -top-14 left-10 text-[64px] text-yellow-300">10</p>
 
                         <div className="lg:w-[165px] lg:h-[165px] lg:static w-[120px] h-[120px] lg:top-auto lg:left-auto lg:transform-none lg:z-auto absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:m-auto lg:mt-8 lg:flex lg:justify-center lg:items-center">
-                            <Image src="/image/profile.png" alt="" width={165} height={160} className="object-contain"/>
+                            <Image src="/image/profile.png" alt="" width={165} height={160} className="object-contain lg:opacity-90 opacity-40"/>
                         </div>
 
                         <div className="w-full lg:mt-1 mt-5 text-center text-md font-bold lg:z-auto z-10 text-white">درک عمیق از نیازهای مشتری</div>
@@ -36,7 +36,7 @@ const SparkCode = ()=>{
                         <p className="absolute -top-14 left-10 text-[64px] text-yellow-300">01</p>
 
                         <div className="lg:w-[165px] lg:h-[165px] lg:static w-[120px] h-[120px] lg:top-auto lg:left-auto lg:transform-none lg:z-auto absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:m-auto lg:mt-8 lg:flex lg:justify-center lg:items-center">
-                            <Image src="/image/shield.png" alt="" width={165} height={160} className="object-contain"/>
+                            <Image src="/image/shield.png" alt="" width={165} height={160} className="object-contain lg:opacity-90 opacity-40"/>
                         </div>
 
                         <div className="w-full lg:mt-1 mt-5 text-center text-md font-bold lg:z-auto z-10 text-white">تمرکز بر کیفیت و امنیت</div>
@@ -50,7 +50,7 @@ const SparkCode = ()=>{
                         <p className="absolute -top-14 left-10 text-[64px] text-yellow-300">00</p>
 
                         <div className="lg:w-[165px] lg:h-[165px] lg:static w-[120px] h-[120px] lg:top-auto lg:left-auto lg:transform-none lg:z-auto absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  lg:m-auto lg:mt-8 lg:flex lg:justify-center lg:items-center">
-                            <Image src="/image/star.png" alt="" width={165} height={160} className="object-contain"/>
+                            <Image src="/image/star.png" alt="" width={165} height={160} className="object-contain lg:opacity-90 opacity-40"/>
                         </div>
 
                         <div className="w-full lg:mt-1 mt-5 text-center text-md font-bold lg:z-auto z-10 text-white">تجربه و تخصص حرفه‌ای</div>

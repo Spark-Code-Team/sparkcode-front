@@ -31,22 +31,22 @@ const CustomerReviews = ()=>{
 
         <>
 
-            <div className="w-full bg-violet-500 lg:min-h-auto h-full lg:mt-24 mt-10">
+            <div className="w-full lg:min-h-auto h-full lg:mt-24 mt-10">
 
-                <div className="w-full bg-yellow-300 text-center lg:text-3xl text-xl opacity-90">Customer Reviews</div>
-                <div className="w-full bg-yellow-600 text-center lg:text-2xl text-xl lg:mt-1">نظرات مشتریان</div>
+                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text">Customer Reviews</div>
+                <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">نظرات مشتریان</div>
 
-                <div className="lg:w-[85%] w-full bg-blue-700 m-auto mt-10 lg:flex lg:flex-wrap gap-x-4 relative hidden">
+                <div className="lg:w-[85%] w-full m-auto mt-10 lg:flex lg:flex-wrap gap-x-4 relative hidden">
 
-                    <div className="w-full bg-orange-400 flex justify-end gap-x-2">
+                    <div className="w-full flex justify-end gap-x-2">
 
                         <div className=" flex justify-between gap-x-2">
 
-                            <button className="w-9 h-9 bg-red-500 flex justify-center items-center" onClick={() => updateSlider("azafee")}>
+                            <button className="w-12 h-12 bg-[#2e567d] flex justify-center items-center" onClick={() => updateSlider("azafee")}>
                                 <SlideLeft/>
                             </button>
 
-                            <button className="w-9 h-9 bg-red-500 flex justify-center items-center" onClick={() => updateSlider("azafe")}>
+                            <button className="w-12 h-12 bg-[#2e567d] flex justify-center items-center" onClick={() => updateSlider("azafe")}>
                                 <SlideRight/>
                             </button>
 
@@ -54,7 +54,7 @@ const CustomerReviews = ()=>{
 
                     </div>
 
-                    <div className="relative lg:w-[1200px] w-3/5 min-h-[200px] mx-auto mt-10 overflow-hidden bg-red-300">
+                    <div className="relative lg:w-[1200px] w-3/5 min-h-[200px] mx-auto mt-10 overflow-hidden">
                         <div className="flex transition-transform duration-500" style={{ transform: `translateX(${index * 33.33 - 33.33}%)` }}>
                             {slides.map((slide, i) => (
                                 <div
@@ -63,8 +63,8 @@ const CustomerReviews = ()=>{
                                     onClick={() => updateSlider(i)}
                                 >
                                     {/*<Image width={300} height={300} src={src} alt={`Slide ${i + 1}`} className="w-full rounded-lg" />*/}
-                                    <div className="lg:w-[900px] pb-9 bg-yellow-300 pt-5">
-                                        <p className="w-full text-[12px] mt-5 pr-5 pl-7 leading-6">تجربه کار کردن با تیم اسپارکد یکی از بهترین تجربه های کاری من  در این چند ساله بوده  لذت داشتن یک تیم حرفه ای و باحال یکی از دلایل خفن بود این تیم بود ! </p>
+                                    <div className="lg:w-[900px] bg-[#2e567d] pb-9 bg-[#091119] pt-5">
+                                        <p className="w-full text-[12px] mt-5 pr-5 pl-7 leading-6 text-white">تجربه کار کردن با تیم اسپارکد یکی از بهترین تجربه های کاری من  در این چند ساله بوده  لذت داشتن یک تیم حرفه ای و باحال یکی از دلایل خفن بود این تیم بود ! </p>
 
                                         <div className="flex justify-between items-center pr-5 pl-5 mt-16">
 
@@ -73,7 +73,7 @@ const CustomerReviews = ()=>{
                                             </div>
 
                                             <div className="flex items-center">
-                                                <p className="pl-2">{slide.name}</p>
+                                                <p className="pl-2 text-white">{slide.name}</p>
                                                 <Image src="/image/social.png" alt="" width={32} height={32}/>
                                             </div>
 
@@ -99,18 +99,18 @@ const CustomerReviews = ()=>{
                         {slides.map((slide, key) => (
                             <div
                                 key={key}
-                                className={`w-full min-h-[200px] absolute top-0 left-0 flex flex-col justify-center items-center rounded-xl bg-pink-500 pt-4 pb-4 transition-opacity duration-500 ${index === key ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
+                                className={`w-full min-h-[200px] absolute top-0 left-0 flex flex-col justify-center items-center rounded-xl bg-[#2e567d] pt-4 pb-4 transition-opacity duration-500 ${index === key ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
 
-                                <p className="w-full text-[13px] mt-2 pr-7 pl-9 leading-6">
+                                <p className="w-full text-[13px] mt-2 pr-7 pl-9 leading-6 text-white">
                                     تجربه کار کردن با تیم اسپارکد یکی از بهترین تجربه های کاری من  در این چند ساله بوده  لذت داشتن یک تیم حرفه ای و باحال یکی از دلایل خفن بود این تیم بود !
                                 </p>
 
-                                <div className="w-full bg-blue-600 flex justify-between items-center pr-5 pl-5 mt-16">
+                                <div className="w-full flex justify-between items-center pr-5 pl-5 mt-16">
                                     <div>
                                         <Image src="/image/arrow-comment.png" alt="" width={37} height={37}/>
                                     </div>
                                     <div className="flex items-center">
-                                        <p className="pl-2">امید عطایی</p>
+                                        <p className="pl-2 text-white">{slide.name}</p>
                                         <Image src="/image/social.png" alt="" width={32} height={32}/>
                                     </div>
                                 </div>

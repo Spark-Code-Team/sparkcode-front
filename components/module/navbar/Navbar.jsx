@@ -76,13 +76,13 @@ const Navbar = ()=>{
 
             {/*   Responsive Header or Navbar   */}
 
-            <div className="w-full bg-lime-400 h-[50px] flex justify-between items-center pr-7 pl-7 lg:hidden">
+            <div className="w-full h-[50px] flex justify-between items-center pr-7 pl-7 lg:hidden">
 
                 <button onClick={handleOpenMenu}>
-                    <GiHamburgerMenu size={30}/>
+                    <GiHamburgerMenu size={30} color="white"/>
                 </button>
 
-                <Link href="#" className="bg-pink-400 text-white w-[135px] h-[35px] flex justify-center items-center gap-x-2 rounded-md">
+                <Link href="#" className="bg-[#2e567d] text-white w-[135px] h-[35px] flex justify-center items-center gap-x-2 rounded-md">
                     ورود/ثبت نام
                     <IconLogin/>
                 </Link>
@@ -94,9 +94,9 @@ const Navbar = ()=>{
 
             {
                 openMenu ? (
-                    <div className={`w-[217px] h-[500px] bg-red-500 absolute top-0 right-7 rounded-2xl lg:hidden`}>
+                    <div className={`w-[217px] h-[500px] z-10 bg-[#2e567d] absolute top-0 right-7 rounded-2xl lg:hidden`}>
 
-                        <div className="w-full h-[30px] bg-blue-400 flex justify-around items-center mt-5">
+                        <div className="w-full h-[30px] flex justify-around items-center mt-5">
 
                             <div className="w-[20%]" onClick={handleCloseMenu}>
                                 <CloseMenu/>
