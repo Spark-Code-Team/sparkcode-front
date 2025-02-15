@@ -17,7 +17,7 @@ const Footer = ()=>{
                             <Image src="/image/logo-footer.png" alt="" width={180} height={64}/>
                         </div>
 
-                        <div className="lg:w-[95%] m-auto lg:mt-6">
+                        <div className="lg:w-[95%] m-auto lg:mt-6 lg:pl-4">
                             <p className="text-sm text-[#d4e1f2]">تیم نرم افزاری اسپارک کد مرجع برنامه نویسی انواع اپلیکیشن ، وب سایت و نرم افزارهای تخصصی</p>
                         </div>
 

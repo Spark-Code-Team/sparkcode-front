@@ -9,6 +9,13 @@
 }
 
 
+@font-face {
+  font-family: 'DanaLight';
+  src: url('/fonts/DANA-LIGHT.TTF') format('truetype');
+  font-style: normal;
+}
+
+
 .custom-border::before{
   content: "";
   position: absolute;
