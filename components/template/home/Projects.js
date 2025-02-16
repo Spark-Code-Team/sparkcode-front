@@ -15,7 +15,7 @@ const Projects = ()=>{
 
                 <div className="lg:w-[85%] w-full lg:flex m-auto mt-14 lg:gap-x-5">
 
-                    <div className="lg:w-1/3 w-[75%] lg:m-0 m-auto lg:mt-0 mt-4 pb-5 border-2 border-[#182128] rounded-3xl text-white">
+                    <div className="lg:w-1/3 w-[75%] lg:m-0 m-auto lg:mt-0 mt-4 pb-5 border-2 border-[#182128] rounded-3xl text-white hover:animate-textGlow">
 
                         <div className="lg:w-full lg:h-[200px] w-full h-[200px] bg-[#414141]/[0.27] rounded-t-3xl">
                             {/*  image  */}
@@ -38,7 +38,7 @@ const Projects = ()=>{
 
 
 
-                    <div className="lg:w-1/3 w-[75%] lg:m-0 m-auto lg:mt-0 mt-4 pb-5 border-2 border-[#182128] rounded-3xl text-white">
+                    <div className="lg:w-1/3 w-[75%] lg:m-0 m-auto lg:mt-0 mt-4 pb-5 border-2 border-[#182128] rounded-3xl text-white hover:animate-textGlow">
 
                         <div className="lg:w-full lg:h-[200px] w-full h-[200px] bg-[#414141]/[0.27] rounded-t-3xl">
                             {/*  image  */}
@@ -46,8 +46,7 @@ const Projects = ()=>{
 
                         <div className="w-full mt-8 flex items-center gap-x-3 text-xl font-bold pr-5">
 
-                            <Image src="/image/logo-evaam.png" alt="" width={47} height={28}/>
-                            <p>ایوام</p>
+                            <p>لونا</p>
 
                         </div>
 
@@ -61,7 +60,7 @@ const Projects = ()=>{
 
 
 
-                    <div className="lg:w-1/3 w-[75%] lg:m-0 m-auto lg:mt-0 mt-4 pb-5 border-2 border-[#182128] rounded-3xl text-white">
+                    <div className="lg:w-1/3 w-[75%] lg:m-0 m-auto lg:mt-0 mt-4 pb-5 border-2 border-[#182128] rounded-3xl text-white hover:animate-textGlow">
 
                         <div className="lg:w-full lg:h-[200px] w-full h-[200px] bg-[#414141]/[0.27] rounded-t-3xl">
                             {/*  image  */}
@@ -69,8 +68,8 @@ const Projects = ()=>{
 
                         <div className="w-full mt-8 flex items-center gap-x-3 text-xl font-bold pr-5">
 
-                            <Image src="/image/logo-evaam.png" alt="" width={47} height={28}/>
-                            <p>ایوام</p>
+                            <Image src="/image/logo-matin.png" alt="" width={47} height={28}/>
+                            <p>متین خودرو</p>
 
                         </div>
 

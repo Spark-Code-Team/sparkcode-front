@@ -13,7 +13,7 @@ const SparkCode = ()=>{
 
                 <div className="lg:w-[85%] w-full m-auto lg:mt-20 flex lg:flex-nowrap flex-wrap lg:gap-x-5">
 
-                    <div className="border-2 border-[#182128] custom-border lg:w-1/3 lg:h-[480px] w-[94%] min-h-[200px] lg:m-0 lg:mt-0 mt-10 m-auto flex flex-wrap items-center lg:pb-4 lg:pt-0 pt-5 pb-5 relative rounded-2xl">
+                    <div className="border-2 border-[#182128] custom-border lg:w-1/3 lg:h-[480px] w-[94%] min-h-[200px] lg:m-0 lg:mt-0 mt-10 m-auto flex flex-wrap items-center lg:pb-4 lg:pt-0 pt-5 pb-5 relative rounded-2xl hover:animate-textGlow">
 
                         <p className="absolute -top-14 left-10 text-[64px] text-yellow-300">10</p>
 
@@ -31,7 +31,7 @@ const SparkCode = ()=>{
                     </div>
 
 
-                    <div className="border-2 border-[#182128] custom-border lg:w-1/3 lg:h-[480px] w-[94%] min-h-[200px] lg:m-0 lg:mt-0 mt-10 m-auto flex flex-wrap items-center lg:pb-4 lg:pt-0 pt-5 pb-5 relative rounded-2xl">
+                    <div className="border-2 border-[#182128] custom-border lg:w-1/3 lg:h-[480px] w-[94%] min-h-[200px] lg:m-0 lg:mt-0 mt-10 m-auto flex flex-wrap items-center lg:pb-4 lg:pt-0 pt-5 pb-5 relative rounded-2xl hover:animate-textGlow">
 
                         <p className="absolute -top-14 left-10 text-[64px] text-yellow-300">01</p>
 
@@ -45,7 +45,7 @@ const SparkCode = ()=>{
                     </div>
 
 
-                    <div className="border-2 border-[#182128] custom-border lg:w-1/3 lg:h-[480px] w-[94%] min-h-[200px] lg:m-0 lg:mt-0 mt-10 m-auto flex flex-wrap items-center lg:pb-4 lg:pt-0 pt-5 pb-5 relative rounded-2xl">
+                    <div className="border-2 border-[#182128] custom-border lg:w-1/3 lg:h-[480px] w-[94%] min-h-[200px] lg:m-0 lg:mt-0 mt-10 m-auto flex flex-wrap items-center lg:pb-4 lg:pt-0 pt-5 pb-5 relative rounded-2xl hover:animate-textGlow">
 
                         <p className="absolute -top-14 left-10 text-[64px] text-yellow-300">00</p>
 

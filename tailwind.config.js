@@ -32,12 +32,28 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0px) translateX(0px)", backgroundColor: "#2e567d" },
           "50%": { transform: "translateY(-20px) translateX(10px)", backgroundColor: "#9333ea" },
         },
+        textGlow: {
+          "0%, 100%": { boxShadow: "0 0 15px #9333ea" },
+          "50%": { boxShadow: "0 0 15px #38bdf8" }, // فیروزه‌ای برای افکت درخشش
+        },
+
+        textColor: {
+          "0%, 100%": { color: "white" },
+          "50%": { color: "#38bdf8" }, // فیروزه‌ای برای افکت درخشش
+        },
+        textColor2: {
+          "0%, 100%": { color: "white" },
+          "50%": { color: "#9333ea" }, // فیروزه‌ای برای افکت درخشش
+        },
       },
       animation: {
         spinSpring: "spinSpring 2.5s ease-out forwards",
         float: "float 3s ease-in-out infinite",
         floatText: "floatText 3s ease-in-out infinite",
         floatAndColor: "floatAndColor 6s ease-in-out infinite",
+        textGlow: "textGlow 3s ease-in-out infinite",
+        textColor:"textColor 2s ease-in-out infinite",
+        textColor2:"textColor2 2s ease-in-out infinite"
       },
 
     },

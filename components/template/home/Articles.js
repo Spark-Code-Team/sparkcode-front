@@ -21,7 +21,7 @@ const Articles = ()=>{
                     {
                         items.map((item , index)=>(
 
-                            <div key={index} className="border-2 border-[#182128] lg:w-[392px] w-[75%] lg:m-0 lg:mt-0 m-auto mt-6 pb-4 rounded-2xl">
+                            <div key={index} className="border-2 border-[#182128] lg:w-[392px] w-[75%] lg:m-0 lg:mt-0 m-auto mt-6 pb-4 rounded-2xl hover:animate-textGlow">
 
                                 <div className="bg-gradient-to-b from-[#091119] to-[#2E567D] shadow-lg lg:w-[310px] lg:h-[175px] lg:w-[90%] h-[200px] m-auto mt-4 flex justify-center items-center rounded-2xl">
                                     <Image src="/image/gallery.png" alt="" width={75} height={75}/>

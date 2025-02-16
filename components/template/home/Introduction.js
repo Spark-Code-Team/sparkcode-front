@@ -11,10 +11,10 @@ const Introduction = ()=>{
                 <div className="lg:w-[85%] w-full mx-auto lg:mt-32 flex justify-around">
 
                     <div className="lg:w-[553px] w-1/2 lg:block flex items-center">
-                        <div className="lg:w-full lg:animate-spinSpring lg:text-[48px] font-bold text-white lg:leading-[90px] lg:mt-32 text-[24px] ">
-                            <span className="lg:pr-0 pr-3">خلاقیت بی حد</span>
+                        <div className="lg:w-full lg:animate-spinSpring lg:text-[48px] font-bold text-white lg:leading-[90px] lg:mt-32 text-[24px]">
+                            <span className="lg:pr-0 pr-3 animate-textColor">خلاقیت بی حد</span>
                             <br/>
-                            <span className="lg:pr-40 pr-10">فناوری بی مرز</span>
+                            <span className="lg:pr-40 pr-10 animate-textColor2">فناوری بی مرز</span>
                         </div>
 
                         <div className="lg:w-full lg:text-md lg:mt-16 lg:leading-9 lg:block text-white hidden">ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما در ارتباط است. این همکاری نزدیک به ما کمک می‌کند.</div>
