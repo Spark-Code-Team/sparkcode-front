@@ -13,7 +13,7 @@ const Articles = ()=>{
 
             <div className="w-full lg:mt-24 mt-10">
 
-                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text">Articles</div>
+                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">Articles</div>
                 <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">مقاله ها</div>
 
                 <div className="lg:w-[85%] w-full m-auto mt-9 lg:flex lg:flex-nowrap flex flex-wrap lg:gap-x-5">

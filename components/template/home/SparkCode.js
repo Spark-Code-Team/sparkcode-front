@@ -8,7 +8,7 @@ const SparkCode = ()=>{
 
             <div className="w-full lg:mt-0 mt-10">
 
-                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text">? Why Spark Code</div>
+                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">? Why Spark Code</div>
                 <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">چرا اسپارک کد ؟</div>
 
                 <div className="lg:w-[85%] w-full m-auto lg:mt-20 flex lg:flex-nowrap flex-wrap lg:gap-x-5">

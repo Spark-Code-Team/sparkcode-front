@@ -8,78 +8,74 @@ const ContactUs = ()=>{
 
             <div className="w-full lg:mt-24 mt-10 text-white relative">
 
-                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text">About Spark Code</div>
+                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">About Spark Code</div>
                 <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">درباره اسپارک کد</div>
 
-                <div className="glass-background lg:w-[85%] w-full flex m-auto mt-14 border-2 border-[#182128] rounded-3xl">
+                <div className="glass-background lg:w-[85%] w-[90%] lg:flex m-auto mt-14 border-2 border-[#182128] rounded-3xl">
 
-                    <div className="lg:w-[65%] lg:pr-10 flex flex-wrap lg:relative custom-border-contact">
+                    <div className="lg:w-[65%] w-full lg:pr-10 flex flex-wrap lg:relative custom-border-contact">
 
-                        <div className="lg:w-1/2 lg:mt-10">
+                        <div className="lg:w-1/2 lg:mt-10 w-full mt-5">
                             <label className="w-full block">نام *</label>
-                            <input type="text" name="" className="lg:w-[296px] lg:h-[54px] pr-3 rounded-xl mt-4 bg-transparent border-2 border-[#182128] outline-none" placeholder="نام خود را وارد کنید"/>
+                            <input type="text" name="" className="lg:w-[296px] lg:h-[54px] w-full p-2 pr-3 rounded-xl mt-4 bg-transparent border-2 border-[#182128] outline-none" placeholder="نام خود را وارد کنید"/>
                         </div>
 
-                        <div className="lg:w-1/2 lg:mt-10">
+                        <div className="lg:w-1/2 lg:mt-10 w-full mt-5">
                             <label className="w-full block">نام خانوادگی *</label>
-                            <input type="text" name="" className="lg:w-[296px] lg:h-[54px] pr-3 rounded-xl mt-4 bg-transparent border-2 border-[#182128] outline-none" placeholder="نام خانوادگی خود را وارد کنید"/>
+                            <input type="text" name="" className="lg:w-[296px] lg:h-[54px] w-full p-2 pr-3 rounded-xl mt-4 bg-transparent border-2 border-[#182128] outline-none" placeholder="نام خانوادگی خود را وارد کنید"/>
                         </div>
 
-                        <div className="lg:w-1/2 lg:mt-10">
+                        <div className="lg:w-1/2 lg:mt-10 w-full mt-5">
                             <label className="w-full block">شماره تماس *</label>
-                            <input type="tel" name="" className="lg:w-[296px] lg:h-[54px] pl-3 rounded-xl mt-4 text-left bg-transparent border-2 border-[#182128] outline-none" placeholder="98+"/>
+                            <input type="tel" name="" className="lg:w-[296px] lg:h-[54px] w-full p-2 pl-3 rounded-xl mt-4 text-left bg-transparent border-2 border-[#182128] outline-none" placeholder="98+"/>
                         </div>
 
-                        <div className="lg:w-1/2 lg:mt-10">
+                        <div className="lg:w-1/2 lg:mt-10 w-full mt-5">
                             <label className="w-full block">آدرس ایمیل *</label>
-                            <input type="email" name="" className="lg:w-[296px] lg:h-[54px] pr-3 rounded-xl mt-4 bg-transparent border-2 border-[#182128] outline-none" placeholder="omid@gmail.com"/>
+                            <input type="email" name="" className="lg:w-[296px] lg:h-[54px] w-full p-2 pr-3 rounded-xl mt-4 bg-transparent border-2 border-[#182128] outline-none" placeholder="omid@gmail.com"/>
                         </div>
 
-                        <div className="lg:w-full lg:mt-10 flex flex-wrap justify-around">
+                        <div className="lg:w-full lg:mt-10 w-full mt-10 flex flex-wrap">
                             <label className="w-full block">موضوع درخواست خود را مشخص کنید</label>
 
-                            <label className="lg:mt-5">UI UX
+                            <label className="lg:mt-5 mt-6 lg:w-1/3 w-full">درخواست همکاری
                                 <input type="radio" className=""/>
                             </label>
 
-                            <label className="lg:mt-5">Wordpress
+                            <label className="lg:mt-5 mt-6 lg:w-1/3 w-full">انتقادات و پیشنهادات
                                 <input type="radio" className=""/>
                             </label>
 
-                            <label className="lg:mt-5">Brand Identify
-                                <input type="radio" className=""/>
-                            </label>
-
-                            <label className="lg:mt-5">Developing
-                                <input type="radio" className=""/>
+                            <label className="lg:mt-5 mt-6 lg:w-1/3 w-full">نظرات
+                                <input type="radio"/>
                             </label>
 
                         </div>
 
 
-                        <div className="lg:w-full lg:mt-10">
+                        <div className="lg:w-full lg:mt-10 w-full mt-10">
 
                             <label className="w-full block">درخواست خود را بنویسید *</label>
-                            <textarea className="lg:w-[94%] lg:mt-5 lg:pr-4 pt-3 rounded-xl bg-transparent border-2 border-[#182128] outline-none" placeholder="متن پیام را وارد کنید"> </textarea>
+                            <textarea className="lg:w-[94%] lg:mt-5 lg:pr-4 pt-3 rounded-xl bg-transparent border-2 border-[#182128] outline-none w-full mt-5" placeholder="متن پیام را وارد کنید"> </textarea>
 
                         </div>
 
-                        <div className="lg:w-full lg:mt-10 lg:mb-10 flex justify-end lg:pl-11">
-                            <button className="lg:w-[118px] lg:h-[45px] bg-[#2e567d] text-white rounded-lg">ارسال</button>
+                        <div className="lg:w-full lg:mt-10 lg:mb-10 mt-10 flex justify-end lg:pl-11">
+                            <button className="lg:w-[118px] h-[45px] w-32 bg-[#2e567d] text-white rounded-lg">ارسال</button>
                         </div>
 
                     </div>
 
-                    <div className="lg:w-[35%] pt-4 flex flex-wrap">
+                    <div className="lg:w-[35%] pt-4 flex flex-wrap w-full lg:mt-0 mt-10">
 
-                        <div className="lg:w-[90%] m-auto lg:pr-7">
+                        <div className="lg:w-[90%] m-auto lg:pr-7 w-full">
 
-                            <div className="flex gap-x-2 lg:mt-6">
+                            <div className="flex gap-x-2 lg:mt-6 mt-6">
                                 <Image src="/image/email.png" alt="" width={22} height={25}/>
                                 <p>omidataei1382@gmail.com</p>
                             </div>
 
-                            <div className="flex gap-x-2 lg:mt-6">
+                            <div className="flex gap-x-2 lg:mt-6 mt-6">
                                 <Image src="/image/location.png" alt="" width={22} height={25}/>
                                 <p>پاسداران - بوستان 5 - پلاک 84</p>
                             </div>
@@ -87,7 +83,7 @@ const ContactUs = ()=>{
                         </div>
 
 
-                        <div className="lg:w-[90%] m-auto lg:mt-80 flex justify-around">
+                        <div className="lg:w-[90%] m-auto lg:mt-80 flex justify-around w-full mt-20">
 
                             <div className="lg:w-[48px] lg:h-[48px]">
                                 <Image src="/image/telegram.png" alt="" width={48} height={48}/>
@@ -107,9 +103,9 @@ const ContactUs = ()=>{
 
                 </div>
 
-                <div className="lg:w-[132px] lg:h-[132px] rounded-full bg-[#2e567d] absolute left-40 top-14 -z-10"> </div>
-                <div className="lg:w-[162px] lg:h-[162px] rounded-full bg-[#2e567d] absolute left-80 top-40 -z-10"> </div>
-                <div className="lg:w-[250px] lg:h-[250px] rounded-full bg-[#2e567d] absolute left-0 -bottom-20 -z-10"> </div>
+                <div className="lg:w-[132px] lg:h-[132px] rounded-full bg-[#2e567d] absolute left-40 top-14 -z-10 animate-floatAndColor"> </div>
+                <div className="lg:w-[162px] lg:h-[162px] rounded-full bg-[#2e567d] absolute left-80 top-40 -z-10 animate-floatAndColor"> </div>
+                <div className="lg:w-[250px] lg:h-[250px] rounded-full bg-[#2e567d] absolute left-0 -bottom-20 -z-10 animate-floatAndColor"> </div>
 
             </div>
 

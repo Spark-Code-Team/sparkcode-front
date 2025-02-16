@@ -7,21 +7,21 @@ const Footer = ()=>{
 
         <>
 
-            <div className="w-full lg:h-[338px] bg-[#12202F] lg:mt-32 text-white">
+            <div className="w-full lg:h-[338px] bg-[#12202F] lg:mt-32 mt-28 text-white">
 
                 <div className="lg:w-[93%] w-full m-auto flex flex-wrap">
 
-                    <div className="lg:w-1/4">
+                    <div className="lg:w-1/4 w-full">
 
-                        <div className="lg:w-[95%] m-auto lg:mt-6">
-                            <Image src="/image/logo-footer.png" alt="" width={180} height={64}/>
+                        <div className="lg:w-[95%] w-full m-auto lg:mt-6 mt-6">
+                            <Image src="/image/logo-footer.png" alt="" width={180} height={64} className="lg:m-0 m-auto"/>
                         </div>
 
-                        <div className="lg:w-[95%] m-auto lg:mt-6 lg:pl-4">
+                        <div className="lg:w-[95%] w-full m-auto lg:mt-6 mt-6 lg:pl-4 lg:pr-0 pr-6 pl-6 lg:text-right text-center">
                             <p className="text-sm text-[#d4e1f2]">تیم نرم افزاری اسپارک کد مرجع برنامه نویسی انواع اپلیکیشن ، وب سایت و نرم افزارهای تخصصی</p>
                         </div>
 
-                        <div className="lg:w-[95%] m-auto lg:mt-6 flex gap-x-3">
+                        <div className="lg:w-[95%] w-full m-auto lg:mt-6 mt-6 lg:flex lg:justify-start lg:gap-x-3 flex justify-evenly">
 
                             <Image src="/image/insta-footer.png" alt="" width={20} height={20}/>
 
@@ -31,54 +31,54 @@ const Footer = ()=>{
 
                     </div>
 
-                    <div className="lg:w-1/4">
+                    <div className="lg:w-1/4 w-1/2">
 
-                        <div className="lg:w-[95%] m-auto lg:mt-6">
+                        <div className="lg:w-[95%] w-full m-auto lg:mt-6 mt-12 lg:pr-0 pr-7">
 
                             <p className="font-bold">دسترسی مستقیم</p>
 
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2]">پروژه ها</Link>
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2]">دوره ها</Link>
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2]">مقاله ها</Link>
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2]">تماس با ما</Link>
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2]">درباره ما</Link>
+                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">پروژه ها</Link>
+                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">دوره ها</Link>
+                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">مقاله ها</Link>
+                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">تماس با ما</Link>
+                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">درباره ما</Link>
 
                         </div>
 
                     </div>
 
-                    <div className="lg:w-1/4">
+                    <div className="lg:w-1/4 w-1/2">
 
-                        <div className="lg:w-[95%] m-auto lg:mt-6">
+                        <div className="lg:w-[95%] w-full m-auto lg:mt-6 mt-12 lg:pr-0 pr-7">
 
                             <p className="font-bold">خدمات ما</p>
 
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2]">نرم افزار مدیریت ارتباط با مشتری</Link>
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2]">قالب وردپرس</Link>
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2]">طراحی سایت</Link>
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2]">پشتیبانی</Link>
+                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">نرم افزار مدیریت ارتباط با مشتری</Link>
+                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">قالب وردپرس</Link>
+                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">طراحی سایت</Link>
+                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">پشتیبانی</Link>
 
                         </div>
 
                     </div>
 
-                    <div className="lg:w-1/4">
+                    <div className="lg:w-1/4 w-full">
 
-                        <div className="lg:w-[95%] m-auto lg:mt-6">
+                        <div className="lg:w-[95%] w-full m-auto lg:mt-6 mt-12 lg:pr-0 pr-7">
 
                             <p className="font-bold">ارتباط با ما</p>
 
-                            <div className="lg:mt-4 lg:flex lg:items-center gap-x-2 text-[15px] text-[#d4e1f2]">
+                            <div className="lg:mt-4 lg:flex lg:items-center gap-x-2 text-[15px] text-[#d4e1f2] mt-5 flex items-center gap-x-2">
                                 <Image src="/image/email-footer.png" alt="" width={20} height={20}/>
                                 <p>Info@sparkcode-service.com</p>
                             </div>
 
-                            <div className="lg:mt-4 lg:flex lg:items-center gap-x-2 text-[15px] text-[#d4e1f2]">
+                            <div className="lg:mt-4 lg:flex lg:items-center gap-x-2 text-[15px] text-[#d4e1f2] mt-5 flex items-center gap-x-2">
                                 <Image src="/image/phone-footer.png" alt="" width={20} height={20}/>
                                 <p>9961354854 98+ </p>
                             </div>
 
-                            <div className="lg:mt-4 lg:flex lg:items-center gap-x-2 text-[15px] text-[#d4e1f2]">
+                            <div className="lg:mt-4 lg:flex lg:items-center gap-x-2 text-[15px] text-[#d4e1f2] mt-5 flex items-center gap-x-2">
                                 <Image src="/image/map-footer.png" alt="" width={20} height={20}/>
                                 <p>تهران، تهران، خیابان پاسداران، بوستان پنج</p>
                             </div>
@@ -88,9 +88,9 @@ const Footer = ()=>{
                     </div>
 
 
-                    <div className="w-full lg:h-[1px] mt-10 bg-[#d4e1f2]"> </div>
+                    <div className="w-full lg:h-[1px] mt-10 bg-[#d4e1f2] w-[95%] h-[1px] m-auto mt-10"> </div>
 
-                    <div className="w-full m-auto text-center lg:mt-4 text-[#d4e1f2]">کلیه حقوق مادی و معنوی این سایت متعلق به اسپارک کد است.</div>
+                    <div className="w-full m-auto text-center lg:mt-7 lg:mb-0 mt-7 mb-7 text-[#d4e1f2]">کلیه حقوق مادی و معنوی این سایت متعلق به اسپارک کد است.</div>
 
                 </div>
 

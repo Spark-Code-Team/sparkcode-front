@@ -33,7 +33,7 @@ const CustomerReviews = ()=>{
 
             <div className="w-full lg:min-h-auto h-full lg:mt-24 mt-10">
 
-                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text">Customer Reviews</div>
+                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">Customer Reviews</div>
                 <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">نظرات مشتریان</div>
 
                 <div className="lg:w-[85%] w-full m-auto mt-10 lg:flex lg:flex-wrap gap-x-4 relative hidden">
