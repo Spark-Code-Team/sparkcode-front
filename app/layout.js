@@ -1,6 +1,6 @@
 import "./globals.css";
-import Navbar from "../components/module/navbar/Navbar";
-import Footer from "../components/module/footer/Footer";
+
+import HomeLayout from "@/components/layout/homeLayout/HomeLayout";
 
 export const metadata = {
   title: "spark code",
@@ -12,9 +12,9 @@ export default function RootLayout({ children }) {
     <html lang="fa">
       <body className={`bg-[#091119] font-dana`}>
 
-        <Navbar/>
-        {children}
-        <Footer/>
+        <HomeLayout>
+          {children}        
+        </HomeLayout>
 
       </body>
     </html>

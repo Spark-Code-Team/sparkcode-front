@@ -5,8 +5,9 @@ import IconLogin from "../../../public/icons/IconLogin";
 import { GiHamburgerMenu } from "react-icons/gi";
 import CloseMenu from "../../../public/icons/CloseMenu";
 import {useState} from "react";
+import { headerLink } from "@/constant/homeConstant";
 
-const Navbar = ()=>{
+const Header = ()=>{
 
     const [openMenu , setOpenMenu] = useState(false);
 
@@ -38,25 +39,20 @@ const Navbar = ()=>{
 
                     <ul className="flex items-center lg:mr-16 gap-x-9">
 
-                        <li>
-                            <Link href="#">پروژه ها</Link>
-                        </li>
-
-                        <li>
-                            <Link href="#">دوره ها</Link>
-                        </li>
-
-                        <li>
-                            <Link href="#">مقالات</Link>
-                        </li>
-
-                        <li>
-                            <Link href="#">تماس با ما</Link>
-                        </li>
-
-                        <li>
-                            <Link href="#">درباره ما</Link>
-                        </li>
+                        {
+                            headerLink.map((item, index) => (
+                                <li>
+                                    <Link 
+                                        href={item.link}
+                                        key={index}
+                                    >
+                                        {
+                                            item.title
+                                        }
+                                    </Link>
+                                </li>
+                            ))
+                        }
 
                     </ul>
 
@@ -113,35 +109,28 @@ const Navbar = ()=>{
 
                             <ul className="mt-7">
 
-                                <li className=" pr-5 mt-3">
-                                    <Link href="#">پروژه ها</Link>
-                                </li>
-
-                                <hr className="mt-3 mb-3"/>
-
-                                <li className=" pr-5 mt-3">
-                                    <Link href="#">دوره ها</Link>
-                                </li>
-
-                                <hr className="mt-3 mb-3"/>
-
-                                <li className=" pr-5 mt-3">
-                                    <Link href="#">مقالات</Link>
-                                </li>
-
-                                <hr className="mt-3 mb-3"/>
-
-                                <li className=" pr-5 mt-3">
-                                    <Link href="#">درباره ما</Link>
-                                </li>
-
-                                <hr className="mt-3 mb-3"/>
-
-                                <li className=" pr-5 mt-3">
-                                    <Link href="#">تماس با ما</Link>
-                                </li>
-
-                                <hr className="mt-3 mb-3"/>
+                                {
+                                    headerLink.map((item, index) => (
+                                        <>
+                                            <li 
+                                                className="
+                                                    pr-5 
+                                                    mt-3
+                                                "
+                                            >
+                                                <Link
+                                                    key={index} 
+                                                    href={item.link}
+                                                >
+                                                    {
+                                                        item.title
+                                                    }
+                                                </Link>
+                                            </li>
+                                            <hr className="mt-3 mb-3"/>
+                                        </>
+                                    ))
+                                }
 
                             </ul>
 
@@ -158,4 +147,4 @@ const Navbar = ()=>{
 }
 
 
-export default Navbar;
+export default Header;
