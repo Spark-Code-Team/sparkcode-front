@@ -56,7 +56,7 @@ const ContactUs = ()=>{
                         <div className="lg:w-full lg:mt-10 w-full mt-10">
 
                             <label className="w-full block">درخواست خود را بنویسید *</label>
-                            <textarea className="lg:w-[94%] lg:mt-5 lg:pr-4 pt-3 rounded-xl bg-transparent border-2 border-[#182128] outline-none w-full mt-5" placeholder="متن پیام را وارد کنید"> </textarea>
+                            <textarea className="lg:w-[94%] lg:mt-5 lg:pr-4 pt-3 rounded-xl bg-transparent border-2 border-[#182128] outline-none w-full mt-5" defaultValue="" /> 
 
                         </div>
 

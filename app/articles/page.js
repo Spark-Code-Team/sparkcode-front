@@ -1,15 +1,11 @@
+import ArticlsPage from "@/components/template/ArticelsPage";
+
+
+
 const Articles = ()=>{
 
     return(
-
-        <>
-
-            <h1>
-                Articles
-            </h1>
-
-        </>
-
+        <ArticlsPage />
     )
 
 }
