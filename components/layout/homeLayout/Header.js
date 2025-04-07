@@ -4,27 +4,27 @@ import Link from "next/link";
 import IconLogin from "../../../public/icons/IconLogin";
 import { GiHamburgerMenu } from "react-icons/gi";
 import CloseMenu from "../../../public/icons/CloseMenu";
-import {useState} from "react";
+import { useState } from "react";
 import { headerLink } from "@/constant/homeConstant";
 
-const Header = ()=>{
+const Header = () => {
 
-    const [openMenu , setOpenMenu] = useState(false);
+    const [openMenu, setOpenMenu] = useState(false);
 
-    const handleOpenMenu = ()=>{
+    const handleOpenMenu = () => {
 
         setOpenMenu(true);
         console.log("menu");
 
     }
 
-    const handleCloseMenu = ()=>{
+    const handleCloseMenu = () => {
 
         setOpenMenu(false);
 
     }
 
-    return(
+    return (
 
         <>
 
@@ -34,17 +34,16 @@ const Header = ()=>{
                 <div className="flex">
 
                     <div>
-                        <Image src={"/image/logo.png"} alt="" width={145} height={41}/>
+                        <Image src={"/image/logo.png"} alt="" width={145} height={41} />
                     </div>
 
                     <ul className="flex items-center lg:mr-16 gap-x-9">
 
                         {
                             headerLink.map((item, index) => (
-                                <li>
-                                    <Link 
+                                <li key={index}>
+                                    <Link
                                         href={item.link}
-                                        key={index}
                                     >
                                         {
                                             item.title
@@ -62,7 +61,7 @@ const Header = ()=>{
                 <div>
                     <Link href="#" className="bg-[#2e567d] text-white lg:w-[170px] lg:h-[48px] flex justify-center items-center gap-x-2 rounded-md">
                         ورود/ثبت نام
-                        <IconLogin/>
+                        <IconLogin />
                     </Link>
                 </div>
 
@@ -75,12 +74,12 @@ const Header = ()=>{
             <div className="w-full h-[50px] flex justify-between items-center pr-7 pl-7 lg:hidden">
 
                 <button onClick={handleOpenMenu}>
-                    <GiHamburgerMenu size={30} color="white"/>
+                    <GiHamburgerMenu size={30} color="white" />
                 </button>
 
                 <Link href="#" className="bg-[#2e567d] text-white w-[135px] h-[35px] flex justify-center items-center gap-x-2 rounded-md">
                     ورود/ثبت نام
-                    <IconLogin/>
+                    <IconLogin />
                 </Link>
 
             </div>
@@ -95,11 +94,11 @@ const Header = ()=>{
                         <div className="w-full h-[30px] flex justify-around items-center mt-5">
 
                             <div className="w-[20%]" onClick={handleCloseMenu}>
-                                <CloseMenu/>
+                                <CloseMenu />
                             </div>
 
                             <div>
-                                <Image src="/image/logo.png" alt="" width={81} height={16}/>
+                                <Image src="/image/logo.png" alt="" width={81} height={16} />
                             </div>
 
                         </div>
@@ -112,14 +111,14 @@ const Header = ()=>{
                                 {
                                     headerLink.map((item, index) => (
                                         <>
-                                            <li 
+                                            <li
                                                 className="
                                                     pr-5 
                                                     mt-3
                                                 "
                                             >
                                                 <Link
-                                                    key={index} 
+                                                    key={index}
                                                     href={item.link}
                                                 >
                                                     {
@@ -127,7 +126,7 @@ const Header = ()=>{
                                                     }
                                                 </Link>
                                             </li>
-                                            <hr className="mt-3 mb-3"/>
+                                            <hr className="mt-3 mb-3" />
                                         </>
                                     ))
                                 }
@@ -137,7 +136,7 @@ const Header = ()=>{
                         </div>
 
                     </div>
-                ):null
+                ) : null
             }
 
         </>
