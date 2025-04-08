@@ -6,7 +6,7 @@ const ServicesBanner = () => {
 
         <>
 
-            <div className="lg:w-full lg:h-[600px] bg-red-600 lg:pt-1 lg:mt-0">
+            <div className="lg:w-full lg:h-[600px] lg:pt-1 lg:mt-0">
 
                 <div className="lg:w-[85%] w-full mx-auto lg:mt-24 flex justify-around">
 
@@ -30,11 +30,6 @@ const ServicesBanner = () => {
                 <div className="w-full text-sm leading-7 text-white -mt-7 lg:hidden pr-3 pl-3 block">ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما در ارتباط است. این همکاری نزدیک به ما کمک می‌کند.</div>
 
             </div>
-
-
-            <h1>
-                omid
-            </h1>
 
         </>
 
