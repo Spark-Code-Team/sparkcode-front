@@ -1,3 +1,4 @@
+import DescriptionServices from "../module/servicesPage/DescriptionServices";
 import ServicesBanner from "../module/servicesPage/ServicesBanner";
 import ServicesSparkCode from "../module/servicesPage/ServicesSparkCode";
 import ServicesUs from "../module/servicesPage/ServicesUs";
@@ -11,6 +12,7 @@ const ServicesPage = ()=>{
             <ServicesBanner/>
             <ServicesUs/>
             <ServicesSparkCode/>
+            <DescriptionServices/>
         
         </>
 
