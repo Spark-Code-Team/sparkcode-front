@@ -1,34 +1,35 @@
-
-
-
 const headerLink = [
     {
         title: "پروژه ها",
-        link: ""
+        link: "/projects",
+        external: false
     },
     {
         title: "دوره ها",
-        link: ""
+        link: "/courses",
+        external: false
     },
     {
         title: "مقالات",
-        link: ""
+        link: "http://blog.sparkcode-service.com",
+        external: true
     },
     {
         title: "خدمات",
-        link: "/services"
+        link: "/services",
+        external: false
     },
     {
         title: "تماس با ما",
-        link: ""
+        link: "/contact",
+        external: false
     },
     {
         title: "درباره ما",
-        link: ""
+        link: "/about",
+        external: false
     },
 ]
 
 
-export {
-    headerLink
-}
+export {headerLink};

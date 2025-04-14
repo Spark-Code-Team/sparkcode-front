@@ -42,16 +42,21 @@ const Header = () => {
                         {
                             headerLink.map((item, index) => (
                                 <li key={index}>
-                                    <Link
-                                        href={item.link}
-                                    >
-                                        {
-                                            item.title
-                                        }
-                                    </Link>
+                                    {
+                                        item.external ? (
+                                            <a href={item.link}>
+                                                {item.title}
+                                            </a>
+                                        ) : (
+                                            <Link href={item.link}>
+                                                {item.title}
+                                            </Link>
+                                        )
+                                    }
                                 </li>
                             ))
                         }
+
 
                     </ul>
 
