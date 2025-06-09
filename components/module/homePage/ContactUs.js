@@ -27,27 +27,30 @@ const ContactUs = ()=>{
 
                         <div className="lg:w-1/2 lg:mt-10 w-full mt-5">
                             <label className="w-full block">شماره تماس *</label>
-                            <input type="tel" name="" className="lg:w-[296px] lg:h-[54px] w-full p-2 pl-3 rounded-xl mt-4 text-left bg-transparent border-2 border-[#182128] outline-none" placeholder="98+"/>
+                            <input type="tel" name="" className="lg:w-[296px] lg:h-[54px] w-full p-2 pl-3 rounded-xl mt-4 text-left bg-transparent border-2 border-[#182128] outline-none" placeholder="09120000000"/>
                         </div>
 
                         <div className="lg:w-1/2 lg:mt-10 w-full mt-5">
                             <label className="w-full block">آدرس ایمیل *</label>
-                            <input type="email" name="" className="lg:w-[296px] lg:h-[54px] w-full p-2 pr-3 rounded-xl mt-4 bg-transparent border-2 border-[#182128] outline-none" placeholder="omid@gmail.com"/>
+                            <input type="email" name="" className="lg:w-[296px] lg:h-[54px] w-full p-2 pr-3 rounded-xl mt-4 bg-transparent border-2 border-[#182128] outline-none" placeholder="email-address@gmail.com"/>
                         </div>
 
                         <div className="lg:w-full lg:mt-10 w-full mt-10 flex flex-wrap">
                             <label className="w-full block">موضوع درخواست خود را مشخص کنید</label>
 
-                            <label className="lg:mt-5 mt-6 lg:w-1/3 w-full">درخواست همکاری
+                            <label className="lg:mt-5 flex items-center gap-1 mt-6 lg:w-1/3 w-full">
                                 <input type="radio" className=""/>
+                                درخواست همکاری
                             </label>
 
-                            <label className="lg:mt-5 mt-6 lg:w-1/3 w-full">انتقادات و پیشنهادات
+                            <label className="lg:mt-5 flex items-center gap-1 mt-6 lg:w-1/3 w-full">
                                 <input type="radio" className=""/>
+                                انتقادات و پیشنهادات
                             </label>
 
-                            <label className="lg:mt-5 mt-6 lg:w-1/3 w-full">نظرات
+                            <label className="lg:mt-5 flex items-center gap-1 mt-6 lg:w-1/3 w-full">
                                 <input type="radio"/>
+                                نظرات
                             </label>
 
                         </div>
@@ -72,12 +75,12 @@ const ContactUs = ()=>{
 
                             <div className="flex gap-x-2 lg:mt-6 mt-6">
                                 <Image src="/image/email.png" alt="" width={22} height={25}/>
-                                <p>omidataei1382@gmail.com</p>
+                                <p>spark.code.agance@gmail.com</p>
                             </div>
 
                             <div className="flex gap-x-2 lg:mt-6 mt-6">
                                 <Image src="/image/location.png" alt="" width={22} height={25}/>
-                                <p>پاسداران - بوستان 5 - پلاک 84</p>
+                                <p>پاسداران - بوستان 5 </p>
                             </div>
 
                         </div>
@@ -85,17 +88,23 @@ const ContactUs = ()=>{
 
                         <div className="lg:w-[90%] m-auto lg:mt-80 flex justify-around w-full mt-20">
 
-                            <div className="lg:w-[48px] lg:h-[48px]">
+                            {/* <div className="lg:w-[48px] lg:h-[48px]">
                                 <Image src="/image/telegram.png" alt="" width={48} height={48}/>
-                            </div>
+                            </div> */}
 
-                            <div className="lg:w-[48px] lg:h-[48px]">
+                            <a 
+                                href="https://www.linkedin.com/company/sparkcode-com/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B8nkW%2FiZdReqDjj4u%2BlNEgA%3D%3D"
+                                className="lg:w-[48px] lg:h-[48px]"
+                            >
                                 <Image src="/image/linkedin.png" alt="" width={48} height={48}/>
-                            </div>
+                            </a>
 
-                            <div className="lg:w-[48px] lg:h-[48px]">
+                            <a 
+                                href="https://www.instagram.com/sparkcode_com?igsh=dXp2YnU4dGljd2xu"
+                                className="lg:w-[48px] lg:h-[48px]"
+                            >
                                 <Image src="/image/instagram.png" alt="" width={48} height={48}/>
-                            </div>
+                            </a>
 
                         </div>
 

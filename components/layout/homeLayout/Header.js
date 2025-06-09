@@ -12,10 +12,7 @@ const Header = () => {
     const [openMenu, setOpenMenu] = useState(false);
 
     const handleOpenMenu = () => {
-
         setOpenMenu(true);
-        console.log("menu");
-
     }
 
     const handleCloseMenu = () => {
@@ -34,7 +31,7 @@ const Header = () => {
                 <div className="flex">
 
                     <div>
-                        <Image src={"/image/logo.png"} alt="" width={145} height={41} />
+                        <Image src={"/image/logo.png"} alt="logo" width={145} height={41} />
                     </div>
 
                     <ul className="flex items-center lg:mr-16 gap-x-9">
@@ -64,10 +61,10 @@ const Header = () => {
 
 
                 <div>
-                    <Link href="#" className="bg-[#2e567d] text-white lg:w-[170px] lg:h-[48px] flex justify-center items-center gap-x-2 rounded-md">
+                    {/* <Link href="#" className="bg-[#2e567d] text-white lg:w-[170px] lg:h-[48px] flex justify-center items-center gap-x-2 rounded-md">
                         ورود/ثبت نام
                         <IconLogin />
-                    </Link>
+                    </Link> */}
                 </div>
 
             </div>
@@ -78,71 +75,87 @@ const Header = () => {
 
             <div className="w-full h-[50px] flex justify-between items-center pr-7 pl-7 lg:hidden">
 
-                <button onClick={handleOpenMenu}>
+                <button onClick={() => handleOpenMenu()}>
                     <GiHamburgerMenu size={30} color="white" />
                 </button>
 
-                <Link href="#" className="bg-[#2e567d] text-white w-[135px] h-[35px] flex justify-center items-center gap-x-2 rounded-md">
+                <div>
+                    <Image src={"/image/logo.png"} alt="logo" className=" w-32 h-10" width={145} height={41} />
+                </div>
+                {/* <Link href="#" className="bg-[#2e567d] text-white w-[135px] h-[35px] flex justify-center items-center gap-x-2 rounded-md">
                     ورود/ثبت نام
                     <IconLogin />
-                </Link>
+                </Link> */}
 
             </div>
 
 
             {/*  Hamberger Menu   */}
+                    <div
+                        className={`
+                            w-screen
+                            h-screen
+                            fixed
+                            top-0
+                            bg-[#00000080]    
+                            z-50
+                            lg:hidden
+                            transition-all
+                            duration-300
+                            ${openMenu ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}
+                        `}
+                    >
+                        <div className={`w-[217px] h-full z-10 bg-[#2e567d] absolute top-0 rounded-l-2xl`}>
 
-            {
-                openMenu ? (
-                    <div className={`w-[217px] h-[500px] z-10 bg-[#2e567d] absolute top-0 right-7 rounded-2xl lg:hidden`}>
+                            <div className="w-full h-[30px] flex justify-around items-center mt-5">
 
-                        <div className="w-full h-[30px] flex justify-around items-center mt-5">
+                                <div className="w-fit cursor-pointer" onClick={() => handleCloseMenu()}>
+                                    <CloseMenu />
+                                </div>
 
-                            <div className="w-[20%]" onClick={handleCloseMenu}>
-                                <CloseMenu />
+                                <div>
+                                    <Image src="/image/logo.png" alt="logo" width={81} height={16} />
+                                </div>
+
                             </div>
 
-                            <div>
-                                <Image src="/image/logo.png" alt="" width={81} height={16} />
-                            </div>
 
-                        </div>
+                            <div className="w-full">
 
+                                <ul className="mt-7">
 
-                        <div className="w-full">
-
-                            <ul className="mt-7">
-
-                                {
-                                    headerLink.map((item, index) => (
-                                        <>
-                                            <li
-                                                className="
-                                                    pr-5 
-                                                    mt-3
-                                                "
+                                    {
+                                        headerLink.map((item, index) => (
+                                            <div
+                                                key={index}
                                             >
-                                                <Link
-                                                    key={index}
-                                                    href={item.link}
+                                                <li
+                                                    className="
+                                                        pr-5 
+                                                        mt-3
+                                                        text-white
+                                                    "
                                                 >
-                                                    {
-                                                        item.title
-                                                    }
-                                                </Link>
-                                            </li>
-                                            <hr className="mt-3 mb-3" />
-                                        </>
-                                    ))
-                                }
+                                                    <Link
+                                                        key={index}
+                                                        href={item.link}
+                                                    >
+                                                        {
+                                                            item.title
+                                                        }
+                                                    </Link>
+                                                </li>
+                                                <hr className="mt-3 mb-3" />
+                                            </div>
+                                        ))
+                                    }
 
-                            </ul>
+                                </ul>
+
+                            </div>
 
                         </div>
-
                     </div>
-                ) : null
-            }
 
         </>
 

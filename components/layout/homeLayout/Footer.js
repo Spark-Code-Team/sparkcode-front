@@ -22,10 +22,17 @@ const Footer = ()=>{
                         </div>
 
                         <div className="lg:w-[95%] w-full m-auto lg:mt-6 mt-6 lg:flex lg:justify-start lg:gap-x-3 flex justify-evenly">
+                            <a
+                                href="https://www.instagram.com/sparkcode_com?igsh=dXp2YnU4dGljd2xu"
+                            >
+                                <Image src="/image/insta-footer.png" alt="" width={20} height={20}/>
+                            </a>
 
-                            <Image src="/image/insta-footer.png" alt="" width={20} height={20}/>
-
-                            <Image src="/image/linkedin-footer.png" alt="" width={20} height={20}/>
+                            <a
+                                href="https://www.linkedin.com/company/sparkcode-com/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B8nkW%2FiZdReqDjj4u%2BlNEgA%3D%3D"
+                            >
+                                <Image src="/image/linkedin-footer.png" alt="" width={20} height={20}/>
+                            </a>
 
                         </div>
 
@@ -68,19 +75,19 @@ const Footer = ()=>{
 
                             <p className="font-bold">ارتباط با ما</p>
 
-                            <div className="lg:mt-4 lg:flex lg:items-center gap-x-2 text-[15px] text-[#d4e1f2] mt-5 flex items-center gap-x-2">
-                                <Image src="/image/email-footer.png" alt="" width={20} height={20}/>
-                                <p>Info@sparkcode-service.com</p>
+                            <div className="lg:mt-4 lg:flex lg:items-center text-[15px] text-[#d4e1f2] mt-5 flex items-center gap-x-2">
+                                <Image src="/image/email-footer.png" alt="logo" width={20} height={20}/>
+                                <p>spark.code.agance@gmail.com</p>
                             </div>
 
-                            <div className="lg:mt-4 lg:flex lg:items-center gap-x-2 text-[15px] text-[#d4e1f2] mt-5 flex items-center gap-x-2">
-                                <Image src="/image/phone-footer.png" alt="" width={20} height={20}/>
-                                <p>9961354854 98+ </p>
+                            <div className="lg:mt-4 lg:flex lg:items-center text-[15px] text-[#d4e1f2] mt-5 flex items-center gap-x-2">
+                                <Image src="/image/phone-footer.png" alt="logo" width={20} height={20}/>
+                                <p>9961354854 021 </p>
                             </div>
 
-                            <div className="lg:mt-4 lg:flex lg:items-center gap-x-2 text-[15px] text-[#d4e1f2] mt-5 flex items-center gap-x-2">
-                                <Image src="/image/map-footer.png" alt="" width={20} height={20}/>
-                                <p>تهران، تهران، خیابان پاسداران، بوستان پنج</p>
+                            <div className="lg:mt-4 lg:flex lg:items-center text-[15px] text-[#d4e1f2] mt-5 flex items-center gap-x-2">
+                                <Image src="/image/map-footer.png" alt="logo" width={20} height={20}/>
+                                <p>تهران، خیابان پاسداران، بوستان پنج</p>
                             </div>
 
                         </div>
@@ -88,7 +95,7 @@ const Footer = ()=>{
                     </div>
 
 
-                    <div className="w-full lg:h-[1px] mt-10 bg-[#d4e1f2] w-[95%] h-[1px] m-auto mt-10"> </div>
+                    <div className="lg:h-[1px] bg-[#d4e1f2] w-[95%] h-[1px] m-auto mt-10"> </div>
 
                     <div className="w-full m-auto text-center lg:mt-7 lg:mb-0 mt-7 mb-7 text-[#d4e1f2]">کلیه حقوق مادی و معنوی این سایت متعلق به اسپارک کد است.</div>
 

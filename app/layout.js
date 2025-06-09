@@ -2,6 +2,10 @@ import "./globals.css";
 
 import HomeLayout from "@/components/layout/homeLayout/HomeLayout";
 
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 export const metadata = {
   title: "spark code",
   description: "spark code",

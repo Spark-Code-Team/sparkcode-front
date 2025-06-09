@@ -1,14 +1,14 @@
-const headerLink = [
+export const headerLink = [
     {
         title: "پروژه ها",
         link: "/projects",
         external: false
     },
-    {
-        title: "دوره ها",
-        link: "/courses",
-        external: false
-    },
+    // {
+    //     title: "دوره ها",
+    //     link: "/courses",
+    //     external: false
+    // },
     {
         title: "مقالات",
         link: "http://blog.sparkcode-service.com",
@@ -30,6 +30,3 @@ const headerLink = [
         external: false
     },
 ]
-
-
-export {headerLink};
