@@ -1,6 +1,80 @@
-import Image from "next/image";
+"use client"
 
-const ContactUs = ()=>{
+import { LandingRequest } from "@/services/homePage";
+// Next & React
+import Image from "next/image";
+import { useState } from "react";
+import { toast } from "react-toastify";
+
+
+const inputs = [
+    {
+        title: "نام",
+        placeholder: "نام خود را بنویسید",
+        name: "first_name"
+    },
+    {
+        title: "نام خانوادگی",
+        placeholder: "نام خانوادگی خود را بنویسید",
+        name: "last_name"
+    },
+    {
+        title: "شماره تماس",
+        placeholder: "09120000000",
+        name: "phone_number"
+    },
+    {
+        title: "آدرس ایمیل",
+        placeholder: "email-address@gmail.com",
+        name: "email"
+    },
+    {
+        title: "درخواست خود را بنویسید",
+        placeholder: "",
+        name: "request"
+    }
+]
+
+const ContactUs = () => {
+
+    const [requestInputs, setRequestInputs] = useState({
+        first_name: "",
+        last_name: "",
+        phone_number: "",
+        email: "",
+        request: ""
+    })
+
+    const InputHandler = (e) => {
+        
+        setRequestInputs(last => ({...last, [e.target.name]: e.target.value}))
+    }
+
+    const sendData = async () => {
+
+        if(!requestInputs.email && !requestInputs.first_name && !requestInputs.last_name && !requestInputs.request && !requestInputs.phone_number) {
+            return toast.error("تمام فیلد ها باید پر شوند")
+        }
+        const {response, error} = await LandingRequest(
+            `${requestInputs.first_name + " " + requestInputs.last_name}`,
+            requestInputs.phone_number,
+            `${requestInputs.request + " " + requestInputs.email}`,
+            ""
+        )
+
+        if(response) {
+            toast.success("درخواست شما با موفقیت ثبت شد")
+            setRequestInputs({
+                first_name: "",
+                last_name: "",
+                phone_number: "",
+                email: "",
+                request: ""
+            })
+        } else {
+            toast.error("مشکلی پیش آمده")
+        }
+    }
 
     return(
 
@@ -15,56 +89,108 @@ const ContactUs = ()=>{
 
                     <div className="lg:w-[65%] w-full lg:pr-10 flex flex-wrap lg:relative custom-border-contact">
 
-                        <div className="lg:w-1/2 lg:mt-10 w-full mt-5">
-                            <label className="w-full block">نام *</label>
-                            <input type="text" name="" className="lg:w-[296px] lg:h-[54px] w-full p-2 pr-3 rounded-xl mt-4 bg-transparent border-2 border-[#182128] outline-none" placeholder="نام خود را وارد کنید"/>
-                        </div>
+                        {
+                            inputs.map(item => {
 
-                        <div className="lg:w-1/2 lg:mt-10 w-full mt-5">
-                            <label className="w-full block">نام خانوادگی *</label>
-                            <input type="text" name="" className="lg:w-[296px] lg:h-[54px] w-full p-2 pr-3 rounded-xl mt-4 bg-transparent border-2 border-[#182128] outline-none" placeholder="نام خانوادگی خود را وارد کنید"/>
-                        </div>
-
-                        <div className="lg:w-1/2 lg:mt-10 w-full mt-5">
-                            <label className="w-full block">شماره تماس *</label>
-                            <input type="tel" name="" className="lg:w-[296px] lg:h-[54px] w-full p-2 pl-3 rounded-xl mt-4 text-left bg-transparent border-2 border-[#182128] outline-none" placeholder="09120000000"/>
-                        </div>
-
-                        <div className="lg:w-1/2 lg:mt-10 w-full mt-5">
-                            <label className="w-full block">آدرس ایمیل *</label>
-                            <input type="email" name="" className="lg:w-[296px] lg:h-[54px] w-full p-2 pr-3 rounded-xl mt-4 bg-transparent border-2 border-[#182128] outline-none" placeholder="email-address@gmail.com"/>
-                        </div>
-
-                        <div className="lg:w-full lg:mt-10 w-full mt-10 flex flex-wrap">
-                            <label className="w-full block">موضوع درخواست خود را مشخص کنید</label>
-
-                            <label className="lg:mt-5 flex items-center gap-1 mt-6 lg:w-1/3 w-full">
-                                <input type="radio" className=""/>
-                                درخواست همکاری
-                            </label>
-
-                            <label className="lg:mt-5 flex items-center gap-1 mt-6 lg:w-1/3 w-full">
-                                <input type="radio" className=""/>
-                                انتقادات و پیشنهادات
-                            </label>
-
-                            <label className="lg:mt-5 flex items-center gap-1 mt-6 lg:w-1/3 w-full">
-                                <input type="radio"/>
-                                نظرات
-                            </label>
-
-                        </div>
-
-
-                        <div className="lg:w-full lg:mt-10 w-full mt-10">
-
-                            <label className="w-full block">درخواست خود را بنویسید *</label>
-                            <textarea className="lg:w-[94%] lg:mt-5 lg:pr-4 pt-3 rounded-xl bg-transparent border-2 border-[#182128] outline-none w-full mt-5" defaultValue="" /> 
-
-                        </div>
+                                if(item.name == "request") {
+                                    return (
+                                        <div 
+                                            className="
+                                                lg:w-full 
+                                                lg:mt-10 
+                                                w-full 
+                                                mt-10
+                                            "
+                                            key={item.title}
+                                        >
+                                            <label 
+                                                className="
+                                                    w-full 
+                                                    block
+                                                "
+                                            >
+                                                {item.title}    
+                                            </label>
+                                            <textarea 
+                                                className="
+                                                    lg:w-[94%] 
+                                                    lg:mt-5 
+                                                    lg:pr-4 
+                                                    pt-3 
+                                                    rounded-xl 
+                                                    bg-transparent 
+                                                    border-2 
+                                                    border-[#182128] 
+                                                    outline-none 
+                                                    w-full 
+                                                    mt-5
+                                                " 
+                                                value={requestInputs[item.name]}
+                                                name={item.name} 
+                                                onChange={(e) => InputHandler(e)}
+                                            /> 
+                                        </div>
+                                    )
+                                } else {
+                                    return (
+                                        <div 
+                                            className="
+                                                lg:w-1/2 
+                                                lg:mt-10
+                                                w-full 
+                                                mt-5
+                                            "
+                                            key={item.title}
+                                        >
+                                            <label 
+                                                className="
+                                                    w-full 
+                                                    block
+                                                "
+                                            >
+                                                {item.title}
+                                            </label>
+                                            <input 
+                                                type="text" 
+                                                name={item.name} 
+                                                className="
+                                                    lg:w-[296px] 
+                                                    lg:h-[54px] 
+                                                    w-full 
+                                                    p-2 
+                                                    pr-3 
+                                                    rounded-xl 
+                                                    mt-4 
+                                                    bg-transparent 
+                                                    border-2 
+                                                    border-[#182128] 
+                                                    outline-none
+                                                " 
+                                                placeholder={item.placeholder}
+                                                value={requestInputs[item.name]}
+                                                onChange={(e) => InputHandler(e)}
+                                            />
+                                        </div>
+                                    )
+                                }
+                            
+                            })
+                        }
 
                         <div className="lg:w-full lg:mt-10 lg:mb-10 mt-10 flex justify-end lg:pl-11">
-                            <button className="lg:w-[118px] h-[45px] w-32 bg-[#2e567d] text-white rounded-lg">ارسال</button>
+                            <button 
+                                className="
+                                    lg:w-[118px] 
+                                    h-[45px] 
+                                    w-32 
+                                    bg-[#2e567d] 
+                                    text-white 
+                                    rounded-lg
+                                "
+                                onClick={() => sendData()}
+                            >
+                                ارسال
+                            </button>
                         </div>
 
                     </div>

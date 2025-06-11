@@ -10,7 +10,7 @@ import 'swiper/css/effect-coverflow';
 
 const CustomerReviews = () => {
 
-    const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(3);
     const slides = [
         { id: 1, name: "امید عطایی" },
         { id: 2, name: "محسن پورپاک" },
@@ -22,21 +22,6 @@ const CustomerReviews = () => {
         { id: 8, name: "مریم محمدی" },
     ]
 
-    const prevButton = useRef(null)
-    const nextButton = useRef(null)
-
-    const updateSlider = (mozoe) => {
-        if (mozoe === "azafe") {
-            setIndex((prev) =>
-            prev <= 0 ? prev + 1 : prev
-            );
-        } else {
-            setIndex((prev) =>
-            prev >= slides.length -1 ? prev - 1 : prev
-            );
-        }
-    };
-
     return (
 
             <div className="w-full lg:min-h-auto h-full lg:mt-24 mt-10">
@@ -44,89 +29,53 @@ const CustomerReviews = () => {
                 <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">Customer Reviews</div>
                 <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">نظرات مشتریان</div>
 
-                <div className="lg:w-[85%] w-full m-auto mt-10 lg:flex lg:flex-wrap gap-x-4 relative hidden">
+                <div className="lg:w-[85%] w-full m-auto mt-10 lg:flex lg:flex-wrap gap-x-4 relative">
 
-                    <div className="w-full flex justify-end gap-x-2">
-
-                        <div className=" flex justify-between gap-x-2">
-
-                            <button ref={prevButton} className="w-12 h-12 bg-[#2e567d] flex justify-center items-center" onClick={() => updateSlider("azafee")}>
-                                <SlideRight/>
-                            </button>
-                            <button ref={nextButton} className="w-12 h-12 bg-[#2e567d] flex justify-center items-center" onClick={() => updateSlider("azafe")}>
-                                <SlideLeft/>
-                            </button>
-
-
-                        </div>
-
-                    </div>
-
-                    <div className=" lg:w-[1200px] w-3/5 min-h-[200px] mx-auto mt-10 overflow-hidden">
+                    <div className=" lg:w-[1200px] w-full  mx-auto mt-10 overflow-hidden">
                         <Swiper
                             effect="coverflow"
                             grabCursor={true}
                             centeredSlides={true}
                             slidesPerView={3}
                             spaceBetween={30}
+                            initialSlide={3}
                             coverflowEffect={{
-                            rotate: 0,
-                            stretch: 0,
-                            depth: 100,
-                            modifier: 2.5,
-                            slideShadows: false,
+                                rotate: 0,
+                                stretch: 0,
+                                depth: 100,
+                                modifier: 2.5,
+                                slideShadows: false,
                             }}
                             modules={[EffectCoverflow, Navigation]}
-                            className="
-                                p-2
-                            "
-                            navigation={{
-                                prevEl: prevButton.current,
-                                nextEl: nextButton.current
-                            }}
-                            // onSlideChange={(swiper) => {
-                            //     setIndex(swiper.activeIndex)
-                            // }}
-                            // onBeforeInit={(swiper) => {
-                            //     swiper.params.navigation.prevEl = prevRef.current;
-                            //     swiper.params.navigation.nextEl = nextRef.current;
-                            // }}
                             onSwiper={(swiper) => {
-                                // حل مشکل: گوش دادن دستی به تغییر اسلاید
                                 swiper.on('slideChange', () => {
-                                    setIndex(swiper.activeIndex);
+                                setIndex(swiper.activeIndex);
                                 });
                             }}
-                        >
+                            >
                             {slides.map((slide, i) => (
                                 <SwiperSlide
                                     key={i}
-                                    virtualIndex={index}
-                                    className={`flex-none w-[300px] flex justify-center rounded-lg items-center p-4 transition-transform duration-300 cursor-pointer scale-125 z-10 opacity-100 ${i == index ? "opacity-100" : "opacity-50"}`}
-                                    // onClick={() => updateSlider(i)}
+                                    className={`flex justify-center transition-transform duration-300 cursor-pointer ${
+                                        i === index ? 'scale-110 z-10 opacity-100' : 'scale-90 opacity-50'
+                                    }`}
                                 >
-                                    {/*<Image width={300} height={300} src={src} alt={`Slide ${i + 1}`} className="w-full rounded-lg" />*/}
-                                    <div className="lg:w-[300px] bg-[#2e567d] pb-9 pt-5 rounded-lg">
-                                        <p className="w-full text-[12px] mt-5 pr-5 pl-7 leading-6 text-white">تجربه کار کردن با تیم اسپارکد یکی از بهترین تجربه های کاری من در این چند ساله بوده لذت داشتن یک تیم حرفه ای و باحال یکی از دلایل خفن بود اینتیم بود ! </p>
-
-                                        <div className="flex justify-between items-center pr-5 pl-5 mt-16">
-
-                                            <div>
-                                                <Image src="/image/arrow-comment.png" alt="" width={37} height={37}/>
-                                            </div>
-
-                                            <div className="flex items-center">
-                                                <p className="pl-2 text-white">{slide.name}</p>
-                                                <Image src="/image/social.png" alt="" width={32} height={32}/>
-                                            </div>
-
-                                        </div>
-
+                                <div className="w-full max-w-[250px] sm:max-w-[280px] md:max-w-[300px] lg:max-w-[320px] h-[170px] lg:h-[220px] flex flex-col justify-between bg-[#2e567d] py-3 lg:pt-5 lg:pb-9 rounded-lg">
+                                    <p className="text-[10px] lg:text-[12px] text-white text-justify px-2 lg:px-7 mt-2 lg:mt-5">
+                                    تجربه کار کردن با تیم اسپارکد یکی از بهترین تجربه های کاری من در این چند ساله بوده...
+                                    </p>
+                                    <div className="flex justify-between items-center px-2 lg:px-5 mt-auto">
+                                    <Image src="/image/arrow-comment.png" className="w-5 h-5 lg:w-8 lg:h-8" alt="" width={37} height={37} />
+                                    <div className="flex items-center">
+                                        <p className="pl-2 text-[10px] text-white">{slide.name}</p>
+                                        <Image src="/image/social.png" className="w-5 h-5 lg:w-8 lg:h-8" alt="" width={32} height={32} />
                                     </div>
-
+                                    </div>
+                                </div>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
+
                     </div>
 
 
