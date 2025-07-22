@@ -30,9 +30,11 @@ const Header = () => {
 
                 <div className="flex">
 
-                    <div>
+                    <Link
+                        href="/"
+                    >
                         <Image src={"/image/logo.png"} alt="logo" width={145} height={41} />
-                    </div>
+                    </Link>
 
                     <ul className="flex items-center lg:mr-16 gap-x-9">
 
@@ -113,9 +115,12 @@ const Header = () => {
                                     <CloseMenu />
                                 </div>
 
-                                <div>
+                                <Link
+                                    href="/"
+                                    onClick={() => setOpenMenu(false)}
+                                >
                                     <Image src="/image/logo.png" alt="logo" width={81} height={16} />
-                                </div>
+                                </Link>
 
                             </div>
 
@@ -128,15 +133,17 @@ const Header = () => {
                                         headerLink.map((item, index) => (
                                             <div
                                                 key={index}
-                                            >
+                                                >
                                                 <li
                                                     className="
-                                                        pr-5 
-                                                        mt-3
-                                                        text-white
+                                                    pr-5 
+                                                    mt-3
+                                                    text-white
                                                     "
-                                                >
+                                                    
+                                                    >
                                                     <Link
+                                                        onClick={() => setOpenMenu(false)}
                                                         key={index}
                                                         href={item.link}
                                                     >
