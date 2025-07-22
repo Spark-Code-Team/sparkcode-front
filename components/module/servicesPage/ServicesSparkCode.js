@@ -13,8 +13,8 @@ const ServicesSparkCode = () => {
 
                     <div className="lg:w-1/4">
 
-                        <div className="lg:w-[65%] m-auto">
-                            
+                        <div className="lg:w-[65%] text-center m-auto">
+                            <img src="/image/proTeam.png" className=" rounded-xl mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
                             <div className="w-full m-auto text-white">تیم حرفه ای و خلاق</div>
                             <div className="w-full m-auto mt-4 text-white">تیمی از متخصصان با تجربه و پرشور</div>
 
@@ -24,8 +24,8 @@ const ServicesSparkCode = () => {
 
                     <div className="lg:w-1/4">
 
-                        <div className="lg:w-[65%] m-auto">
-                            
+                        <div className="lg:w-[65%] m-auto text-center">
+                            <img src="image/Comprehensive.png" className=" rounded-xl mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
                             <div className="w-full m-auto text-white">خدمات جامع</div>
                             <div className="w-full m-auto mt-4 text-white">ارائه خدمات سفارشی برا اساس نیازهای شما</div>
 
@@ -35,9 +35,9 @@ const ServicesSparkCode = () => {
 
                     <div className="lg:w-1/4">
 
-                        <div className="lg:w-[65%] m-auto">
-                            
-                            <div className="w-full m-auto text-white">تکنولوژی های روز دنیا</div>
+                        <div className="lg:w-[65%] text-center m-auto">
+                            <img src="image/tech.png" className=" rounded-xl mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
+                            <div className="w-full m-auto mb-2 text-white">تکنولوژی های روز دنیا</div>
                             <div className="w-full m-auto mt-4 text-white">به روز بودن با آخرین تکنولوژی ها</div>
 
                         </div>
@@ -46,8 +46,8 @@ const ServicesSparkCode = () => {
 
                     <div className="lg:w-1/4">
 
-                        <div className="lg:w-[65%] m-auto">
-                            
+                        <div className="lg:w-[65%] mb-2 text-center m-auto">
+                            <img src="image/quality.png" className=" rounded-xl mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
                             <div className="w-full m-auto text-white">تعهد به کیفیت</div>
                             <div className="w-full m-auto mt-4 text-white">تضمین کیفیت و رضایت مشتری</div>
 

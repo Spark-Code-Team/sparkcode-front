@@ -6,9 +6,7 @@ const DescriptionServices = () => {
 
         <>
 
-            <DescriptionServicesElement reverse={false}/>
-            <DescriptionServicesElement reverse={true}/>
-            <DescriptionServicesElement reverse={false}/>
+            <DescriptionServicesElement />
 
         </>
 
