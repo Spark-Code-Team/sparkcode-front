@@ -10,7 +10,7 @@ const DescriptionServicesElement = () => {
 
             <div className="w-full lg:mt-20 mt-10">
 
-                <div className={`lg:w-[85%] w-full m-auto lg:mt-14 flex flex-col lg:flex-row `}>
+                <div className={`lg:w-[85%] w-full m-auto lg:mt-14 p-7 lg:p-0 flex flex-col lg:flex-row `}>
 
                     <div className="lg:w-1/2 m-auto">
                         <p className="text-xl text-white">توسعه وب سایت</p>
@@ -19,14 +19,14 @@ const DescriptionServicesElement = () => {
                         توسعه وب‌سایت فراتر از پیاده‌سازی صفحات و نوشتن کد است؛ ما معماری نرم‌افزار را بر اساس اهداف تجاری، نیازهای کاربران و آینده‌نگری طراحی میکنیم.  از انتخاب دقیق فناوری‌های فرانت‌اند و بک‌اند گرفته تا طراحی پایگاه‌داده و یکپارچه‌سازی با سرویس‌های خارجی، هر بخش با دقت مهندسی و نگاه سیستماتیک ساخته می‌شود. ما فرآیند توسعه را با استفاده از متدولوژی‌های مدرن مانند Agile و DevOps پیش می‌بریم تا تحویل سریع، کنترل کیفیت پیوسته و قابلیت توسعه در آینده تضمین شود. هدف ما ساختن وب‌سایت‌هایی است که نه‌فقط کار کنند، بلکه قابل اعتماد، توسعه‌پذیر و آماده برای رشد باشند.
 
                             </div>
-                        <Link href="#" className="bg-[#2E567D] lg:w-[153px] lg:h-[40px] lg:flex lg:justify-center lg:items-center lg:mt-7 rounded-md lg:gap-x-3 text-white">
+                        <Link href="/?showComponent=true#bottom" className="bg-[#2E567D] lg:w-[153px] lg:h-[40px] lg:flex lg:justify-center lg:items-center lg:mt-7 rounded-md lg:gap-x-3 text-white">
                             تماس با ما<ArrowLeftService />
                         </Link>
                     </div>
 
                     <div className="lg:w-1/2 m-auto lg:flex lg:justify-center">
 
-                    <img src="/image/webdesign.png" className=" rounded-xl lg:w-[449px] lg:h-[425px] bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
+                    <img src="/image/webdesign.png" className=" lg-rounded-xl rounded-full mt-4 m-auto w-[40%] lg:w-[449px] lg:h-[425px] bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
 
                     </div>
 
@@ -48,7 +48,7 @@ const DescriptionServicesElement = () => {
                     </div>
 
                     <div className="lg:w-1/2 m-auto lg:flex lg:justify-center">
-                    <img src="/image/Services.png" className=" rounded-xl lg:w-[449px] lg:h-[425px] bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
+                    <img src="/image/Services.png" className=" lg-rounded-xl rounded-full w-[40%] m-auto mt-4 lg:w-[449px] lg:h-[425px] bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
 
 
                     </div>
@@ -71,7 +71,7 @@ const DescriptionServicesElement = () => {
 
                     <div className="lg:w-1/2 m-auto lg:flex lg:justify-center">
                         
-                    <img src="/image/success.png" className=" rounded-xl lg:w-[449px] lg:h-[425px] bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
+                    <img src="/image/success.png" className="lg-rounded-xl rounded-full w-[40%] m-auto mt-4 lg:w-[449px] lg:h-[425px] bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
 
                         {/* <div className="lg:w-[449px] lg:h-[425px] bg-[url('/image/vector11.png')] bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white">
                             SparkCode

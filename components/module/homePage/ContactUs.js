@@ -5,6 +5,8 @@ import { LandingRequest } from "@/services/homePage";
 import Image from "next/image";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 
 const inputs = [
@@ -36,6 +38,18 @@ const inputs = [
 ]
 
 const ContactUs = () => {
+
+    const router = useRouter();
+
+    useEffect(() => {
+        if (router.isReady && router.query.showComponent === 'true') {
+          const element = document.getElementById('bottom');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }, [router.isReady, router.query]);
+      
 
     const [requestInputs, setRequestInputs] = useState({
         first_name: "",
@@ -85,7 +99,7 @@ const ContactUs = () => {
                 <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">About Spark Code</div>
                 <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">درباره اسپارک کد</div>
 
-                <div className="glass-background lg:w-[85%] w-[90%] lg:flex m-auto mt-14 border-2 border-[#182128] rounded-3xl">
+                <div id="bottom" className="glass-background lg:w-[85%] w-[90%] lg:flex m-auto mt-14 border-2 border-[#182128] rounded-3xl">
 
                     <div className="lg:w-[65%] w-full lg:pr-10 flex flex-wrap lg:relative custom-border-contact">
 
