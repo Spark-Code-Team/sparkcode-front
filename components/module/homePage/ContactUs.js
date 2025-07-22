@@ -124,6 +124,8 @@ const ContactUs = () => {
                                                     outline-none 
                                                     w-full 
                                                     mt-5
+                                                    focus:bg-white
+                                                    focus:text-black
                                                 " 
                                                 value={requestInputs[item.name]}
                                                 name={item.name} 
@@ -165,6 +167,8 @@ const ContactUs = () => {
                                                     border-2 
                                                     border-[#182128] 
                                                     outline-none
+                                                    focus:bg-white
+                                                    focus:text-black
                                                 " 
                                                 placeholder={item.placeholder}
                                                 value={requestInputs[item.name]}

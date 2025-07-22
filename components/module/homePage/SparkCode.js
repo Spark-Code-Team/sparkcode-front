@@ -22,7 +22,9 @@ const SparkCode = ()=>{
                         </div>
 
                         <div className="w-full lg:mt-1 mt-5 text-center text-md font-bold lg:z-auto z-10 text-white">درک عمیق از نیازهای مشتری</div>
-                        <div className="w-full lg:mt-1 mt-5 lg:pr-4 lg:pl-4 pr-3 pl-3 lg:text-sm text-[13px] lg:leading-7 leading-7 lg:z-auto z-10 text-[#d4e1f2]">ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما در ارتباط است. این همکاری نزدیک به ما کمک می‌کند تا بهترین خروجی ممکن را ارائه دهیم و پروژه‌ها را به موقع و با هزینه‌های معقول به سرانجام برسانیم.</div>
+                        <div className="w-full lg:mt-1 mt-5 lg:pr-4 lg:pl-4 pr-3 pl-3 lg:text-sm text-[13px] lg:leading-7 leading-7 lg:z-auto z-10 text-[#d4e1f2]">
+                            ما به صدای شما گوش می‌دهیم. درک درست از نیازها و دغدغه‌های مشتری، پایه تصمیم‌گیری‌های ماست. با تحلیل دقیق رفتار کاربران و شناخت بازار هدف، خدماتی طراحی می‌کنیم که دقیقا با خواسته‌های واقعی شما هم‌راستا باشد. این ارتباط نزدیک، کلید موفقیت پروژه‌های ماست.
+                        </div>
 
                         <div className="absolute -bottom-20 -right-14 lg:block hidden">
                             <Image src="/image/arrow1.png" alt="" width={88} height={97}/>
@@ -40,7 +42,9 @@ const SparkCode = ()=>{
                         </div>
 
                         <div className="w-full lg:mt-1 mt-5 text-center text-md font-bold lg:z-auto z-10 text-white">تمرکز بر کیفیت و امنیت</div>
-                        <div className="w-full lg:mt-1 mt-5 lg:pr-4 lg:pl-4 pr-3 pl-3 lg:text-sm text-[13px] lg:leading-7 leading-7 lg:z-auto z-10 text-[#d4e1f2]">ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما در ارتباط است. این همکاری نزدیک به ما کمک می‌کند تا بهترین خروجی ممکن را ارائه دهیم و پروژه‌ها را به موقع و با هزینه‌های معقول به سرانجام برسانیم.</div>
+                        <div className="w-full lg:mt-1 mt-5 lg:pr-4 lg:pl-4 pr-3 pl-3 lg:text-sm text-[13px] lg:leading-7 leading-7 lg:z-auto z-10 text-[#d4e1f2]">
+                            ما به کیفیت در تمام سطوح پروژه پایبند هستیم. امنیت اطلاعات شما اولویت ماست و با رعایت استانداردهای روز دنیا، تلاش می‌کنیم تا بستری مطمئن برای کسب‌وکار شما فراهم کنیم. کیفیت بالا در طراحی و اجرا، همراه با تست‌های دقیق، باعث می‌شود پروژه‌ای پایدار و قابل‌اعتماد تحویل بگیرید.
+                        </div>
 
                     </div>
 
@@ -54,7 +58,9 @@ const SparkCode = ()=>{
                         </div>
 
                         <div className="w-full lg:mt-1 mt-5 text-center text-md font-bold lg:z-auto z-10 text-white">تجربه و تخصص حرفه‌ای</div>
-                        <div className="w-full lg:mt-1 mt-5 lg:pr-4 lg:pl-4 pr-3 pl-3 lg:text-sm text-[13px] lg:leading-7 leading-7 lg:z-auto z-10 text-[#d4e1f2]">ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما در ارتباط است. این همکاری نزدیک به ما کمک می‌کند تا بهترین خروجی ممکن را ارائه دهیم و پروژه‌ها را به موقع و با هزینه‌های معقول به سرانجام برسانیم.</div>
+                        <div className="w-full lg:mt-1 mt-5 lg:pr-4 lg:pl-4 pr-3 pl-3 lg:text-sm text-[13px] lg:leading-7 leading-7 lg:z-auto z-10 text-[#d4e1f2]">
+                            ما با تکیه بر سال‌ها تجربه در اجرای پروژه‌های متنوع، نیازهای شما را به‌خوبی درک می‌کنیم. تیم ما از متخصصانی تشکیل شده که با دانش فنی به‌روز، بهترین راه‌حل‌ها را با کیفیت بالا و دقت کامل در اختیارتان می‌گذارند. این تخصص باعث می‌شود تا در تمامی مراحل پروژه، از تحلیل تا اجرا، در کنار شما باشیم و خروجی دقیق و مطمئن ارائه دهیم.    
+                        </div>
 
                         <div className="absolute -top-20 -left-14 lg:block hidden">
                             <Image src="/image/arrow2.png" alt="" width={88} height={97}/>
