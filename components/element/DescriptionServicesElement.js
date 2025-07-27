@@ -32,7 +32,7 @@ const DescriptionServicesElement = () => {
 
                 </div>
 
-                <div className={`lg:w-[85%] w-full m-auto lg:mt-14 flex flex-col lg:flex-row-reverse`}>
+                <div className={`lg:w-[85%] w-full m-auto lg:mt-14 p-5 flex flex-col lg:flex-row-reverse`}>
 
                     <div className="lg:w-1/2 m-auto">
                         <p className="text-xl text-white">خدمات جامع</p>
@@ -55,7 +55,7 @@ const DescriptionServicesElement = () => {
 
                 </div>
 
-                <div className={`lg:w-[85%] w-full m-auto lg:mt-14 flex flex-col lg:flex-row`}>
+                <div className={`lg:w-[85%] p-5 w-full m-auto lg:mt-14 flex flex-col lg:flex-row`}>
 
                     <div className="lg:w-1/2 m-auto">
                         <p className="text-xl text-white">رزومه موفق</p>
