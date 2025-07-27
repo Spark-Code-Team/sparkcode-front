@@ -19,7 +19,7 @@ const DescriptionServicesElement = () => {
                         توسعه وب‌سایت فراتر از پیاده‌سازی صفحات و نوشتن کد است؛ ما معماری نرم‌افزار را بر اساس اهداف تجاری، نیازهای کاربران و آینده‌نگری طراحی میکنیم.  از انتخاب دقیق فناوری‌های فرانت‌اند و بک‌اند گرفته تا طراحی پایگاه‌داده و یکپارچه‌سازی با سرویس‌های خارجی، هر بخش با دقت مهندسی و نگاه سیستماتیک ساخته می‌شود. ما فرآیند توسعه را با استفاده از متدولوژی‌های مدرن مانند Agile و DevOps پیش می‌بریم تا تحویل سریع، کنترل کیفیت پیوسته و قابلیت توسعه در آینده تضمین شود. هدف ما ساختن وب‌سایت‌هایی است که نه‌فقط کار کنند، بلکه قابل اعتماد، توسعه‌پذیر و آماده برای رشد باشند.
 
                             </div>
-                        <Link href="/?showComponent=true#bottom" className="bg-[#2E567D] lg:w-[153px] lg:h-[40px] lg:flex lg:justify-center lg:items-center lg:mt-7 rounded-md lg:gap-x-3 text-white">
+                        <Link href="/?showComponent=true#bottom" className="bg-[#2E567D] w-max h-max pr-2 flex justify-center items-center mt-7 rounded-md gap-x-3 text-white">
                             تماس با ما<ArrowLeftService />
                         </Link>
                     </div>
