@@ -1,14 +1,10 @@
+import ContactUsPage from "@/components/template/ContactUsPage";
+
 const Contact = ()=>{
 
     return(
 
-        <>
-
-            <h1>
-                Contact
-            </h1>
-
-        </>
+       <ContactUsPage/>
 
     )
 
