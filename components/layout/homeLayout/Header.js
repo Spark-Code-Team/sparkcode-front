@@ -26,9 +26,32 @@ const Header = () => {
         <>
 
 
-            <div className="bg-gradient-to-b from-[#091119] via-[#172744] to-[#091119] shadow-xl text-white lg:absolute lg:top-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:z-50 lg:w-[1150px] z-100 lg:h-[83px] lg:mx-auto lg:mt-7 lg:rounded-xl lg:flex lg:justify-between lg:items-center lg:pl-7 lg:pr-7 hidden">
+            <div 
+                className="
+                    bg-gradient-to-b
+                    from-[#091119] 
+                    via-[#172744] 
+                    to-[#091119] 
+                    shadow-xl 
+                    text-white 
+                    z-50  
+                    lg:h-[83px] 
+                    lg:mx-auto 
+                    lg:rounded-xl 
+                    flex 
+                    justify-between 
+                    items-center 
+                    lg:pl-7 
+                    lg:pr-7 
+                    px-2
+                    py-2
+                    sticky
+                    top-0
+                    max-w-[1440px]
+                "
+            >
 
-                <div className="flex">
+                <div className="lg:flex hidden">
 
                     <Link
                         href="/"
@@ -62,33 +85,33 @@ const Header = () => {
                 </div>
 
 
-                <div>
+                <div
+                    className="
+                        hidden
+                    "
+                >
                     {/* <Link href="#" className="bg-[#2e567d] text-white lg:w-[170px] lg:h-[48px] flex justify-center items-center gap-x-2 rounded-md">
                         ورود/ثبت نام
                         <IconLogin />
                     </Link> */}
                 </div>
 
-            </div>
-
-
-
-            {/*   Responsive Header or Navbar   */}
-
-            <div className="w-full h-[50px] flex justify-between items-center pr-7 pl-7 lg:hidden">
-
-                <button onClick={() => handleOpenMenu()}>
+                <button 
+                    className="
+                        lg:hidden
+                    "            
+                    onClick={() => handleOpenMenu()}
+                >
                     <GiHamburgerMenu size={30} color="white" />
                 </button>
 
-                <div>
+                <div
+                    className="
+                        lg:hidden
+                    "
+                >
                     <Image src={"/image/logo.png"} alt="logo" className=" w-32 h-10" width={145} height={41} />
                 </div>
-                {/* <Link href="#" className="bg-[#2e567d] text-white w-[135px] h-[35px] flex justify-center items-center gap-x-2 rounded-md">
-                    ورود/ثبت نام
-                    <IconLogin />
-                </Link> */}
-
             </div>
 
 

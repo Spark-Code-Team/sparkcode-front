@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fa">
-      <body className={`bg-[#091119] font-dana`}>
+      <body className={`bg-[#091119] font-dana max-w-[1440px] mx-auto`}>
 
         <HomeLayout>
           {children}        
