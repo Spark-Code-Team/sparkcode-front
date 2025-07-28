@@ -14,8 +14,8 @@ const ContactUsPage = ()  =>{
         ">
         
         <div className="
-        md:w-[1270px] w-96
-        md:h-[400px]
+        md:w-[1270px] w-[380px]
+        md:h-[400px] h-[250px]
         custom-border  
         animate-textGlow
         rounded-2xl
@@ -25,9 +25,9 @@ const ContactUsPage = ()  =>{
              width={1270} 
              height={250} 
              className="
-             md:w-[1270px] w-96
+             md:w-[1270px] w-[380px]
              rounded-2xl 
-             md:h-[400px]
+             md:h-[400px] h-[250px]
              "/>
 
         </div>
@@ -37,7 +37,7 @@ const ContactUsPage = ()  =>{
         flex-col
         md:flex-row
         justify-center 
-        md:w-[1270px] w-96
+        md:w-[1270px] w-[380px]
         mt-24
         ">
             <div className="
@@ -206,7 +206,7 @@ const ContactUsPage = ()  =>{
             </div>
             
             <div className="
-             md:w-full w-96
+             md:w-full w-[380px]
              rounded-xl
              custom-border  
              animate-textGlow
@@ -228,7 +228,7 @@ const ContactUsPage = ()  =>{
                     md:grid 
                     md:grid-cols-2 
                     md:gap-y-12
-                    gap-x-7
+                    md:gap-x-7
                     ">
 
                     <div>
