@@ -14,8 +14,8 @@ const ContactUsPage = ()  =>{
         ">
         
         <div className="
-        w-[1270px] 
-        h-[400px]
+        md:w-[1270px] w-96
+        md:h-[400px]
         custom-border  
         animate-textGlow
         rounded-2xl
@@ -25,17 +25,19 @@ const ContactUsPage = ()  =>{
              width={1270} 
              height={250} 
              className="
-             w-[1270px] 
+             md:w-[1270px] w-96
              rounded-2xl 
-             h-[400px]
+             md:h-[400px]
              "/>
 
         </div>
 
         <div className="
         flex 
+        flex-col
+        md:flex-row
         justify-center 
-        w-[1270px]
+        md:w-[1270px] w-96
         mt-24
         ">
             <div className="
@@ -43,10 +45,10 @@ const ContactUsPage = ()  =>{
              rounded-xl
              custom-border  
              animate-textGlow
-             ml-5
+             md:ml-5
              ">
 
-                <div className="w-[447px] m-2 p-8">
+                <div className="md:w-[447px] w-full m-2 p-8">
 
                         <p className="text-white">
                         ارتباط با ما
@@ -204,11 +206,13 @@ const ContactUsPage = ()  =>{
             </div>
             
             <div className="
-             w-full 
+             md:w-full w-96
              rounded-xl
              custom-border  
              animate-textGlow
-             mr-5
+             md:mr-5
+             mt-10
+             md:mt-0 
             ">
 
                 <div className="
@@ -221,9 +225,9 @@ const ContactUsPage = ()  =>{
                 ">
 
                     <div className="
-                    grid 
-                    grid-cols-2 
-                    gap-y-12
+                    md:grid 
+                    md:grid-cols-2 
+                    md:gap-y-12
                     gap-x-7
                     ">
 
@@ -319,8 +323,8 @@ const ContactUsPage = ()  =>{
                        <textarea
                         type="text" 
                         className="
-                        w-[530px]
-                        h-32
+                        md:w-[530px] w-[250px]
+                        h-32 
                         mt-8 
                         rounded-[4px] 
                         text-[15px]
@@ -343,13 +347,15 @@ const ContactUsPage = ()  =>{
                        
                       <button 
                       className="
-                      w-[530px]
+                      md:w-[530px] w-[250px]
                       border-[1px]
                       border-[#dcdcdc26]
-                       h-[40px] 
-                        mt-8 
-                        rounded-[4px] 
-                        text-white
+                      h-[40px] 
+                      mt-8 
+                      mb-10
+                      md:mb-0
+                      rounded-[4px] 
+                      text-white
                       "
                       >
                         ارسال
