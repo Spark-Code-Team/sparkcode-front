@@ -9,34 +9,44 @@ const ContactUsPage = ()  =>{
         items-center 
         justify-center 
         w-full 
-        h-screen
+        h-full
+        mt-10
         ">
         
         <div className="
         w-[1270px] 
-        h-[256px] 
+        h-[400px]
         custom-border  
         animate-textGlow
-        rounded-lg
+        rounded-2xl
         ">
-            image
+             <Image src="/image/banner3.jpg" 
+             alt="logo" 
+             width={1270} 
+             height={250} 
+             className="
+             w-[1270px] 
+             rounded-2xl 
+             h-[400px]
+             "/>
+
         </div>
 
         <div className="
         flex 
         justify-center 
         w-[1270px]
-        mt-10
+        mt-24
         ">
             <div className="
              w-full 
-             rounded-[4px]
+             rounded-xl
              custom-border  
              animate-textGlow
              ml-5
              ">
 
-                <div className="w-[447px] m-2">
+                <div className="w-[447px] m-2 p-8">
 
                         <p className="text-white">
                         ارتباط با ما
@@ -50,14 +60,34 @@ const ContactUsPage = ()  =>{
                         items-center 
                         gap-x-2
                         ">
-                            <Image src="/image/phone-footer.png" alt="logo" width={20} height={20}/>
+                            <Image 
+                            src="/image/phone-footer.png" 
+                            alt="logo" 
+                            width={20} 
+                            height={20}
+                            />
+
                             <p>9961354854 021 </p>
 
                         </div>
 
-                       <div className="lg:mt-4 lg:flex lg:items-center text-[15px] text-[#d4e1f2] mt-5 flex items-center gap-x-2">
-                            <Image src="/image/email-footer.png" alt="logo" width={20} height={20}/>
+                       <div className="
+                       text-[15px] 
+                       text-[#d4e1f2] 
+                       mt-5 
+                       flex 
+                       items-center 
+                       gap-x-2
+                       ">
+                            <Image 
+                            src="/image/email-footer.png" 
+                            alt="logo" 
+                            width={20} 
+                            height={20}
+                            />
+
                             <p>spark.code.agance@gmail.com</p>
+
                         </div>
 
                          <div className="
@@ -68,11 +98,18 @@ const ContactUsPage = ()  =>{
                          items-center 
                          gap-x-2
                          border-b-[1px]
-                         border-[#d4e1f2]
+                         border-[#dcdcdc26]
                          pb-5
                          ">
-                            <Image src="/image/map-footer.png" alt="logo" width={20} height={20}/>
+                            <Image 
+                            src="/image/map-footer.png" 
+                            alt="logo" 
+                            width={20} 
+                            height={20}
+                            />
+
                             <p>تهران، خیابان پاسداران، بوستان پنج</p>
+
                         </div>
 
                         <div className="
@@ -83,9 +120,10 @@ const ContactUsPage = ()  =>{
                          items-center 
                          gap-x-2
                          ">
-                            <Image src="/image/map-footer.png" alt="logo" width={20} height={20}/>
-                            <p>تهران، خیابان پاسداران، بوستان پنج</p>
+                           
+                            <p className="text-white">  مدیر موسسه </p>
                         </div>
+
                         <div className="
                          text-[15px] 
                          text-[#d4e1f2] 
@@ -94,8 +132,9 @@ const ContactUsPage = ()  =>{
                          items-center 
                          gap-x-2
                          ">
-                            <Image src="/image/map-footer.png" alt="logo" width={20} height={20}/>
-                            <p>تهران، خیابان پاسداران، بوستان پنج</p>
+                        <p> نام و نام خانوادگی: محسن پورپاک </p>
+
+                       
                         </div>
 
                         <div className="
@@ -106,11 +145,18 @@ const ContactUsPage = ()  =>{
                          items-center 
                          gap-x-2
                          border-b-[1px]
-                         border-[#d4e1f2]
+                         border-[#dcdcdc26]
                          pb-5
                          ">
-                            <Image src="/image/map-footer.png" alt="logo" width={20} height={20}/>
-                            <p>تهران، خیابان پاسداران، بوستان پنج</p>
+                         <Image 
+                         src="/image/phone-footer.png" 
+                         alt="logo" 
+                         width={20} 
+                         height={20}
+                         />
+
+                         <p> 9961354854 021 </p>
+
                         </div>
 
                         <div className="
@@ -121,8 +167,8 @@ const ContactUsPage = ()  =>{
                          items-center 
                          gap-x-2
                          ">
-                            <Image src="/image/map-footer.png" alt="logo" width={20} height={20}/>
-                            <p>تهران، خیابان پاسداران، بوستان پنج</p>
+                            <p className="text-white">  مدیر آموزش </p>
+
                         </div>
                         <div className="
                          text-[15px] 
@@ -132,9 +178,9 @@ const ContactUsPage = ()  =>{
                          items-center 
                          gap-x-2
                          ">
-                            <Image src="/image/map-footer.png" alt="logo" width={20} height={20}/>
-                            <p>تهران، خیابان پاسداران، بوستان پنج</p>
-                        </div>
+                            <p> نام و نام خانوادگی: محسن پورپاک </p>
+
+                            </div>
                         <div className="
                          text-[15px] 
                          text-[#d4e1f2] 
@@ -143,26 +189,28 @@ const ContactUsPage = ()  =>{
                          items-center 
                          gap-x-2
                          ">
-                            <Image src="/image/map-footer.png" alt="logo" width={20} height={20}/>
-                            <p>تهران، خیابان پاسداران، بوستان پنج</p>
+                            <Image 
+                            src="/image/phone-footer.png" 
+                            alt="logo" 
+                            width={20} 
+                            height={20}
+                            />
+
+                            <p> 9961354854 021 </p>
                         </div>
                    
                 </div>
 
-
-
-               
             </div>
             
-
             <div className="
              w-full 
-             rounded-[4px]
+             rounded-xl
              custom-border  
              animate-textGlow
              mr-5
             ">
-                
+
                 <div className="
                 w-full 
                 mt-8 
@@ -312,10 +360,10 @@ const ContactUsPage = ()  =>{
                  
               
                 </div>
+              
             </div>
 
         </div>
-
         </div>
     )
 }
