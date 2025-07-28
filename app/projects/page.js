@@ -1,14 +1,10 @@
+import Project from "@/components/template/ProjectsPage";
+
 const Projects = ()=>{
 
     return(
 
-        <>
-
-            <h1>
-                projects
-            </h1>
-
-        </>
+       <Project/>
 
     )
 
