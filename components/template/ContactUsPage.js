@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ContactUs from "../module/homePage/ContactUs";
+import CollaborationForm from "../module/Collaboration/CollaborationForm";
 
 const ContactUsPage = ()  =>{
     return(
@@ -370,6 +371,9 @@ const ContactUsPage = ()  =>{
             </div>
 
         </div>
+
+
+        <CollaborationForm/>
         </div>
     )
 }
