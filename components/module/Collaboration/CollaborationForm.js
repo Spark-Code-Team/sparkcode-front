@@ -1,5 +1,33 @@
 import Image from "next/image";
 
+const colabForm = [
+  {
+    name: "name",
+    placeholder: "نام و نام خانوادگی",
+    type: "text"
+  },
+  {
+    name: "phone_number",
+    placeholder: "شماره تماس",
+    type: "text"
+  },
+  {
+    name: "website",
+    placeholder: "وب سایت خود را وارد کنید",
+    type: "text"
+  },
+  {
+    name: "description",
+    placeholder: "توضیحات",
+    type: "text"
+  },
+  {
+    name: "file",
+    placeholder: "فایل رزومه خود را وارد کنید",
+    type: "file"
+  }
+]
+
 const CollaborationForm = () =>{
     return(
         
@@ -69,8 +97,6 @@ const CollaborationForm = () =>{
                      md:justify-end 
                      md:pl-11
                      ">
-
-                        
                 <div className="
                 w-full 
                 mt-8 
@@ -87,111 +113,52 @@ const CollaborationForm = () =>{
                     md:gap-x-7
                     ">
 
-                    <div>
-                       
-                      <input
-                        type="text" 
-                        className="
-                        w-[250px]
-                        h-[40px] 
-                        mt-2 
-                        rounded-[4px] 
-                        px-2 
-                        text-[15px]
-                      text-white
-                      bg-[#091119]
-                      border-[1px]
-                      border-[#dcdcdc26]
-                      "
-                        placeholder="   نام و نام خانوادگی  "  />
+                    {
+                      colabForm.map((item, index) => {
+                        if(item.name == "file") {
+                          return (
+                            <h1
+                              className="
+                                text-white
+                              "
+                            >
+                              
+                            </h1>
+                          )
+                        } else {
+                          return (
+                            <div>
+                              
+                              <input
+                                type="text" 
+                                className="
+                                w-[250px]
+                                h-[40px] 
+                                mt-2 
+                                rounded-[4px] 
+                                px-2 
+                                text-[15px]
+                              text-white
+                              bg-[#091119]
+                              border-[1px]
+                              border-[#dcdcdc26]
+                              "
+                                placeholder="   نام و نام خانوادگی  "  />
+
+                            </div>
+                          )
+                        }
+                      })
+                    }
+
+
+
+
+
+
 
                     </div>
 
-                    <div>
-                       
-                      <input
-                        type="text" 
-                        className="
-                        w-[250px] 
-                        h-[40px] 
-                        mt-2 
-                        rounded-[4px] 
-                        px-2 
-                        text-[15px]
-                      text-white
-                      bg-[#091119]
-                      border-[1px]
-                      border-[#dcdcdc26]
-                      "
-                        placeholder="   شماره تماس  "/>
-                        
-                    </div>
-                    <div>
-                       
-                      <input
-                        type="text" 
-                        className="
-                        w-[250px] 
-                        h-[40px] 
-                        mt-2 
-                        rounded-[4px] 
-                        px-2 
-                        text-[15px]
-                      text-white
-                      bg-[#091119]
-                      border-[1px]
-                      border-[#dcdcdc26]
-                      "
-                        placeholder="   ایمیل "/>
-                        
-                    </div>
-
-                    <div>
-                       
-                      <input
-                        type="text" 
-                        className="
-                        w-[250px] 
-                        h-[40px] 
-                        mt-2 
-                        rounded-[4px] 
-                        px-2 
-                        text-[15px]
-                      text-white
-                      bg-[#091119]
-                      border-[1px]
-                      border-[#dcdcdc26]
-                      "
-                        placeholder="  نام مجموعه / آدرس سایت   " />
-                        
-                    </div>
-
-                    </div>
-
-                    <div className="
-                    w-full 
-                    flex 
-                    flex-col 
-                    items-center 
-                    justify-center
-                    ">
-                       
-                       <textarea
-                        type="text" 
-                        className="
-                        md:w-[530px] w-[250px]
-                        h-32 
-                        mt-8 
-                        rounded-[4px] 
-                        text-[15px]
-                       text-white
-                       bg-[#091119]
-                       border-[1px]
-                       border-[#dcdcdc26]
-                       "
-                         placeholder=" توضیحات   " />
-                         
-                    </div>
 
                     <div className="
                     w-full 

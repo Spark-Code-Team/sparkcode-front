@@ -2,17 +2,15 @@ import api from "@/config/api"
 
 
 
-export const LandingRequest = async (name, phone_number, question, answer) => {
-
-    console.log({name, phone_number, question, answer});
+export const LandingRequest = async (name, last_name, phone_number, question) => {
     
 
     try {
-        const response = await api.post("api/contacts/", {
+        const response = await api.post("/contact/send/", {
             name,
+            last_name,
             phone_number,
-            question,
-            answer
+            question
         })
 
         return { response }

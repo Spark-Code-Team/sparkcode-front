@@ -1,8 +1,84 @@
+"use client"
+
 import Image from "next/image";
 import ContactUs from "../module/homePage/ContactUs";
 import CollaborationForm from "../module/Collaboration/CollaborationForm";
+import { useRef, useState } from "react";
+import { postContact } from "@/services/contactUsPage";
 
-const ContactUsPage = ()  =>{
+const colabForm = [
+  {
+    name: "name",
+    placeholder: "نام",
+    type: "text"
+  },
+  {
+    name: "last_name",
+    placeholder: "نام خانوادگی",
+    type: "text"
+  },
+  {
+    name: "phone_number",
+    placeholder: "شماره تماس",
+    type: "text"
+  },
+  {
+    name: "website",
+    placeholder: "وب سایت خود را وارد کنید",
+    type: "text"
+  },
+  {
+    name: "description",
+    placeholder: "توضیحات",
+    type: "text"
+  },
+  {
+    name: "file",
+    placeholder: "فایل رزومه خود را وارد کنید",
+    type: "file"
+  }
+]
+
+const ContactUsPage = () => {
+
+    const ref = useRef(null)
+    const formData = new FormData()
+    const [formState, setFormState] = useState({
+      file: null,
+      description: "",
+      website: "",
+      phone_number: "",
+      name: "",
+      last_name: ""
+    })
+
+
+    const handelForms = (e) => {
+      const value = e.target.value
+
+      setFormState(last => ({...last, [e.target.name]: value}))
+    }
+
+    const sendData = async () => {
+
+      for (let item in formState) {
+        formData.append(item, formState[item])
+      }
+
+      for (let [key, value] of formData.entries()) {
+        console.log(`${key}:`, value);
+      }
+      
+
+      const { response, error } = await postContact(formData)
+
+      if(response) {
+        console.log(response)
+      } else {
+        console.log(error);
+      }
+    }
+
     return(
         <div className="
         flex 
@@ -232,110 +308,110 @@ const ContactUsPage = ()  =>{
                     md:gap-x-7
                     ">
 
-                    <div>
-                       
-                      <input
-                        type="text" 
-                        className="
-                        w-[250px]
-                        h-[40px] 
-                        mt-2 
-                        rounded-[4px] 
-                        px-2 
-                        text-[15px]
-                      text-white
-                      bg-[#091119]
-                      border-[1px]
-                      border-[#dcdcdc26]
-                      "
-                        placeholder="   نام و نام خانوادگی  "  />
+                    {
+                      colabForm.map((item, index) => {
+                        if(item.type == "file") {
+                          return (
+                           <div
+                              key={index}                         
+                           >
+                              <input 
+                                type={item.type}
+                                placeholder={item.placeholder}
+                                className="
+                                  hidden
+                                "
+                                onChange={(e) => {
+                                  setFormState(last => ({...last, file: e.target.files[0]}))
+                                }}
+                                ref={ref}
+                              />
+                              <div
+                                className="
+                                  text-white
+                                  border
+                                  p-2
+                                  flex
+                                  items-center
+                                  justify-center
+                                  hover:bg-white
+                                  hover:text-black
+                                  transition-all
+                                  rounded-md
+                                  cursor-pointer
+                                "
+                                onClick={() => ref.current.click()}
+                              >
+                                <p>
+                                  آپلود رزومه (اختیاری)
+                                </p>
+                              </div>
+                              <p
+                                className="
+                                  text-white
+                                "
+                              >
+                                {
+                                  formState.file ? formState.file.name : null
+                                }
+                              </p>
+                           </div> 
+                          )
+                        } else if (item.name == "description") {
+                          return (
+                            <div
+                              key={index}
+                            >
+                              <textarea 
+                                placeholder={item.placeholder}
+                                className="
+                                    w-[250px]
+                                    h-[40px] 
+                                    mt-2 
+                                    rounded-[4px] 
+                                    px-2 
+                                    text-[15px]
+                                    text-white
+                                    bg-[#091119]
+                                    border-[1px]
+                                    border-[#dcdcdc26]
+                                    pt-2
+                                "
+                                name={item.name}
+                                onChange={(e) => handelForms(e)}
+                              />
+                            </div>
+                          )
+                        } else {
+                          return (
+                            <div
+                              key={index}
+                            >
+                              <input
+                                type="text" 
+                                className="
+                                  w-[250px]
+                                  h-[40px] 
+                                  mt-2 
+                                  rounded-[4px] 
+                                  px-2 
+                                  text-[15px]
+                                  text-white
+                                  bg-[#091119]
+                                  border-[1px]
+                                  border-[#dcdcdc26]
+                                "
+                                placeholder={item.placeholder}
+                                name={item.name}
+                                onChange={(e) => handelForms(e)}
+                              />
 
-                    </div>
+                            </div>
 
-                    <div>
-                       
-                      <input
-                        type="text" 
-                        className="
-                        w-[250px] 
-                        h-[40px] 
-                        mt-2 
-                        rounded-[4px] 
-                        px-2 
-                        text-[15px]
-                      text-white
-                      bg-[#091119]
-                      border-[1px]
-                      border-[#dcdcdc26]
-                      "
-                        placeholder="   شماره تماس  "/>
-                        
-                    </div>
-                    <div>
-                       
-                      <input
-                        type="text" 
-                        className="
-                        w-[250px] 
-                        h-[40px] 
-                        mt-2 
-                        rounded-[4px] 
-                        px-2 
-                        text-[15px]
-                      text-white
-                      bg-[#091119]
-                      border-[1px]
-                      border-[#dcdcdc26]
-                      "
-                        placeholder="   ایمیل "/>
-                        
-                    </div>
-
-                    <div>
-                       
-                      <input
-                        type="text" 
-                        className="
-                        w-[250px] 
-                        h-[40px] 
-                        mt-2 
-                        rounded-[4px] 
-                        px-2 
-                        text-[15px]
-                      text-white
-                      bg-[#091119]
-                      border-[1px]
-                      border-[#dcdcdc26]
-                      "
-                        placeholder="  عنوان   " />
-                        
-                    </div>
-
-                    </div>
-
-                    <div className="
-                    w-full 
-                    flex 
-                    flex-col 
-                    items-center 
-                    justify-center
-                    ">
-                       
-                       <textarea
-                        type="text" 
-                        className="
-                        md:w-[530px] w-[250px]
-                        h-32 
-                        mt-8 
-                        rounded-[4px] 
-                        text-[15px]
-                       text-white
-                       bg-[#091119]
-                       border-[1px]
-                       border-[#dcdcdc26]
-                       "
-                         placeholder=" توضیحات   " />
-                         
+                          )
+                        }
+                      })
+                    }
                     </div>
 
                     <div className="
@@ -347,17 +423,21 @@ const ContactUsPage = ()  =>{
                     ">
                        
                       <button 
-                      className="
-                      md:w-[530px] w-[250px]
-                      border-[1px]
-                      border-[#dcdcdc26]
-                      h-[40px] 
-                      mt-8 
-                      mb-10
-                      md:mb-0
-                      rounded-[4px] 
-                      text-white
-                      "
+                        className="
+                          md:w-[530px] w-[250px]
+                          border-[1px]
+                          border-[#dcdcdc26]
+                          h-[40px] 
+                          mt-8 
+                          mb-10
+                          md:mb-0
+                          rounded-[4px] 
+                          text-white
+                          hover:text-black
+                          hover:bg-white
+                          transition-all
+                        "
+                        onClick={() => sendData()}
                       >
                         ارسال
                       </button>
@@ -373,7 +453,7 @@ const ContactUsPage = ()  =>{
         </div>
 
 
-        <CollaborationForm/>
+        {/* <CollaborationForm/> */}
         
         </div>
     )

@@ -33,12 +33,19 @@ const inputs = [
     {
         title: "درخواست خود را بنویسید",
         placeholder: "",
-        name: "request"
+        name: "question"
     }
 ]
 
 const ContactUs = () => {
 
+    const [requestInputs, setRequestInputs] = useState({
+        first_name: "",
+        last_name: "",
+        phone_number: "",
+        email: "",
+        question: "",
+    })
     const router = useRouter();
 
     useEffect(() => {
@@ -51,13 +58,6 @@ const ContactUs = () => {
       }, [router.isReady, router.query]);
       
 
-    const [requestInputs, setRequestInputs] = useState({
-        first_name: "",
-        last_name: "",
-        phone_number: "",
-        email: "",
-        request: ""
-    })
 
     const InputHandler = (e) => {
         
@@ -70,10 +70,10 @@ const ContactUs = () => {
             return toast.error("تمام فیلد ها باید پر شوند")
         }
         const {response, error} = await LandingRequest(
-            `${requestInputs.first_name + " " + requestInputs.last_name}`,
+            requestInputs.first_name,
+            requestInputs.last_name,
             requestInputs.phone_number,
-            `${requestInputs.request + " " + requestInputs.email}`,
-            ""
+            requestInputs.question
         )
 
         if(response) {
@@ -83,10 +83,12 @@ const ContactUs = () => {
                 last_name: "",
                 phone_number: "",
                 email: "",
-                request: ""
+                question: ""
             })
         } else {
             toast.error("مشکلی پیش آمده")
+            console.log(error);
+            
         }
     }
 
@@ -106,7 +108,7 @@ const ContactUs = () => {
                         {
                             inputs.map(item => {
 
-                                if(item.name == "request") {
+                                if(item.name == "question") {
                                     return (
                                         <div 
                                             className="
