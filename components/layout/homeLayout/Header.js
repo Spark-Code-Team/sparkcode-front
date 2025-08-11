@@ -4,12 +4,28 @@ import Link from "next/link";
 import IconLogin from "../../../public/icons/IconLogin";
 import { GiHamburgerMenu } from "react-icons/gi";
 import CloseMenu from "../../../public/icons/CloseMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { headerLink } from "@/constant/homeConstant";
+import { Profile } from "@/services/profile";
+import { UserProfile } from "@/stores/profileStore";
 
 const Header = () => {
 
     const [openMenu, setOpenMenu] = useState(false);
+
+    const profile = UserProfile()
+
+    useEffect(() => {  
+        if(!profile.data.role){
+            const fetchProfile = async () => {
+            const {response , error} = await Profile()
+            if (response){
+                profile.setProfile(response.data); 
+            }
+        }
+            fetchProfile()
+        }
+    }, [profile.data.role]); 
 
     const handleOpenMenu = () => {
         setOpenMenu(true);
@@ -60,21 +76,32 @@ const Header = () => {
                     </Link>
 
                     <ul className="flex items-center lg:mr-16 gap-x-9">
-                            <div
-                                >
-                                <li
-                                    className="
-                                    text-white
-                                    "
-                                    >
-                                    <Link
-                                        href={'/Login'}
-                                    >
-                                        {
-                                            'حساب کاربری'
-                                        }
-                                    </Link>
-                                </li>
+                            <div>                      
+                                {profile.data.role?<>
+                                    {profile.data.role == 1 ? 
+                                        <Link href="/dashboard/user-account-dashboard">
+                                            <Image alt="profile" onClick={() => Profile()} width={500} height={500} src={profile.profile_img} className="w-[42px] h-[42px] border-4 rounded-full"/>
+                                            </Link> : <>{profile.data.role == 2 ? 
+                                            <Link href="/admin/User-Account">
+                                            <Image alt="profile" onClick={() => Profile()} width={500} height={500} src={profile.profile_img} className="w-[42px] h-[42px] border-4 rounded-full"/>
+                                        </Link> : <></> }</>}
+                                    </>:<>
+                                    <div>
+                                        <li
+                                            className="
+                                            text-white
+                                            "
+                                            >
+                                            <Link
+                                                href={'/Login'}
+                                            >
+                                                {
+                                                    'ورود / ثبت نام'
+                                                }
+                                            </Link>
+                                        </li>
+                                    </div>
+                                    </>}
                             </div>
 
                         {
@@ -232,3 +259,9 @@ const Header = () => {
 
 
 export default Header;
+
+
+// {true?<>
+//     :
+
+// }

@@ -5,19 +5,13 @@ import { create } from 'zustand'
 export const UserProfile = create((set) => ({
     data: {
         id: null,
-        phone_number: null,
-        sheba: null,
-        national_code: null,
-        is_active: null,
-        email: null,
-        first_name: null,
-        last_name: null,
-        role: null,
-        is_2fa: null,
-        profile_img: null,
-        pending_loan: null,
-        grade: null,
-        grade_achieved_date: null
+        username:null,
+        phone_number:null,
+        full_name:null,
+        email:null,
+        role:null,
+        profile_img:null,
+
     },
     
     setProfile: (data) => {
@@ -30,19 +24,12 @@ export const UserProfile = create((set) => ({
         set(() => ({
             data: {
                 id: null,
-                phone_number: null,
-                sheba: null,
-                national_code: null,
-                is_active: null,
-                email: null,
-                first_name: null,
-                last_name: null,
-                role: null,
-                is_2fa: null,
-                profile_img: null,
-                pending_loan: null,
-                grade: null,
-                grade_achieved_date: null
+                username:null,
+                phone_number:null,
+                full_name:null,
+                email:null,
+                role:null,
+                profile_img:null,
             },
         }))
     }

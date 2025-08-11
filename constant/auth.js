@@ -3,19 +3,19 @@ export const registerForm =[
         id:1,
         placeholder: 'نام',
         type: "text",
-        name:'fullName'
+        name:'full_name'
     },
     {
         id:2,
-        placeholder: 'نام خانوادگی',
+        placeholder: 'نام کاربری',
         type: "text",
-        name:'userName'
+        name:'username'
     },
     {
         id:3,
         placeholder: 'شماره موبایل (ثبت شده با کد ملی) ',
         type: "number",
-        name:'mobileNumber'
+        name:'phone_number'
     },
     {
         id:4,
@@ -33,7 +33,7 @@ export const registerForm =[
         id:6,
         placeholder: 'تایید رمز عبور',
         type: "password",
-        name:'confirmPass'
+        name:'confirm_password'
     },
 ]
 

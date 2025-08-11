@@ -1,12 +1,12 @@
 "use client"
 
 import Link from "next/link";
-import { sendOtp } from "@/service/auth";
 // import { useState } from "react";
 // import EmailLogin from "../../../../public/icons/EmailLogin";
-import PersonName from "../../../../public/icons/PersonName";
+// import PersonName from "../../../../public/icons/PersonName";
 import { Bounce, toast } from "react-toastify";
 import { registerForm } from "@/constant/auth";
+import { sendOtp } from "@/services/auth";
 
 
 
@@ -22,12 +22,14 @@ const RegisterLogin = ({setFormData ,formData ,setloginRegisterState }) =>{
     }; 
 
     const handleSendData = async () => {       
-      
+      console.log(formData, 'this is form data hereeeeeeeeeeeeeeeeeeeeeeeee')
+
       const { response, error } = await sendOtp(formData)
 
       if (response){
         document.cookie = `expire_time=${response.data.code_expires_at}; max-age=${2*60}`;
-        setloginRegisterState({state: 1, phone: formData.mobileNumber})
+        setloginRegisterState({state: 1, phone: formData.phone_number})
+
         
       } else  {
         toast.error(error.response?.data.error, { 
@@ -121,7 +123,7 @@ const RegisterLogin = ({setFormData ,formData ,setloginRegisterState }) =>{
                           md:mb-0
                       ">  
                           <span className="mr-4">  
-                              <PersonName />  
+                              {/* <PersonName />   */}
                           </span>  
                           
                           <input  

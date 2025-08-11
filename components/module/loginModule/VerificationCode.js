@@ -4,15 +4,16 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getCookie , setCookie } from "@/utils/cookies";
-import { register, sendOtp } from "@/service/auth";
 import { Bounce, toast } from "react-toastify";
-import { Profile } from "@/service/profile";
-import { UserProfile } from "@/stores/profileStore";
+
 import { setTime } from "@/utils/setTime";
+import { register, sendOtp } from "@/services/auth";
+import { UserProfile } from "@/stores/profileStore";
+import { Profile } from "@/services/profile";
 
 
 const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
-      const [otpObj, setOtpObj] = useState({phoneNumber: dynamicPhoneNumber, otp: '' });
+      const [otpObj, setOtpObj] = useState({phoneNumber: dynamicPhoneNumber, otp_code: '' });
       const [expired, setExpired] = useState(false);
       const [remainingTime, setRemainingTime] = useState(0);
       const router = useRouter()
@@ -58,14 +59,17 @@ const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
 
 
       const handleOtpChange = (e) => {  
+        console.log(otpObj)
         const value = e.target.value;
-        setOtpObj(prevState => ({ ...prevState, otp: value }));
+        setOtpObj(prevState => ({ ...prevState, otp_code: value }));
       };
 
 
             const handleSendOtpAgain = async ()=>{
               if (expired){
-                const { response, error } = await sendOtp({ mobileNumber: otpObj.phoneNumber });
+                const { response, error } = await sendOtp({ phone_number: otpObj.phoneNumber });
+                console.log(otpObj , 'this is otpObj')
+
                     if (response) {
                           document.cookie = `expire_time=${response.data.code_expires_at}; max-age=${2*60}`;
                           setTime(response.data.code_expires_at) 
@@ -91,9 +95,9 @@ const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
       const handleSendData = async () =>{
         const newFormdata = {
           ...formData,
-          otp:otpObj.otp,
-          otp_for:otpObj.otp_for
+          otp_code:otpObj.otp_code,
         };
+        console.log(newFormdata , 'new form data is hereeeeee')
         
         setFormData(newFormdata)
 
@@ -203,6 +207,7 @@ const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
                 >
                 <input
                 className="
+                p-1
                 border-none
                 focus:outline-none
                 focus:ring-0
@@ -212,8 +217,8 @@ const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
                 "
                 placeholder=""
                 type="text"
-                name="otp"  
-                value={formData.otp_code} 
+                name="otp_code"  
+                value={otpObj.otp_code} 
                 onChange={handleOtpChange}
                 
                 />

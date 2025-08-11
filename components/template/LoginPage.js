@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
-import VerificationCode from "../modules/loginModule/VerificationCode";
-import SignInPhone from "../modules/signIn/SignInPhone";
+// import SignInPhone from "../modules/signIn/SignInPhone";
 import RegisterLogin from "../module/loginModule/RegisterLogin";
+import VerificationCode from "../module/loginModule/VerificationCode";
 const LoginPage = () => {
     const [loginRegisterState, setloginRegisterState] = useState ({
         state: 0,
@@ -11,13 +11,13 @@ const LoginPage = () => {
     
 
     const [formData, setFormData] = useState({ 
-        firstName: '',  
-        lastName: '',  
-        mobileNumber: '',  
-        nationalCode: '',  
-        shebaNumber: '',  
-        bankName: '' ,
-        otp: '' ,
+        full_name: '',  
+        username: '',  
+        phone_number: '',  
+        email: '',  
+        password: '',  
+        confirm_password: '' ,
+        otp_code: '' ,
         // otp_for: ''
     });
 
@@ -29,7 +29,8 @@ const LoginPage = () => {
         ) : loginRegisterState.state === 1 ? (
             <VerificationCode setFormData={setFormData} formData={formData} dynamicPhoneNumber={loginRegisterState.phone} setloginRegisterState={setloginRegisterState} />
         ) : (
-            <SignInPhone />
+            <></>
+            // <SignInPhone />
         )}
     </>
     )
