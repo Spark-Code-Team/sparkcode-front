@@ -60,6 +60,22 @@ const Header = () => {
                     </Link>
 
                     <ul className="flex items-center lg:mr-16 gap-x-9">
+                            <div
+                                >
+                                <li
+                                    className="
+                                    text-white
+                                    "
+                                    >
+                                    <Link
+                                        href={'/Login'}
+                                    >
+                                        {
+                                            'حساب کاربری'
+                                        }
+                                    </Link>
+                                </li>
+                            </div>
 
                         {
                             headerLink.map((item, index) => (
@@ -179,7 +195,6 @@ const Header = () => {
                                             </div>
                                         ))
                                     }
-                                    ططططططططططططططططططططططططططططط
                                         <div
                                                 >
                                                 <li
