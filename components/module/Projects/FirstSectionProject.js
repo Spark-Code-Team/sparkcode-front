@@ -11,6 +11,7 @@ const FirstSecProject = () => {
         items-center
         mt-10
         ">
+
             <div className="
             md:w-1/2 w-full
             md:h-[300px] h-full

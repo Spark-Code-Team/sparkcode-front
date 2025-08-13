@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import IconLogin from "../../../public/icons/IconLogin";
 import { GiHamburgerMenu } from "react-icons/gi";
 import CloseMenu from "../../../public/icons/CloseMenu";
 import { useEffect, useState } from "react";
@@ -78,10 +77,10 @@ const Header = () => {
                     <ul className="flex items-center lg:mr-16 gap-x-9">
                             <div>                      
                                 {profile.data.role?<>
-                                    {profile.data.role == 1 ? 
+                                    {profile.data.role == 2 ? 
                                         <Link href="/dashboard/user-account-dashboard">
                                             <Image alt="profile" onClick={() => Profile()} width={500} height={500} src={profile.profile_img} className="w-[42px] h-[42px] border-4 rounded-full"/>
-                                            </Link> : <>{profile.data.role == 2 ? 
+                                            </Link> : <>{profile.data.role == 1 ? 
                                             <Link href="/admin/User-Account">
                                             <Image alt="profile" onClick={() => Profile()} width={500} height={500} src={profile.profile_img} className="w-[42px] h-[42px] border-4 rounded-full"/>
                                         </Link> : <></> }</>}

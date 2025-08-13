@@ -1,9 +1,6 @@
 "use client"
 
 import Link from "next/link";
-// import { useState } from "react";
-// import EmailLogin from "../../../../public/icons/EmailLogin";
-// import PersonName from "../../../../public/icons/PersonName";
 import { Bounce, toast } from "react-toastify";
 import { registerForm } from "@/constant/auth";
 import { sendOtp } from "@/services/auth";
@@ -66,7 +63,7 @@ const RegisterLogin = ({setFormData ,formData ,setloginRegisterState }) =>{
         >
 
         <div className="
-       bg-white
+       bg-slate-800
          md:w-[664px] w-full
          md:h-[590px] h-screen
          md:p-8 p-3
@@ -84,6 +81,7 @@ const RegisterLogin = ({setFormData ,formData ,setloginRegisterState }) =>{
              ">
 
             <h2 className="
+              text-white
               md:text-xl text-2xl
               font-bold 
               mb-4 
@@ -94,7 +92,7 @@ const RegisterLogin = ({setFormData ,formData ,setloginRegisterState }) =>{
 
             <p className="
                 text-[16px]
-              text-[#A6A6A6]
+              text-white
               ">
                  لطفا اطلاعات زیر را تکمیل کنید 
             </p>
@@ -113,21 +111,19 @@ const RegisterLogin = ({setFormData ,formData ,setloginRegisterState }) =>{
                   return (  
                       <div key={p.id} className="  
                           flex  
-                          items-center  
-                          md:w-[292px]  
+                          items-center 
+                          md: full 
                           h-12  
-                          rounded-xl  
-                          border-[1px]  
-                          border-[#E1E1E1]  
+                          rounded-xl 
                           mb-3
                           md:mb-0
-                      ">  
-                          <span className="mr-4">  
-                              {/* <PersonName />   */}
-                          </span>  
+                      ">   
                           
                           <input  
-                              className="  
+                              className=" 
+                                  rounded-xl
+                                  m-auto 
+                                  p-2
                                   border-none  
                                   focus:outline-none  
                                   focus:ring-0  
@@ -150,15 +146,19 @@ const RegisterLogin = ({setFormData ,formData ,setloginRegisterState }) =>{
 
             <div>
                 <button className="
-                md:w-[600px] w-full
-                h-12 
-                bg-[#EDEDED] 
-                rounded-xl 
-                text-black
                 hover:bg-primary
-                hover:text-black
-                text-xl
-                md:text-base
+                hover:text-white
+                transition
+                duration-200
+                hover:bg-slate-500
+                 md:w-[616px] w-full
+                 h-12 
+                 bg-[#e6e6e6] 
+                 rounded-xl 
+                 text-[#202020]
+                 text-xl
+                 md:text-base
+                 
                 "
                 onClick={() => handleSendData()}
                  >
@@ -167,6 +167,7 @@ const RegisterLogin = ({setFormData ,formData ,setloginRegisterState }) =>{
             </div> 
 
             <div className="
+            text-white
             mt-3 
             w-[600px]
             flex
@@ -177,7 +178,6 @@ const RegisterLogin = ({setFormData ,formData ,setloginRegisterState }) =>{
             <Link href="/Sign-in">
               <p className="
                   mr-1 
-                text-primary
                   text-xl
                   md:text-base
                 ">

@@ -4,11 +4,11 @@ export const headerLink = [
         link: "/projects",
         external: false
     },
-    // {
-    //     title: "دوره ها",
-    //     link: "/courses",
-    //     external: false
-    // },
+    {
+        title: "دوره ها",
+        link: "/courses",
+        external: false
+    },
     {
         title: "مقالات",
         link: "http://blog.sparkcode-service.com",

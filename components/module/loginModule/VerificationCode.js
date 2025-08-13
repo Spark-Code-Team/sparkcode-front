@@ -118,7 +118,7 @@ const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
               fetchProfile()
               router.push('/')
         }else{
-          toast.error(error.response.data.detail, { 
+          toast.error(error.response.data.error, { 
                   position: "bottom-right",
                   autoClose: 5000,
                   hideProgressBar: false,
@@ -146,7 +146,7 @@ const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
        md:bg-[url('/images/userdashboard.png')]
       ">
         <div className="
-         bg-white 
+         bg-slate-800
          md:w-[664px] 
          md:h-[590px] 
          md:p-8 
@@ -166,6 +166,7 @@ const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
               mb-4 
               text-center
               md:text-2xl
+              text-white
               ">
                 ثبت نام
             </h2>
@@ -184,6 +185,8 @@ const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
                 <p className="
                   text-2xl
                   md:text-base
+                text-white
+
                 ">
                 کد تایید وارد کنید
                 </p>
@@ -191,7 +194,8 @@ const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
                 <p className="
                   text-xl
                   md:text-base
-                text-[#A6A6A6]">
+                text-white
+">
                 کد تایید به شماره تلفن {dynamicPhoneNumber} ارسال شد.
                 </p>
 
@@ -227,7 +231,7 @@ const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
                 <p className="
                   text-xl
                   md:text-base
-                text-[#A6A6A6]">
+                text-[#ffffff]">
                 {turnToMinuets(remainingTime).minuet}:{turnToMinuets(remainingTime).seconds} تا ارسال مجدد کد
                 </p>
 
@@ -250,15 +254,18 @@ const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
                  >
                     ارسال مجدد کد
                 </button>:<button className="
-                md:w-[600px] w-[375px]
-                h-12 
-                bg-[#EDEDED] 
-                rounded-xl 
-                text-black
                 hover:bg-primary
-                hover:text-black
-                text-xl
-                md:text-base
+                hover:text-white
+                transition
+                duration-200
+                hover:bg-slate-500
+                 md:w-[616px] w-full
+                 h-12 
+                 bg-[#e6e6e6] 
+                 rounded-xl 
+                 text-[#202020]
+                 text-xl
+                 md:text-base
                 "
                  onClick={() => {
                   handleSendData()
@@ -275,10 +282,13 @@ const VerificationCode = ({dynamicPhoneNumber , setFormData , formData }) => {
              flex
              text-xl
              md:text-base
+           text-white
+
              ">
             حساب کاربری دارید؟
             <Link href="/Sign-in">
-             <p className="mr-1 text-primary">
+             <p className="mr-1 text-primary
+                           text-white">
                 ورود
             </p>  
              </Link> 
