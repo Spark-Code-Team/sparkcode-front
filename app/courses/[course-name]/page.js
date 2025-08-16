@@ -91,7 +91,6 @@ const SingleCourses = () => {
         </div>
       </div>
 
-      {/* Description */}
       <section className="mt-10 bg-transparent">
         <h2 className="text-2xl font-semibold mb-3 text-slate-100">توضیحات دوره</h2>
         <p className="text-gray-300 leading-relaxed whitespace-pre-line">
@@ -99,7 +98,6 @@ const SingleCourses = () => {
         </p>
       </section>
 
-      {/* Chapters */}
       <section className="mt-10 bg-transparent">
   <h2 className="text-2xl font-semibold mb-3 text-slate-100">فصل‌ها</h2>
   <div className="space-y-4">
@@ -130,7 +128,6 @@ const SingleCourses = () => {
   </div>
 </section>
 
-      {/* FAQs */}
       {coursesDetail.faqs?.length > 0 && (
         <section className="mt-10 bg-transparent">
           <h2 className="text-2xl font-semibold mb-3 text-slate-100">سوالات متداول</h2>
@@ -145,7 +142,6 @@ const SingleCourses = () => {
         </section>
       )}
 
-      {/* Reviews */}
       {coursesDetail.reviews?.length > 0 && (
         <section className="mt-10 bg-transparent">
           <h2 className="text-2xl font-semibold mb-3 text-slate-100">نظرات کاربران</h2>
@@ -165,9 +161,7 @@ const SingleCourses = () => {
       )}
         <ModalPage isOpen={openModal}>
         <div className="flex items-center gap-4 mt-2 md:mt-0">
-                {/* <span className="text-sm">{video.duration} دقیقه</span> */}
 
-                {/* نمایش ویدیو با منوی سفارشی بدون امکان دانلود */}
                 {videoPath? (
                     <div className="h-max rounded-xl p-5 bg-slate-400/30">
                     <div className="text-white w-max cursor-pointer m-1 "
@@ -183,7 +177,7 @@ const SingleCourses = () => {
                     style={{ maxWidth: '100%' }}
                     src={videoPath}
                     poster={videoPath}
-                    onContextMenu={(e) => e.preventDefault()} // جلوگیری از راست‌کلیک دانلود
+                    onContextMenu={(e) => e.preventDefault()} 
                   >
                     مرورگر شما ویدیو را پشتیبانی نمی‌کند.
                   </video></div>
