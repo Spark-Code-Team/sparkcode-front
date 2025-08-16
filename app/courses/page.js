@@ -1,6 +1,11 @@
+'use client'
+
 import CoursesArchive from "@/components/template/coursesArchive";
 
 const Courses = ()=>{
+
+
+
 
     return(
 

@@ -11,3 +11,14 @@ export const Courses_list = async (ordering = '') => {
         return { error }
     }
 }
+
+export const Courses_detail = async (name = '') => {
+    try {
+        const response = await api.get(`/product/course-detail/${name}/`)
+        console.log('get courses detail response -------->' , response)
+        return { response }
+    } catch(error) {
+        console.log('get courses detail error -------->' , error)
+        return { error }
+    }
+}
