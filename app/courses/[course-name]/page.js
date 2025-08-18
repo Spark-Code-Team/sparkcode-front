@@ -1,14 +1,23 @@
 'use client'
+import Spinner from "@/components/element/Loading";
 import ModalPage from "@/components/element/Modals";
 import { Courses_detail } from "@/services/courses";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import {  useRef, useEffect, useState } from "react";
 
 const SingleCourses = () => {
+
+  const videoRef = useRef(null); 
   const path = usePathname();
+
   const [ openModal , setOpenmodal ] = useState(false)
   const [ videoPath , setVideoPath ] = useState('')
   const [coursesDetail, setCoursesDetail] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [introduction , setIntroduction] = useState('')
+  const [isPlaying , setIsPlaying] = useState(false)
+
+
 
   function getCourseName(input) {
     const parts = input.split('/').filter(Boolean); 
@@ -20,14 +29,21 @@ const SingleCourses = () => {
       const { response, error } = await Courses_detail(getCourseName(path));
       if (response) {
         setCoursesDetail(response.data);
+        if (response?.data?.chapters?.[0]?.videos?.[0]?.file) {
+          setIntroduction(response.data.chapters[0].videos[0].file);
+        } else {
+          setIntroduction(null);
+        }
+        setLoading(false)
       } else {
         console.error(error.response?.data.error || "خطا در دریافت اطلاعات");
+        setLoading(false)
       }
     };
     getData();
   }, [path]);
 
-  if (!coursesDetail) return <p className="text-white/90">در حال بارگذاری...</p>;
+  if (loading) return <div className="w-full flex justify-center mt-30 " ><Spinner/></div>;
 
   return (
     <div className="max-w-6xl mx-auto p-6 bg-[#0b1220] text-white">
@@ -66,29 +82,64 @@ const SingleCourses = () => {
         </div>
 
         <div className="bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden shadow-sm">
-          <img
-            src={coursesDetail.thumbnail || '/placeholder.png'}
-            alt={coursesDetail.title || 'Course Thumbnail'}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4 space-y-3">
-            <p className="text-xl font-bold">
-              {coursesDetail.discount_price ? (
-                <>
-                  <span className="line-through text-slate-400 mr-2">
-                    {coursesDetail.price} تومان
-                  </span>
-                  <span className="text-white">{coursesDetail.discount_price} تومان</span>
-                </>
-              ) : (
-                <span className="text-white">{coursesDetail.price} تومان</span>
-              )}
-            </p>
-            <button className="w-full bg-indigo-700 text-white rounded-xl py-2 font-medium hover:bg-indigo-600 transition">
-              ثبت‌نام در دوره
-            </button>
-          </div>
+  {!isPlaying ? (
+    <div 
+      className="relative w-[320px] h-[180px] cursor-pointer"
+      onClick={() => {
+        if (introduction) {
+          setIsPlaying(true);
+          videoRef.current.play();
+        }
+      }}
+    >
+      <img 
+        src={coursesDetail?.thumbnail} 
+        alt={coursesDetail?.title}
+        className="w-full h-full mr-4 mt-3 object-cover rounded-lg"
+      />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <button className="bg-white/70 rounded-full p-4">
+          ▶
+        </button>
+      </div>
+      {!introduction && (
+        <div className="absolute inset-0 flex items-center justify-center text-gray-300 font-medium text-center px-2">
+          ویدیوی معرفی موجود نیست
         </div>
+      )}
+    </div>
+  ) : (
+    <video
+      className="m-auto mt-3"
+      ref={videoRef}
+      controls
+      width={320}
+      height={180}
+      style={{ maxWidth: "100%" }}
+      src={introduction || coursesDetail?.thumbnail} // اگر ویدیو نبود thumbnail جایگزین شود
+      onContextMenu={(e) => e.preventDefault()}
+    />
+  )}
+
+  <div className="p-4 space-y-3">
+    <p className="text-xl font-bold">
+      {coursesDetail.discount_price ? (
+        <>
+          <span className="line-through text-slate-400 mr-2">
+            {coursesDetail.price} تومان
+          </span>
+          <span className="text-white mx-2">{coursesDetail.discount_price} تومان</span>
+        </>
+      ) : (
+        <span className="text-white mx-2">{coursesDetail.price} تومان</span>
+      )}
+    </p>
+    <button className="w-full bg-indigo-700 text-white rounded-xl py-2 font-medium hover:bg-indigo-600 transition">
+      ثبت‌نام در دوره
+    </button>
+  </div>
+</div>
+
       </div>
 
       <section className="mt-10 bg-transparent">
@@ -100,33 +151,44 @@ const SingleCourses = () => {
 
       <section className="mt-10 bg-transparent">
   <h2 className="text-2xl font-semibold mb-3 text-slate-100">فصل‌ها</h2>
-  <div className="space-y-4">
+  <div className="space-y-3">
     {coursesDetail.chapters?.map((chapter) => (
-      <div key={chapter.id} className="border border-slate-700 rounded-xl p-4 bg-slate-800/60">
-        <h3 className="font-bold text-lg mb-2 text-white">{chapter.title}</h3>
-        <ul className="space-y-2">
-          {chapter.videos?.map((video , i) => (
+      <details
+        key={chapter.id}
+        className="border border-slate-700 rounded-xl p-3 bg-slate-800/60"
+      >
+        <summary className="cursor-pointer font-bold text-lg text-white">
+          {chapter.title}
+        </summary>
+
+        <ul className="space-y-2 mt-3">
+          {chapter.videos?.map((video, i) => (
             <li
               key={video.id}
-              className={`flex flex-col md:flex-row md:items-center justify-between ${chapter.videos.length != i+1? 'border-b' : ''} border-slate-700 pb-2 text-gray-300`}
+              className={`flex flex-col md:flex-row py-3 md:items-center justify-between ${
+                chapter.videos.length != i + 1 ? "border-b" : ""
+              } border-slate-700 pb-2 text-gray-300`}
             >
-                <div className="flex items-center gap-3">
-                    <span className="font-medium">{video.title}</span>
-                </div>
-                <div onClick={()=>{
-                    setOpenmodal(true)
-                    setVideoPath(video?.file)
-                }} className=" text-bold cursor-pointer text-blue-400">مشاهده</div>
-
-
-
+              <div className="flex items-center gap-3">
+                <span className="font-medium">{video.title}</span>
+              </div>
+              <div
+                onClick={() => {
+                  setOpenmodal(true);
+                  setVideoPath(video?.file);
+                }}
+                className="text-bold cursor-pointer text-blue-400"
+              >
+                مشاهده
+              </div>
             </li>
           ))}
         </ul>
-      </div>
+      </details>
     ))}
   </div>
 </section>
+
 
       {coursesDetail.faqs?.length > 0 && (
         <section className="mt-10 bg-transparent">
