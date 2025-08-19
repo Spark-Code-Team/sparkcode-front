@@ -22,3 +22,22 @@ export const Courses_detail = async (name = '') => {
         return { error }
     }
 }
+
+// export const buildCourseListQS = (filters = {}) => {
+//     const { search, category, status, ordering, page, page_size } = filters;
+//     const p = new URLSearchParams();
+//     if (search)    p.set("search", search);
+//     if (category)  p.set("category", category);   // slug
+//     if (status)    p.set("status", status);
+//     if (ordering)  p.set("ordering", ordering);   // "-created_at" | "price" | ...
+//     if (page)      p.set("page", page);
+//     if (page_size) p.set("page_size", page_size);
+//     const s = p.toString();
+//     return s ? `?${s}` : "";
+//   };
+  
+//   // همون API قدیمی، فقط با QueryString ساخته‌شده صدا می‌زنیم
+//   export const Courses_listByFilters = async (filters = {}) => {
+//     const qs = buildCourseListQS(filters);    // => "?search=...&ordering=-price"
+//     return Courses_list(qs);                  // => /product/courses-list/?...
+//   };
