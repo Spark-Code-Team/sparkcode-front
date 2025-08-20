@@ -30,14 +30,21 @@ export default function CoursesArchive() {
     { label: "گران‌ترین", value: "-price" },
   ];
 
-  
   const STATUS_OPTIONS = [
-    { label: "همه دوره‌ها", value: "" },
-    { label: "در حال بروزرسانی", value: "updating" },
-    { label: "منتشر شده", value: "published" },
-    { label: "تکمیل‌شده", value: "completed" },
+    { label: "همه دوره‌ها",     value: "" },
+    { label: "در حال برگزاری",  value: "ongoing" },
+    { label: "خاتمه‌یافته",     value: "finished" },
+    { label: "به‌زودی",         value: "coming_soon" },
   ];
 
+  const CATEGORY_OPTIONS = [
+    { label: "فرانت‌اند",    value: "frontend" },
+    { label: "ارتقای مهارت‌ها", value: "skills" },
+    { label: "بک‌اند",       value: "backend" },
+    { label: "امنیت",        value: "isms" },
+    { label: "زبان",       value: "language" },
+    { label: "نود جی‌اس",    value: "nodejs" },
+  ];
 
   function buildQuery(obj) {
     const params = new URLSearchParams();
@@ -65,13 +72,13 @@ export default function CoursesArchive() {
     return () => clearTimeout(id);
   }, [categoryInput]);
 
- 
   useEffect(() => {
     let ignore = false;
     (async () => {
       setLoading(true);
       setErr("");
-      const { response, error } = await Courses_list(buildQuery(filters));
+      console.log("[UI] filters =>", filters);
+      const { response, error } = await Courses_list(filters);
       if (ignore) return;
       if (response) setCourses(response.data);
       else setErr(error?.response?.data?.error || "خطا در دریافت اطلاعات");
@@ -79,6 +86,19 @@ export default function CoursesArchive() {
     })();
     return () => { ignore = true; };
   }, [JSON.stringify(filters)]);
+  // useEffect(() => {
+  //   let ignore = false;
+  //   (async () => {
+  //     setLoading(true);
+  //     setErr("");
+  //     const { response, error } = await Courses_list(buildQuery(filters));
+  //     if (ignore) return;
+  //     if (response) setCourses(response.data);
+  //     else setErr(error?.response?.data?.error || "خطا در دریافت اطلاعات");
+  //     setLoading(false);
+  //   })();
+  //   return () => { ignore = true; };
+  // }, [JSON.stringify(filters)]);
 
   const clearFilters = () => {
     setSearchInput("");
@@ -141,14 +161,39 @@ export default function CoursesArchive() {
 
          
                 <div className="space-y-2 mb-4">
-                  <label className="text-sm text-slate-300"> دسته‌بندی</label>
-                  <input
-                    value={categoryInput}
-                    onChange={(e) => setCategoryInput(e.target.value)}
-                    placeholder="مثلاً: javascript"
-                    className="w-full rounded-xl bg-slate-900 text-slate-200 placeholder:text-slate-400 border border-slate-700 px-3 py-2 focus:outline-none focus:border-indigo-500"
-                  />
-                </div>
+  <div className="flex items-center justify-between">
+    <label className="text-sm text-slate-300">دسته‌بندی</label>
+    {filters.category && (
+      <button
+        type="button"
+        onClick={() => setFilters((p) => ({ ...p, category: "" }))}
+        className="text-xs text-indigo-400 hover:text-indigo-300"
+      >
+        حذف
+      </button>
+    )}
+  </div>
+
+  <div className="space-y-2 max-h-56 overflow-y-auto pr-1">
+    {CATEGORY_OPTIONS.map((cat) => (
+      <label key={cat.value} className="flex items-center gap-2 text-slate-200">
+        <input
+          type="checkbox"
+          className="accent-indigo-600"
+          checked={filters.category === cat.value}
+          onChange={() =>
+            setFilters((p) => ({
+              ...p,
+             
+              category: p.category === cat.value ? "" : cat.value,
+            }))
+          }
+        />
+        <span className="text-sm">{cat.label}</span>
+      </label>
+    ))}
+  </div>
+</div>
 
     
                 <div className="space-y-2">

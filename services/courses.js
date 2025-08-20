@@ -1,16 +1,39 @@
 import api from "@/config/api"
 
 
-export const Courses_list = async (ordering = '') => {
+// export const Courses_list = async (ordering = '') => {
+//     try {
+//         const response = await api.get(`/product/courses-list/${ordering}`)
+//         console.log('get courses response -------->' , response)
+//         return { response }
+//     } catch(error) {
+//         console.log('get courses error -------->' , error)
+//         return { error }
+//     }
+// }
+
+export const Courses_list = async (filters = {}) => {
     try {
-        const response = await api.get(`/product/courses-list/${ordering}`)
-        console.log('get courses response -------->' , response)
-        return { response }
-    } catch(error) {
-        console.log('get courses error -------->' , error)
-        return { error }
+      const { search, category, status, ordering, page, page_size } = filters || {};
+      console.log("[Courses_list] filters =>", { search, category, status, ordering, page, page_size });
+  
+      const response = await api.get("/product/courses-list/", {
+        params: {
+          ...(search?.trim() ? { search: search.trim() } : {}),
+          ...(category?.trim() ? { category: category.trim() } : {}),
+          ...(status?.trim() ? { status: status.trim() } : {}),
+          ...(ordering?.trim() ? { ordering: ordering.trim() } : {}),
+          ...(page !== undefined && page !== null ? { page } : {}),               
+          ...(page_size !== undefined && page_size !== null ? { page_size } : {}),
+        },
+      });
+      console.log("[Courses_list] requested URL =>", response.config?.url, "params =>", response.config?.params);
+      return { response };
+    } catch (error) {
+        console.log("[Courses_list] ERROR =>", error?.response?.status, error?.response?.data || error?.message);
+      return { error };
     }
-}
+  };
 
 export const Courses_detail = async (name = '') => {
     try {
@@ -23,21 +46,3 @@ export const Courses_detail = async (name = '') => {
     }
 }
 
-// export const buildCourseListQS = (filters = {}) => {
-//     const { search, category, status, ordering, page, page_size } = filters;
-//     const p = new URLSearchParams();
-//     if (search)    p.set("search", search);
-//     if (category)  p.set("category", category);   // slug
-//     if (status)    p.set("status", status);
-//     if (ordering)  p.set("ordering", ordering);   // "-created_at" | "price" | ...
-//     if (page)      p.set("page", page);
-//     if (page_size) p.set("page_size", page_size);
-//     const s = p.toString();
-//     return s ? `?${s}` : "";
-//   };
-  
-//   // همون API قدیمی، فقط با QueryString ساخته‌شده صدا می‌زنیم
-//   export const Courses_listByFilters = async (filters = {}) => {
-//     const qs = buildCourseListQS(filters);    // => "?search=...&ordering=-price"
-//     return Courses_list(qs);                  // => /product/courses-list/?...
-//   };
