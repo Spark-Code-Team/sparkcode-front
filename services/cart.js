@@ -1,13 +1,12 @@
 import api from "@/config/api"
 
-
-export const cartAddItem = async (order_id) => {
+export const cartAddItem = async () => {
     try{
-        const response = await api.get(`/cart/orders/cart-details/${order_id}`)
+        const response = await api.get('/cart/orders/my-cart')
         console.log('get cart response --->', response)    
         return{response}
     } catch(error){
-        console.log('ger cart error --->', error)     
+        console.log('get cart error --->', error)     
         return{error}
     }
 }
