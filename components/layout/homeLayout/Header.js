@@ -102,6 +102,24 @@ const Header = () => {
                                     </div>
                                     </>}
                             </div>
+                            {
+                                profile.data.role?
+                                <>
+                                    <li
+                                        className="
+                                        text-white
+                                        "
+                                        >
+                                        <Link
+                                            href={'/cart'}
+                                        >
+                                            {
+                                                'سبد خرید'
+                                            }
+                                        </Link>
+                                    </li>
+                                </>:<></>
+                            }
 
                         {
                             headerLink.map((item, index) => (

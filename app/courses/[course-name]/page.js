@@ -1,6 +1,7 @@
 'use client'
 import Spinner from "@/components/element/Loading";
 import ModalPage from "@/components/element/Modals";
+import { addItem } from "@/services/cart";
 import { Courses_detail } from "@/services/courses";
 import { usePathname } from "next/navigation";
 import {  useRef, useEffect, useState } from "react";
@@ -50,6 +51,15 @@ const SingleCourses = () => {
     };
     getData();
   }, [path]);
+
+  // const addToCart = async () => {
+  //   const {response , error} = await addItem({formData})
+  //   if(response){
+  //       console.log(response)
+  //   }else{
+  //       toast.error(error.response.data.error)
+  //   } 
+  // }
 
   if (loading) return <div className="w-full flex justify-center mt-40" ><Spinner/></div>;
 
@@ -150,8 +160,10 @@ const SingleCourses = () => {
         <span className="text-white mx-2">{coursesDetail.price} تومان</span>
       )}
     </p>
-    <button className="w-full bg-[#2e567d] text-white rounded-xl py-2 font-medium hover:bg-indigo-500 transition">
-      ثبت‌نام در دوره
+    <button 
+    // onClick={()=>{addToCart()}}
+    className="w-full bg-[#2e567d] text-white rounded-xl py-2 font-medium hover:bg-indigo-500 transition">
+      اضافه کردن به سبد خرید
     </button>
   </div>
 
@@ -295,7 +307,7 @@ const SingleCourses = () => {
         {coursesDetail.reviews.map((review, i) => (
           <div key={i} className="border border-slate-700 rounded-xl p-4 bg-slate-800">
             <p className="font-bold text-white">{review.user}</p>
-            <p className="text-yellow-400">امتیاز: {review.rating}/5</p>
+            <p className="text-yellow- 400">امتیاز: {review.rating}/5</p>
             <p className="text-gray-300">{review.comment}</p>
             <span className="text-xs text-gray-400">
               {new Date(review.created_at).toLocaleDateString("fa-IR")}
