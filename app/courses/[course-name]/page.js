@@ -52,14 +52,15 @@ const SingleCourses = () => {
     getData();
   }, [path]);
 
-  // const addToCart = async () => {
-  //   const {response , error} = await addItem({formData})
-  //   if(response){
-  //       console.log(response)
-  //   }else{
-  //       toast.error(error.response.data.error)
-  //   } 
-  // }
+  const addToCart = async (course_slug) => {
+    console.log(course_slug )
+    const {response , error} = await addItem(course_slug)
+    if(response){
+        console.log(response)
+    }else{
+        toast.error(error.response.data.error)
+    } 
+  }
 
   if (loading) return <div className="w-full flex justify-center mt-40" ><Spinner/></div>;
 
@@ -161,7 +162,7 @@ const SingleCourses = () => {
       )}
     </p>
     <button 
-    // onClick={()=>{addToCart()}}
+    onClick={()=>{addToCart(coursesDetail.slug)}}
     className="w-full bg-[#2e567d] text-white rounded-xl py-2 font-medium hover:bg-indigo-500 transition">
       اضافه کردن به سبد خرید
     </button>
