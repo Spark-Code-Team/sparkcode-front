@@ -19,9 +19,25 @@ const AboutSparkCode = ()=>{
 
                         <p className="w-full leading-8 text-white">ما یک تیم متخصص در حوزه برنامه‌نویسی و فناوری اطلاعات هستیم که با خلاقیت و نوآوری توانسته‌ایم راه‌حل‌های منحصربه‌فردی برای کسب‌وکارهای کوچک و بزرگ ارائه دهیم. با قابلیت‌هایی در زمینه کدنویسی، طراحی وب و اپلیکیشن، و مدیریت سرورها و هاستینگ، ما به شما کمک می‌کنیم تا حضور آنلاین خود را تقویت کنید و نیازهای خاص بیزینس خود را برآورده سازید. هدف ما ایجاد تجربه‌ای کاربرپسند و مؤثر برای مشتریانمان است.</p>
 
-                        <Link href="#" className="bg-[#2e567d] lg:w-[135px] lg:h-[51px] lg:p-0 p-2 w-32 flex gap-x-1 lg:flex justify-center items-center lg:mt-6 text-white rounded-lg">
-                            درباره ما <ArrowRight/>
+                        <Link
+                            href="/about"
+                            className="
+                                hover:text-lg
+                                inline-flex items-center justify-center
+                                bg-[#2E567D]
+                                text-white
+                                rounded-lg
+                                px-4 py-2
+                                gap-x-2
+                                whitespace-nowrap
+                                transition-all duration-300 ease-in-out
+                                hover:bg-[#3F6FA3]
+                            "
+                            >
+                            درباره ما
+                            <ArrowRight className="inline-block transition-transform duration-300 ease-in-out hover:translate-x-1" />
                         </Link>
+
 
                     </div>
 

@@ -11,34 +11,34 @@ const ServicesSparkCode = () => {
 
                 <div className="lg:w-[85%] justify-center w-full m-auto lg:mt-14 flex flex-col md:flex-row p-7">
 
-                    <div className="lg:w-1/4">
+                    <div className="lg:w-1/4 mb-6 md:mb-0">
 
                         <div className="lg:w-[65%] mb-5 text-center m-auto">
                             <img src="/image/proTeam.png" className=" w-[50%] md:w-max m-auto rounded-xl mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
-                            <div className="w-full m-auto text-white">تیم حرفه ای و خلاق</div>
-                            <div className="w-full m-auto mt-4 text-white">تیمی از متخصصان با تجربه و پرشور</div>
+                            <div className="w-full text-2xl m-auto text-white">تیم حرفه ای و خلاق</div>
+                            <div className="w-full m-auto mt-2 text-white">تیمی از متخصصان با تجربه و پرشور</div>
 
                         </div>
 
                     </div>
 
-                    <div className="lg:w-1/4">
+                    <div className="lg:w-1/4 mb-6 md:mb-0">
 
                         <div className="lg:w-[65%] mb-5 m-auto text-center">
                             <img src="image/Comprehensive.png" className=" rounded-xl w-[50%] md:w-max m-auto mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
-                            <div className="w-full m-auto text-white">خدمات جامع</div>
-                            <div className="w-full m-auto mt-4 text-white">ارائه خدمات سفارشی برا اساس نیازهای شما</div>
+                            <div className="w-full text-2xl m-auto text-white">خدمات جامع</div>
+                            <div className="w-full m-auto mt-2 text-white">ارائه خدمات سفارشی برا اساس نیازهای شما</div>
 
                         </div>
                         
                     </div>
 
-                    <div className="lg:w-1/4">
+                    <div className="lg:w-1/4 mb-6 md:mb-0">
 
                         <div className="lg:w-[65%] mb-5 text-center m-auto">
                             <img src="image/tech.png" className=" rounded-xl w-[50%] md:w-max m-auto mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
-                            <div className="w-full m-auto mb-2 text-white">تکنولوژی های روز دنیا</div>
-                            <div className="w-full m-auto mt-4 text-white">به روز بودن با آخرین تکنولوژی ها</div>
+                            <div className="w-full text-2xl m-auto mb-2 text-white">تکنولوژی های روز دنیا</div>
+                            <div className="w-full m-auto mt-2 text-white">به روز بودن با آخرین تکنولوژی ها</div>
 
                         </div>
                         
@@ -46,10 +46,10 @@ const ServicesSparkCode = () => {
 
                     <div className="lg:w-1/4">
 
-                        <div className="lg:w-[65%] mb-2 text-center m-auto">
+                        <div className="lg:w-[65%] mb-6 text-center m-auto">
                             <img src="image/quality.png" className=" rounded-xl w-[50%] md:w-full m-auto mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
-                            <div className="w-full m-auto text-white">تعهد به کیفیت</div>
-                            <div className="w-full m-auto mt-4 text-white">تضمین کیفیت و رضایت مشتری</div>
+                            <div className="w-full text-2xl m-auto text-white">تعهد به کیفیت</div>
+                            <div className="w-full m-auto mt-2 text-white">تضمین کیفیت و رضایت مشتری</div>
 
                         </div>
                         

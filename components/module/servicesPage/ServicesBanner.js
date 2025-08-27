@@ -6,7 +6,7 @@ const ServicesBanner = () => {
 
         <>
 
-            <div className="lg:w-full lg:h-[600px] lg:pt-1 lg:mt-0">
+            <div className="lg:w-full mx-5 md:mx-0 lg:h-[600px] lg:pt-1 lg:mt-0">
 
                 <div className="lg:w-[85%] w-full mx-auto lg:mt-24 flex justify-around">
 

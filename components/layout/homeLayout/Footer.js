@@ -44,11 +44,11 @@ const Footer = ()=>{
 
                             <p className="font-bold">دسترسی مستقیم</p>
 
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">پروژه ها</Link>
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">دوره ها</Link>
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">مقاله ها</Link>
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">تماس با ما</Link>
-                            <Link href="#" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">درباره ما</Link>
+                            <Link href="/projects" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">پروژه ها</Link>
+                            <Link href="/courses" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">دوره ها</Link>
+                            <Link href="https://blog.sparkcode-service.com/" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">مقاله ها</Link>
+                            <Link href="/contact" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">تماس با ما</Link>
+                            <Link href="/about" className="lg:mt-4 lg:block text-[15px] text-[#d4e1f2] mt-5 block text-sm">درباره ما</Link>
 
                         </div>
 

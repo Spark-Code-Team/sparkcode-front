@@ -1,3 +1,4 @@
+import LogoSVG from "@/public/icons/logoLoading";
 import Image from "next/image";
 
 const Introduction = ()=>{
@@ -5,7 +6,6 @@ const Introduction = ()=>{
     return(
 
         <>
-
             <div className="lg:w-full lg:h-[750px] lg:pt-1 lg:mt-0 custom-background">
 
                 <div className="lg:w-[85%] w-full mx-auto flex justify-around">
