@@ -191,6 +191,7 @@ export default Projects;
 
 
 // export default Projects;// export default Projects;
+// export default Projects;
 
 // const cardVariants = {
 //   hidden: { opacity: 0, y: 50 },
