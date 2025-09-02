@@ -190,7 +190,6 @@ export default Projects;
 // }
 
 
-// export default Projects;// export default Projects;
 // export default Projects;
 
 // const cardVariants = {
