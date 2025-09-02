@@ -51,7 +51,7 @@ const Introduction = () => {
               animate={{ opacity: [0.2, 1, 0.2] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
             >
-              خلاقیت بی حد
+              آینده از اینجا
             </motion.span>
 
             <motion.span
@@ -59,7 +59,7 @@ const Introduction = () => {
               animate={{ opacity: [0.2, 1, 0.2] }}
               transition={{ repeat: Infinity, duration: 1.5, delay: 0.3 }}
             >
-              فناوری بی مرز
+              شروع می‌شه
             </motion.span>
           </div>
 
