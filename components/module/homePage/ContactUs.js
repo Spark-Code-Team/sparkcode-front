@@ -98,8 +98,8 @@ const ContactUs = () => {
 
             <div className="w-full lg:mt-24 mt-10 text-white relative">
 
-                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">About Spark Code</div>
-                <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">درباره اسپارک کد</div>
+                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">contact Spark Code</div>
+                <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold"> باما در ارتباط باشید! </div>
 
                 <div id="bottom" className="glass-background lg:w-[85%] w-[90%] lg:flex m-auto mt-14 border-2 border-[#182128] rounded-3xl">
 

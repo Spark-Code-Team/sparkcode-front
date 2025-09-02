@@ -57,7 +57,7 @@ const ContactUsPage = () => {
         
         {/* اطلاعات تماس */}
         <div className="w-full md:w-[447px] rounded-xl custom-border animate-textGlow p-6 md:p-8 bg-[#091119]/20">
-          <h2 className="text-white font-bold text-lg mb-4">ارتباط با ما</h2>
+          <h2 className="text-white font-bold text-lg mb-4"> راه‌های ارتباطی ما </h2>
 
           <div className="flex items-center gap-2 text-[#d4e1f2] mb-3">
             <Image src="/image/phone-footer.png" alt="phone" width={20} height={20} />
@@ -93,6 +93,9 @@ const ContactUsPage = () => {
 
         {/* فرم همکاری */}
         <div className="w-full md:w-[600px] rounded-xl custom-border animate-textGlow p-6 md:p-8 bg-[#091119]/20">
+        <p className="text-white font-bold text-lg mb-4">
+        پیام بزار برامون !
+        </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {colabForm.map((item, idx) => {
               if(item.type === "file") {
@@ -105,7 +108,7 @@ const ContactUsPage = () => {
                       onChange={(e) => setFormState(last => ({ ...last, file: e.target.files[0] }))}
                     />
                     <div
-                      className="w-full text-center border p-2 rounded-md cursor-pointer hover:bg-white hover:text-black transition"
+                      className="w-[250px] text-[#d4e1f2] text-[15px] border border-[#dcdcdc26] p-2 ml-2 bg-[#091119] rounded-md cursor-pointer "
                       onClick={() => ref.current.click()}
                     >
                       آپلود رزومه (اختیاری)
