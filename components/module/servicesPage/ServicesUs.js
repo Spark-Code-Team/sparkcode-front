@@ -1,89 +1,110 @@
 const ServicesUs = () => {
-
     return (
-
-        <>
-
-<div className="w-full lg:mt-20 mt-10">
-
-<div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">Our Services</div>
-<div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">خدمات ما</div>
-
-<div className="lg:w-[85%] w-full m-auto lg:mt-16 flex flex-wrap justify-center md:justify-center sm:justify-center">
-
-    <div className="lg:w-1/3 flex flex-wrap justify-center relative text-center mx-auto">
-
-        <div className="w-full absolute top-2 text-white">طراحی وب سایت</div>
-
-        <div className="custom-background-blue">
-            <div className="lg:w-[90%] text-center mt-2 text-white">ما در Sparkcode وب‌سایت‌هایی طراحی می‌کنیم که مبتنی بر نیاز واقعی کاربر هستند. تمرکز ما بر بهینه‌سازی تجربه کاربری و پیاده‌سازی دقیق‌ترین استانداردهای فرانت‌اند و بک‌اند است.</div>
+      <div className="w-full lg:mt-20 mt-10">
+  
+        <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">
+          Our Services
         </div>
-
-    </div>
-
-    <div className="lg:w-1/3 flex flex-wrap justify-center relative text-center mx-auto">
-
-        <div className="w-full absolute top-2 text-white">برنامه نویسی</div>
-
-        <div className="custom-background-yellow">
-            <div className="lg:w-[90%] text-center mt-2 text-white">در Sparkcode، توسعه نرم‌افزار را با معماری ماژولار، کدنویسی تمیز و تمرکز بر مقیاس‌پذیری انجام می‌دهیم. هر خط کد بر اساس نیاز واقعی محصول و اصول مهندسی نرم‌افزار نوشته می‌شود.</div>
+        <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">
+          خدمات ما
         </div>
-
-    </div>
-
-    <div className="lg:w-1/3 flex flex-wrap justify-center relative text-center mx-auto">
-
-        <div className="w-full absolute top-2 text-white">مشاوره</div>
-
-        <div className="custom-background-red">
-            <div className="lg:w-[90%] text-center mt-2 text-white">مشاوره برای ما یعنی تحلیل دقیق نیاز، انتخاب فناوری مناسب و طراحی مسیری که توسعه‌ی نرم‌افزار را از ابتدا با رشد و دیده شدن هم‌راستا می‌کند.</div>
+  
+        <div className="lg:w-[85%] w-full m-auto lg:mt-16 flex flex-wrap justify-center gap-6">
+  
+          {/* کارت خدمات */}
+          {[
+            {
+              title: "طراحی وب سایت",
+              bgClass: "custom-background-blue",
+              text: " اسپارک‌کد وب‌سایت‌هایی حرفه‌ای و متناسب با نیاز کسب‌وکار شما طراحی می‌کند. در این مسیر از جدیدترین تکنولوژی‌ها، UI/UX و اصول سئو استفاده می‌شود. هدف ما ساخت سایتی زیبا، کاربردی و موفق در دنیای دیجیتال است. "
+            },
+            {
+              title: "برنامه نویسی",
+              bgClass: "custom-background-yellow",
+              text: " اسپارک‌کد ایده‌های شما را با طراحی و توسعه وب‌سایت، اپلیکیشن موبایل و برنامه‌های تحت وب به واقعیت تبدیل می‌کند. با استفاده از زبان‌های مختلف و ساخت APIهای سفارشی، نیازهای فنی کسب‌وکارتان را برطرف می‌کنیم. هدف ما ارائه بهترین راه‌حل‌ها و همراهی در مسیر رشد شماست. "
+            },
+            {
+              title: "مشاوره",
+              bgClass: "custom-background-red",
+              text: "مشاوره برای ما یعنی تحلیل دقیق نیاز، انتخاب فناوری مناسب و طراحی مسیری که توسعه‌ی نرم‌افزار را از ابتدا با رشد و دیده شدن هم‌راستا می‌کند."
+            },
+            {
+              title: "هوش مصنوعی",
+              bgClass: "custom-background-blue",
+              text: "ما از هوش مصنوعی برای حل مسائل واقعی استفاده می‌کنیم. از مدل‌سازی داده و یادگیری ماشین تا پیاده‌سازی سیستم‌های توصیه‌گر و پردازش زبان طبیعی، راه‌حل‌هایمان دقیق، قابل ‌اتکا و قابل ‌سفارشی‌سازی‌اند."
+            },
+            {
+              title: "امنیت",
+              bgClass: "custom-background-yellow",
+              text: " اسپارک‌کد با روش‌هایی مثل تست نفوذ، امنیت شبکه و مدیریت امنیت اطلاعات از داده‌ها و سیستم‌های شما محافظت می‌کند. امنیت برای ما اولویت است تا جلوی هرگونه تهدید و حمله گرفته شود. به این شکل شما می‌توانید با آرامش روی رشد کسب‌وکارتان تمرکز کنید. "
+            },
+            {
+              title: " خدمات IT ",
+              bgClass: "custom-background-red",
+              text: " اسپارک‌کد با خدمات IT، زیرساخت‌های فناوری اطلاعات کسب‌وکار شما را بهینه‌سازی می‌کند. از امنیت شبکه تا پشتیبانی و مشاوره فنی، راه‌حل‌های هوشمند و مقیاس‌پذیر ارائه می‌دهیم. هدف ما تضمین امنیت، به‌روز بودن و کارآمدی سیستم‌ها برای رشد کسب‌وکار شماست. "
+            },
+            {
+              title: "کنترل کیفیت",
+              bgClass: "custom-background-blue",
+              text: " اسپارک‌کد در تمام مراحل طراحی و توسعه، کنترل کیفیت و QA را اجرا می‌کند. هر ویژگی و خط کد به‌دقت بررسی می‌شود تا محصول نهایی بدون نقص باشد. هدف ما تضمین بهترین عملکرد و کیفیت در خروجی پروژه‌هاست. "
+            },
+            {
+              title: "پشتیبانی",
+              bgClass: "custom-background-yellow",
+              text: " اسپارک‌کد با خدمات پشتیبانی، همیشه همراه شما برای رفع مشکلات فنی و بهینه‌سازی سیستم‌هاست. تیم ما سریع پاسخ‌گو بوده و عملکرد وب‌سایت یا نرم‌افزار شما را تضمین می‌کند. از نصب و راه‌اندازی تا پشتیبانی مستمر، در کنار شما خواهیم بود. "
+            },
+            {
+              title: "ربات و بات",
+              bgClass: "custom-background-red",
+              text: " اسپارک‌کد با خدمات ربات و بات، فرآیندهای کسب‌وکار شما را هوشمند و خودکار می‌کند. از چت‌بات‌های هوشمند تا ربات‌های سفارشی، راهکارهای متنوع ارائه می‌دهیم. هدف ما بهبود تعاملات، افزایش بهره‌وری و کاهش هزینه‌هاست. "
+            },
+            {
+              title: "قالب وردپس",
+              bgClass: "custom-background-blue",
+              text: " اسپارک‌کد با طراحی قالب وردپرس، وب‌سایتی شخصی‌سازی‌شده و متناسب با نیاز شما می‌سازد. قالب‌ها زیبا، کاربردی و بهینه برای سرعت و عملکرد بهتر طراحی می‌شوند. هدف ما ایجاد تجربه کاربری عالی همراه با ظاهری جذاب است. "
+            },
+            {
+              title: " پلاگین ",
+              bgClass: "custom-background-blue",
+              text: " اسپارک‌کد با طراحی پلاگین، قابلیت‌های وب‌سایت یا اپلیکیشن شما را گسترش می‌دهد. از افزونه‌های اختصاصی وردپرس تا پلاگین‌های سفارشی، راهکارهای متنوع ارائه می‌کنیم. هدف ما بهبود عملکرد و تجربه کاربری دقیقاً مطابق نیاز شماست. "
+            },
+            {
+              title: " core ",
+              bgClass: "custom-background-yellow",
+              text: " اسپارک‌کد هسته‌های نرم‌افزاری آماده و قابل سفارشی‌سازی ارائه می‌دهد. این هسته‌ها به توسعه‌دهندگان کمک می‌کنند سریع‌تر و بهتر نرم‌افزار بسازند. هدف ما تسهیل ساخت و شخصی‌سازی برنامه‌های اختصاصی است. "
+            },
+            {
+              title: "سرور و هاست",
+              bgClass: "custom-background-red",
+              text: " اسپارک‌کد با ارائه هاست و سرورهای قدرتمند، سرعت و پایداری سایت شما را تضمین می‌کند. از هاست ابری تا سرور اختصاصی، همه‌چیز با بالاترین کیفیت فراهم می‌شود. تیم ما نیز همواره آماده پشتیبانی و رفع سریع مشکلات فنی است. "
+            },
+            {
+              title: " سایت ساز ",
+              bgClass: "custom-background-blue",
+              text: " اسپارک‌کد با خدمات سایت‌ساز، امکان ساخت سریع و آسان وب‌سایت‌های حرفه‌ای را فراهم می‌کند. بدون نیاز به دانش فنی می‌توانید طراحی، مدیریت و ارتقای سایت خود را انجام دهید. این سرویس بهترین گزینه برای راه‌اندازی سریع یک وب‌سایت زیبا و کاربرپسند است. "
+            },
+          ].map((service, idx) => (
+            <div key={idx} className="w-full h-64 sm:w-[48%] lg:w-1/3 flex flex-col items-center text-center mx-auto relative">
+  
+              {/* تیتر */}
+              <div className="w-full text-white text-lg font-semibold mb-[-30px]">
+                {service.title}
+              </div>
+  
+              {/* باکس محتوا */}
+              <div className={`${service.bgClass} p-4 rounded-lg w-full`}>
+                <div className="text-white px-5 text-[14px] text-justify leading-relaxed">
+                  {service.text}
+                </div>
+              </div>
+  
+            </div>
+          ))}
+  
         </div>
-
-    </div>
-
-
-    <div className="lg:w-1/3 flex flex-wrap justify-center relative text-center mx-auto">
-
-        <div className="w-full absolute top-2 text-white">هوش مصنوعی</div>
-
-        <div className="custom-background-blue">
-            <div className="lg:w-[90%] text-center mt-2 text-white">ما از هوش مصنوعی برای حل مسائل واقعی استفاده می‌کنیم. از مدل‌سازی داده و یادگیری ماشین تا پیاده‌سازی سیستم‌های توصیه‌گر و پردازش زبان طبیعی، راه‌حل‌هایمان دقیق، قابل ‌اتکا و قابل ‌سفارشی‌سازی‌اند.
-
-</div>
-        </div>
-
-    </div>
-
-    <div className="lg:w-1/3 flex flex-wrap justify-center relative text-center mx-auto">
-
-        <div className="w-full absolute top-2 text-white">امنیت</div>
-
-        <div className="custom-background-yellow hover:text-bold ">
-            <div className="lg:w-[90%] text-center mt-2 text-white">امنیت در Sparkcode بخشی از فرآیند توسعه است، نه مرحله‌ای جدا. از طراحی معماری امن تا تست نفوذ و پیاده‌سازی سیاست‌های دسترسی، امنیت را در سطح کد و زیرساخت تضمین می‌کنیم.</div>
-        </div>
-
-    </div>
-
-    <div className="lg:w-1/3 flex flex-wrap justify-center relative text-center mx-auto">
-
-        <div className="w-full absolute top-2 text-white">زیرساخت</div>
-
-        <div className="custom-background-red">
-            <div className="lg:w-[90%] text-center mt-2 text-white">زیرساخت‌های ما بر پایه‌ی اتوماسیون، مقیاس‌پذیری و نظارت مداوم طراحی می‌شوند. از کانتینرسازی تا استقرار در فضای ابری، هر لایه برای پایداری و توسعه‌ی بی‌وقفه بهینه‌سازی شده است.</div>
-        </div>
-
-    </div>
-
-
-</div>
-
-</div>
-
-        </>
-
+      </div>
     )
-
-}
-
-
-export default ServicesUs;
+  }
+  
+  export default ServicesUs;
+  

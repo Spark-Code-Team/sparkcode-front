@@ -1,69 +1,129 @@
 const ServicesSparkCode = () => {
-
+    const services = [
+      {
+        img: "/image/proTeam.png",
+        title: "تیم حرفه ای و خلاق",
+        desc: "تیمی از متخصصان با تجربه و پرشور",
+      },
+      {
+        img: "/image/Comprehensive.png",
+        title: "خدمات جامع",
+        desc: "ارائه خدمات سفارشی برا اساس نیازهای شما",
+      },
+      {
+        img: "/image/tech.png",
+        title: "تکنولوژی های روز دنیا",
+        desc: "به روز بودن با آخرین تکنولوژی ها",
+      },
+      {
+        img: "/image/quality.png",
+        title: "تعهد به کیفیت",
+        desc: "تضمین کیفیت و رضایت مشتری",
+      },
+    ];
+  
     return (
-
-        <>
-
-            <div className="w-full lg:mt-20 mt-10">
-
-                <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">? Why Spark Code</div>
-                <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">چرا اسپارک کد ؟</div>
-
-                <div className="lg:w-[85%] justify-center w-full m-auto lg:mt-14 flex flex-col md:flex-row p-7">
-
-                    <div className="lg:w-1/4">
-
-                        <div className="lg:w-[65%] mb-5 text-center m-auto">
-                            <img src="/image/proTeam.png" className=" w-[50%] md:w-max m-auto rounded-xl mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
-                            <div className="w-full m-auto text-white">تیم حرفه ای و خلاق</div>
-                            <div className="w-full m-auto mt-4 text-white">تیمی از متخصصان با تجربه و پرشور</div>
-
-                        </div>
-
-                    </div>
-
-                    <div className="lg:w-1/4">
-
-                        <div className="lg:w-[65%] mb-5 m-auto text-center">
-                            <img src="image/Comprehensive.png" className=" rounded-xl w-[50%] md:w-max m-auto mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
-                            <div className="w-full m-auto text-white">خدمات جامع</div>
-                            <div className="w-full m-auto mt-4 text-white">ارائه خدمات سفارشی برا اساس نیازهای شما</div>
-
-                        </div>
-                        
-                    </div>
-
-                    <div className="lg:w-1/4">
-
-                        <div className="lg:w-[65%] mb-5 text-center m-auto">
-                            <img src="image/tech.png" className=" rounded-xl w-[50%] md:w-max m-auto mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
-                            <div className="w-full m-auto mb-2 text-white">تکنولوژی های روز دنیا</div>
-                            <div className="w-full m-auto mt-4 text-white">به روز بودن با آخرین تکنولوژی ها</div>
-
-                        </div>
-                        
-                    </div>
-
-                    <div className="lg:w-1/4">
-
-                        <div className="lg:w-[65%] mb-2 text-center m-auto">
-                            <img src="image/quality.png" className=" rounded-xl w-[50%] md:w-full m-auto mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
-                            <div className="w-full m-auto text-white">تعهد به کیفیت</div>
-                            <div className="w-full m-auto mt-4 text-white">تضمین کیفیت و رضایت مشتری</div>
-
-                        </div>
-                        
-                    </div>
-
+      <div className="w-full lg:mt-20 mt-10">
+        <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">
+          ? Why Spark Code
+        </div>
+        <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">
+          چرا اسپارک کد ؟
+        </div>
+  
+        <div className="lg:w-[85%] justify-center w-full m-auto lg:mt-14 flex flex-col md:flex-row p-7">
+          {services.map((service, index) => (
+            <div key={index} className="lg:w-1/4 mb-6 md:mb-0">
+              <div className="lg:w-[65%] mb-5 text-center m-auto">
+                <img
+                  src={service.img}
+                  className="w-[50%] md:w-max m-auto rounded-xl mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white"
+                  alt={service.title}
+                />
+                <div className="w-full text-xl m-auto text-white">
+                  {service.title}
                 </div>
-
+                <div className="w-full m-auto mt-2 text-white text-[14px]">
+                  {service.desc}
+                </div>
+              </div>
             </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+  
+  export default ServicesSparkCode;
+  
 
-        </>
 
-    )
+// const ServicesSparkCode = () => {
 
-}
+//     return (
+
+//         <>
+
+//             <div className="w-full lg:mt-20 mt-10">
+
+//                 <div className="w-full text-center lg:text-3xl text-xl bg-gradient-to-b from-[#4899EB] to-[#4899EB]/0 opacity-80 text-transparent bg-clip-text animate-floatText">? Why Spark Code</div>
+//                 <div className="w-full text-center lg:text-2xl text-xl lg:mt-1 text-white font-bold">چرا اسپارک کد ؟</div>
+
+//                 <div className="lg:w-[85%] justify-center w-full m-auto lg:mt-14 flex flex-col md:flex-row p-7">
+
+//                     <div className="lg:w-1/4 mb-6 md:mb-0">
+
+//                         <div className="lg:w-[65%] mb-5 text-center m-auto">
+//                             <img src="/image/proTeam.png" className=" w-[50%] md:w-max m-auto rounded-xl mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
+//                             <div className="w-full text-2xl m-auto text-white">تیم حرفه ای و خلاق</div>
+//                             <div className="w-full m-auto mt-2 text-white">تیمی از متخصصان با تجربه و پرشور</div>
+
+//                         </div>
+
+//                     </div>
+
+//                     <div className="lg:w-1/4 mb-6 md:mb-0">
+
+//                         <div className="lg:w-[65%] mb-5 m-auto text-center">
+//                             <img src="image/Comprehensive.png" className=" rounded-xl w-[50%] md:w-max m-auto mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
+//                             <div className="w-full text-2xl m-auto text-white">خدمات جامع</div>
+//                             <div className="w-full m-auto mt-2 text-white">ارائه خدمات سفارشی برا اساس نیازهای شما</div>
+
+//                         </div>
+                        
+//                     </div>
+
+//                     <div className="lg:w-1/4 mb-6 md:mb-0">
+
+//                         <div className="lg:w-[65%] mb-5 text-center m-auto">
+//                             <img src="image/tech.png" className=" rounded-xl w-[50%] md:w-max m-auto mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
+//                             <div className="w-full text-2xl m-auto mb-2 text-white">تکنولوژی های روز دنیا</div>
+//                             <div className="w-full m-auto mt-2 text-white">به روز بودن با آخرین تکنولوژی ها</div>
+
+//                         </div>
+                        
+//                     </div>
+
+//                     <div className="lg:w-1/4">
+
+//                         <div className="lg:w-[65%] mb-6 text-center m-auto">
+//                             <img src="image/quality.png" className=" rounded-xl w-[50%] md:w-full m-auto mb-2 bg-cover bg-center lg:flex lg:justify-center lg:items-center text-white" alt="Success" />
+//                             <div className="w-full text-2xl m-auto text-white">تعهد به کیفیت</div>
+//                             <div className="w-full m-auto mt-2 text-white">تضمین کیفیت و رضایت مشتری</div>
+
+//                         </div>
+                        
+//                     </div>
+
+//                 </div>
+
+//             </div>
+
+//         </>
+
+//     )
+
+// }
 
 
-export default ServicesSparkCode;
+// export default ServicesSparkCode;
