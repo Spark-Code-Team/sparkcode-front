@@ -70,27 +70,29 @@ const Introduction = () => {
               visible: { opacity: 1, y: 0, transition: { duration: 1 } },
             }}
           >
+            <p className="text-justify">
             ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و
             خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما
             در ارتباط است. این همکاری نزدیک به ما کمک می‌کند.
+            </p>
           </motion.p>
         </motion.div>
       </div>
 
-       <div className="w-full text-center mt-6 lg:hidden px-3">
+       <div className="w-full text-center lg:hidden px-3">
         <motion.span
           className="text-[24px] font-bold text-white block"
           animate={{ opacity: [0.2, 1, 0.2] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         >
-          خلاقیت بی حد
+                        آینده از اینجا
         </motion.span>
         <motion.span
           className="text-[24px] font-bold text-white block"
           animate={{ opacity: [0.2, 1, 0.2] }}
           transition={{ repeat: Infinity, duration: 1.5, delay: 0.3 }}
         >
-          فناوری بی مرز
+                        شروع می‌شه
         </motion.span>
       </div>
 
@@ -100,9 +102,11 @@ const Introduction = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1 }}
       >
+        <p className="text-justify px-4 mb-4">
         ما به ارتباط نزدیک با مشتریان خود اعتقاد داریم. تیم ما با دقت به نیازها و
         خواسته‌های شما گوش می‌دهد و در طی فرآیند توسعه، با شفافیت و صداقت با شما در
         ارتباط است. این همکاری نزدیک به ما کمک می‌کند.
+        </p>
       </motion.div>
     </div>
   );

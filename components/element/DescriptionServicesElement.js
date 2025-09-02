@@ -20,7 +20,7 @@ const DescriptionServicesElement = () => {
           <div className="lg:w-1/2 m-auto">
             <p className="text-3xl mb-3 text-white">توسعه وب سایت</p>
             <div className="w-full text-white lg:m-auto lg:mt-7">
-              <p className="text-justify leading-8">
+              <p className="text-justify leading-8 md:text-[15px] text-[14px]">
                 توسعه وب‌سایت فراتر از پیاده‌سازی صفحات و نوشتن کد است؛ ما
                 معماری نرم‌افزار را بر اساس اهداف تجاری، نیازهای کاربران و
                 آینده‌نگری طراحی میکنیم. از انتخاب دقیق فناوری‌های فرانت‌اند و
@@ -71,7 +71,7 @@ const DescriptionServicesElement = () => {
           <div className="lg:w-1/2 m-auto">
             <p className="text-3xl mb-3 text-white">خدمات جامع</p>
             <div className="w-full text-white lg:m-auto lg:mt-7">
-                <p className="text-justify leading-8">
+                <p className="text-justify leading-8 md:text-[15px] text-[14px]">
                 در دنیای پیچیده و پویا امروز، داشتن یک پشتیبان همه‌جانبه برای
               توسعه دیجیتال کسب‌وکار ضروری است. خدمات جامع Sparkcode به‌گونه‌ای
               طراحی شده‌اند که تمام نیازهای فنی و مشاوره‌ای شما را در یک مسیر
@@ -107,7 +107,7 @@ const DescriptionServicesElement = () => {
           <div className="lg:w-1/2 m-auto">
             <p className="text-3xl mb-3 text-white">رزومه موفق</p>
             <div className="w-full text-white lg:m-auto lg:mt-7">
-                <p className="text-justify leading-8">
+                <p className="text-justify leading-8 md:text-[15px] text-[14px]">
               رزومه‌ای موفق فراتر از فهرست کردن تجربیات کاری است؛ این نمایشی است
               از مهارت‌ها، دستاوردها و ارزش‌هایی که شما به سازمان می‌آورید. یک
               رزومه خوب با تمرکز بر شفافیت، ساختار منظم و بیان دقیق توانمندی‌ها،
