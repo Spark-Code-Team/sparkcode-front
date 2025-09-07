@@ -78,7 +78,7 @@ const CustomerReviews = () => {
                   i === index ? "scale-110 z-10 opacity-100" : "scale-90 opacity-60"
                 }`}
               >
-                <div className="w-full max-w-[260px] sm:max-w-[300px] md:max-w-[320px] hover:animate-textGlow  lg:max-w-[340px] min-h-[230px] flex flex-col justify-between bg-[#2e567d] py-4 lg:pt-5 lg:pb-6 rounded-lg">
+                <div className="w-full max-w-[260px] sm:max-w-[300px] md:max-w-[320px] lg:max-w-[340px] min-h-[230px] flex flex-col justify-between bg-[#2e567d] py-4 lg:pt-5 lg:pb-6 rounded-lg">
                  
                   <p className="text-[11px] lg:text-[15px] text-white/95 leading-6 text-justify px-3 lg:px-6 mt-1 line-clamp-5">
                     {item.review}
